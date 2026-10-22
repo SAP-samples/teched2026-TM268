@@ -1,0 +1,2079 @@
+<?Version 35?>
+<Plan ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_0" xmlns="http://www.sap.com/ndb/planviz" Type="Executed" PlanType="QoExec">
+<SQL><![CDATA[SELECT /* CDS access control applied */ /* Contains Native SQL */ "AIRPORT_FROM_ID" "AIRPORT_FROM_ID" , "AIRPORT_TO_ID" "AIRPORT_TO_ID" , "BOOKING_DATE" "BOOKING_DATE" , "BOOKING_PER_CLASS" "BOOKING_PER_CLASS" , "CARRIER_ID" "CARRIER_ID" , "CARRIER_NAME" "CARRIER_NAME" , "CONNECTION_ID" "CONNECTION_ID" , "CURRENCY_CODE" "CURRENCY_CODE" , "FLIGHT_DATE" "FLIGHT_DATE" , "PRICE_CLASS" "PRICE_CLASS" , "UNIQUE_ID" "UNIQUE_ID" FROM "ZTM268_C_BOOKING_CONN_CARR_900" "ZTM268_C_BOOKING_CONN_0" WHERE "MANDT" = ? AND "CARRIER_NAME" = ? ORDER BY "ZTM268_C_BOOKING_CONN_0" . "CARRIER_ID" , "ZTM268_C_BOOKING_CONN_0" . "CARRIER_NAME" , "ZTM268_C_BOOKING_CONN_0" . "CURRENCY_CODE" , "ZTM268_C_BOOKING_CONN_0" . "CONNECTION_ID" , "ZTM268_C_BOOKING_CONN_0" . "FLIGHT_DATE" , "ZTM268_C_BOOKING_CONN_0" . "UNIQUE_ID" , "ZTM268_C_BOOKING_CONN_0" . "PRICE_CLASS" , "ZTM268_C_BOOKING_CONN_0" . "BOOKING_DATE" LIMIT 200 WITH PARAMETERS( 'LOCALE' = 'EN' )]]></SQL>
+<SystemVersion><![CDATA[{"Version":"2.00.089.01.1769502981","CompileType":"rel","USER_NAME":"Capturing USER_NAME is disabled","SCHEMA_NAME":"SAPHANADBVLX"}]]></SystemVersion>
+<SessionVariables><![CDATA[{"ABAPVARCHARMODE":"TRUE","APPLICATION":"ABAP:APB","APPLICATIONCOMPONENT":"/SAP/OPU/ODATA4/SAP/ZUI_TM268_BOOK_CON_CAR_900_O4/SRVD","APPLICATIONCOMPONENTTYPE":"4","APPLICATIONSOURCE":"CL_SADL_SQL_EXECUTOR==========CP:1952","APPLICATIONUSER":"Capturing APPLICATIONUSER is disabled","APPLICATIONVERSION":"920 PL 12","APPLICATION_SERVER_INSTANCE_NAME":"vhshpapbci_APB_00","APPLICATION_SERVER_WORKPROCESS_INDEX":"48","CDS_CLIENT":"080","CLIENT":"080","DRIVERVERSION":"2.28.22","OS_USER":"Capturing OS_USER is disabled","PROTOCOL_VERSION":"4.1 (6, 8)","SAP_PASSPORT":"2A54482A0300E600003030303030303030303734353539393236342020202020202020202020202020000A43423939383030303039303020202020202020202020202020202020202020205341504D4854545020202020202020202020202020202020202020202020202020202020202020200003303030303030303030373435353939323634202020202020202020202020202036444646424443384144433530333030453030364141424137394435333144383038300001FA163E1349351FE1ACCE705F99E20490FA163E1349351FE1ACCE705F99E2249000000001000000E22A54482A","SAP_SYSTEM_DATE":"20260917","SPATIAL_OUTPUT_REPRESENTATION":"EWKB","USER_DATE":"20260917","USER_TIMEZONE":"UTC","XS_APPLICATIONUSER":"Capturing XS_APPLICATIONUSER is disabled","abapVarcharMode":"TRUE"}]]></SessionVariables>
+<ParameterValues><![CDATA["Capturing Bound Parameter Values is disabled"]]></ParameterValues>
+<ProjectedColsWithDatatype><![CDATA[AIRPORT_FROM_ID(NVARCHAR(3)), AIRPORT_TO_ID(NVARCHAR(3)), BOOKING_DATE(NVARCHAR(8)), BOOKING_PER_CLASS(BIGINT), CARRIER_ID(NVARCHAR(3)), CARRIER_NAME(NVARCHAR(40)), CONNECTION_ID(NVARCHAR(4)), CURRENCY_CODE(NVARCHAR(5)), FLIGHT_DATE(NVARCHAR(8)), PRICE_CLASS(NVARCHAR(8)), UNIQUE_ID(INT)]]></ProjectedColsWithDatatype>
+<StmtStats><![CDATA[]]></StmtStats>
+<StmtMemStats><![CDATA[[{"Allocated Count":5177,"Allocated Size":2633360,"Allocator Name":"Connection/323819/Statement/1390792103447625","Count in Use":5174,"Deallocated Count":3089,"Deallocated Size":2119016,"Depth":3,"Max Allocation Size (estimate)":515024,"Max Single Allocation Size":66592,"Size in Use":514072},{"Allocated Count":259,"Allocated Size":807920,"Allocator Name":"Connection/323819/Statement/1390792103447625/Pool/RowEngine/QueryExecution/SearchAlloc","Count in Use":259,"Deallocated Count":247,"Deallocated Size":777544,"Depth":4,"Max Allocation Size (estimate)":66592,"Max Single Allocation Size":66592,"Size in Use":30376},{"Allocated Count":4945,"Allocated Size":1828680,"Allocator Name":"Connection/323819/Statement/1390792103447625/IMPLICIT","Count in Use":4942,"Deallocated Count":2843,"Deallocated Size":1341512,"Depth":4,"Max Allocation Size (estimate)":487848,"Max Single Allocation Size":42336,"Size in Use":486896}]]]></StmtMemStats>
+<CompileSummary><![CDATA[{}]]></CompileSummary>
+	<RootRelation ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_0" TypeName="PROJECT" Status="Finished">
+		<Name>HEX Search</Name>
+		<ExecutionTime>
+			<Exclusive Unit="us">0</Exclusive>
+			<Inclusive Unit="us">6649</Inclusive>
+		</ExecutionTime>
+		<MemoryUsage>
+			<Max>0</Max>
+		</MemoryUsage>
+		<Child ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1" >
+			<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+			<FetchCallCount>1</FetchCallCount>
+		</Child>
+	</RootRelation>
+	<Relation ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1" TypeName="HEX_SEARCH" InternalBufferId="0" Status="Finished">
+		<Name>HEX Search</Name>
+		<ExecutionType>HEX</ExecutionType>
+		<Summary><![CDATA[/DMO/CONNECTION.AIRPORT_FROM_ID, /DMO/CONNECTION.AIRPORT_TO_ID, ZTM268_BOOKING.BOOKING_DATE, ZTM268_C_BOOKING_CONN_CARR_900.BOOKING_PER_CLASS, /DMO/CARRIER.CARRIER_ID, ?2, ZTM268_BOOKING.CONNECTION_ID, /DMO/CARRIER.CURRENCY_CODE, ZTM268_BOOKING.FLIGHT_DATE, PRICE_CLASS, ZTM268_BOOKING.UNIQUE_ID]]></Summary>
+		<Location>vhshpan5db01:30243</Location>
+		<EstimatedCost>
+			<Inclusive Unit="us">3.33596e+06</Inclusive>
+		</EstimatedCost>
+		<EstimatedOutputCardinality>3</EstimatedOutputCardinality>
+		<ExecutionTime>
+			<Start Unit="us">1789634462021370</Start>
+			<End Unit="us">1789634462028019</End>
+			<Exclusive Unit="us">6495</Exclusive>
+			<Inclusive Unit="us">6649</Inclusive>
+			<Timestamps>[{"Open": [{"start":1789634462021370,"end":1789634462021510,"thread":10655},{"start":1789634462021532,"end":1789634462027392,"thread":10655}]},{"Fetch": [{"start":1789634462027488,"end":1789634462027887,"thread":10655}]},{"Close": [{"start":1789634462027923,"end":1789634462028019,"thread":10655}]}]</Timestamps>
+		</ExecutionTime>
+		<MemoryUsage>
+			<Max>0</Max>
+		</MemoryUsage>
+		<KernelCPUTime Unit="ms">0.000</KernelCPUTime>
+		<UserCPUTime Unit="ms">6.812</UserCPUTime>
+		<Details><![CDATA[{"Projected Cols":"/DMO/CONNECTION.AIRPORT_FROM_ID, /DMO/CONNECTION.AIRPORT_TO_ID, ZTM268_BOOKING.BOOKING_DATE, ZTM268_C_BOOKING_CONN_CARR_900.BOOKING_PER_CLASS, /DMO/CARRIER.CARRIER_ID, ?2, ZTM268_BOOKING.CONNECTION_ID, /DMO/CARRIER.CURRENCY_CODE, ZTM268_BOOKING.FLIGHT_DATE, PRICE_CLASS, ZTM268_BOOKING.UNIQUE_ID","Recompile State":"RECOMPILED"}]]></Details>
+		<InnerPlans>
+			<Plan ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_0" Type="Estimated" PlanType="Logical">
+				<RootRelation ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_0" TypeName="PROJECT">
+					<Name>PROJECT</Name>
+					<Summary><![CDATA[/DMO/CONNECTION.AIRPORT_FROM_ID, /DMO/CONNECTION.AIRPORT_TO_ID, ZTM268_BOOKING.BOOKING_DATE, ZTM268_C_BOOKING_CONN_CARR_900.BOOKING_PER_CLASS, /DMO/CARRIER.CARRIER_ID, ?2, ZTM268_BOOKING.CONNECTION_ID, /DMO/CARRIER.CURRENCY_CODE, ZTM268_BOOKING.FLIGHT_DATE, PRICE_CLASS, ZTM268_BOOKING.UNIQUE_ID]]></Summary>
+					<Property><![CDATA[RECOMPILED, PHYSICAL_ENUM_BY: HEX_PROJECT]]></Property>
+					<Location>vhshpan5db01:30243</Location>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">3.33596e+06</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>3</EstimatedOutputCardinality>
+					<Details><![CDATA[{"Projected Cols":"/DMO/CONNECTION.AIRPORT_FROM_ID, /DMO/CONNECTION.AIRPORT_TO_ID, ZTM268_BOOKING.BOOKING_DATE, ZTM268_C_BOOKING_CONN_CARR_900.BOOKING_PER_CLASS, /DMO/CARRIER.CARRIER_ID, ?2, ZTM268_BOOKING.CONNECTION_ID, /DMO/CARRIER.CURRENCY_CODE, ZTM268_BOOKING.FLIGHT_DATE, PRICE_CLASS, ZTM268_BOOKING.UNIQUE_ID"}]]></Details>
+					<Child ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_1">
+					</Child>
+				</RootRelation>
+				<Relation ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_1" TypeName="TOP">
+					<Name>TOP K SORT</Name>
+					<Summary><![CDATA[SORT COLUMNS: /DMO/CARRIER.CARRIER_ID ASC, /DMO/CARRIER.CURRENCY_CODE ASC, ZTM268_BOOKING.CONNECTION_ID ASC, ZTM268_BOOKING.FLIGHT_DATE ASC, ZTM268_BOOKING.UNIQUE_ID ASC, PRICE_CLASS ASC, ZTM268_BOOKING.BOOKING_DATE ASC, NUM RECORDS: 200]]></Summary>
+					<Property><![CDATA[PHYSICAL_ENUM_BY: HEX_TOPK_SORT]]></Property>
+					<Location>vhshpan5db01:30243</Location>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">3.33596e+06</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>3</EstimatedOutputCardinality>
+					<Details><![CDATA[{"Num Records":"200"}]]></Details>
+					<Child ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_2">
+					</Child>
+				</Relation>
+				<Relation ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_2" TypeName="MATERIALIZE">
+					<Name>MATERIALIZE</Name>
+					<Summary><![CDATA[COALESCE(COUNT(*), 1)]]></Summary>
+					<Property><![CDATA[ENUM_BY: AGGR_THRU_JOIN, PHYSICAL_ENUM_BY: HEX_MATERIALIZE]]></Property>
+					<Location>vhshpan5db01:30243</Location>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">3.33596e+06</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>3</EstimatedOutputCardinality>
+					<Child ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_3">
+					</Child>
+				</Relation>
+				<Relation ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_3" TypeName="JOIN">
+					<Name>INDEX JOIN (LEFT OUTER)</Name>
+					<Summary><![CDATA[INDEX JOIN CONDITION: __cs_concat__(SESSION_CONTEXT('CDS_CLIENT'), ZTM268_BOOKING.CARRIER_ID, ZTM268_BOOKING.CONNECTION_ID) = $trexexternalkey$, POST JOIN CONDITION: SESSION_CONTEXT('CDS_CLIENT') = /DMO/CONNECTION.CLIENT, RIGHT SIDE INDEX]]></Summary>
+					<Schema><![CDATA[SAPHANADB]]></Schema>
+					<TableType><![CDATA[COLUMN TABLE]]></TableType>
+					<ObjectName><![CDATA[/DMO/CONNECTION]]></ObjectName>
+					<Property><![CDATA[ENUM_BY: JOIN_THRU_JOIN, PHYSICAL_ENUM_BY: HEX_INDEX_JOIN]]></Property>
+					<Location>vhshpan5db01:30243</Location>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">3.33596e+06</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>1.83333</EstimatedOutputCardinality>
+					<Details><![CDATA[{"Join Condition":"__cs_concat__(SESSION_CONTEXT('CDS_CLIENT'), ZTM268_BOOKING.CARRIER_ID, ZTM268_BOOKING.CONNECTION_ID) = $trexexternalkey$, POST JOIN CONDITION: SESSION_CONTEXT('CDS_CLIENT') = /DMO/CONNECTION.CLIENT, RIGHT SIDE INDEX"}]]></Details>
+					<Child ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_4">
+					</Child>
+				</Relation>
+				<Relation ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_4" TypeName="JOIN">
+					<Name>HASH JOIN (LEFT OUTER)</Name>
+					<Summary><![CDATA[HASH CONDITION: /DMO/CARRIER.CARRIER_ID = ZTM268_BOOKING.CARRIER_ID, HASH SIZE: 1, LEFT SIDE HASH]]></Summary>
+					<Property><![CDATA[ENUM_BY: JOIN_THRU_JOIN, PHYSICAL_ENUM_BY: HEX_HASH_JOIN]]></Property>
+					<Location>vhshpan5db01:30243</Location>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">3.33596e+06</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>1.83333</EstimatedOutputCardinality>
+					<Details><![CDATA[{"Hash Condition":"/DMO/CARRIER.CARRIER_ID = ZTM268_BOOKING.CARRIER_ID, HASH SIZE: 1, LEFT SIDE HASH"}]]></Details>
+					<Child ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_5">
+					</Child>
+					<Child ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_7">
+					</Child>
+				</Relation>
+				<Relation ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_7" TypeName="GROUP_BY">
+					<Name>AGGREGATION</Name>
+					<Summary><![CDATA[GROUPING: ZTM268_BOOKING.CONNECTION_ID, ZTM268_BOOKING.FLIGHT_DATE, ZTM268_BOOKING.BOOKING_DATE, ZTM268_BOOKING.UNIQUE_ID, PRICE_CLASS, ZTM268_BOOKING.CARRIER_ID, AGGREGATION: COUNT(*)]]></Summary>
+					<Property><![CDATA[ENUM_BY: AGGR_THRU_JOIN, PHYSICAL_ENUM_BY: HEX_AGGR]]></Property>
+					<Location>vhshpan5db01:30243</Location>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">3.33596e+06</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>3</EstimatedOutputCardinality>
+					<Details><![CDATA[{"Grouping Cols":"ZTM268_BOOKING.CONNECTION_ID, ZTM268_BOOKING.FLIGHT_DATE, ZTM268_BOOKING.BOOKING_DATE, ZTM268_BOOKING.UNIQUE_ID, PRICE_CLASS, ZTM268_BOOKING.CARRIER_ID, ","Aggregation Cols":"COUNT(*)"}]]></Details>
+					<Child ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_8">
+					</Child>
+				</Relation>
+				<Relation ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_8" TypeName="MATERIALIZE">
+					<Name>MATERIALIZE</Name>
+					<Summary><![CDATA[CASE WHEN ZTM268_BOOKING.FLIGHT_PRICE > 1500 THEN 'PREMIUM' WHEN ZTM268_BOOKING.FLIGHT_PRICE > 1000 AND ZTM268_BOOKING.FLIGHT_PRICE <= 1500 THEN 'BUSINESS' ELSE 'STANDARD' END]]></Summary>
+					<Property><![CDATA[ENUM_BY: JOIN_THRU_AGGR, PHYSICAL_ENUM_BY: HEX_MATERIALIZE]]></Property>
+					<Location>vhshpan5db01:30243</Location>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">75747.1</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>3.86281e+06</EstimatedOutputCardinality>
+					<Child ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_9">
+					</Child>
+				</Relation>
+				<Relation ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_9" TypeName="JOIN">
+					<Name>TABLE SCAN SEMI JOIN</Name>
+					<Summary><![CDATA[JOIN CONDITION: ZTM268_BOOKING.CARRIER_ID = /DMO/CARRIER.CARRIER_ID, FILTER CONDITION: ZTM268_BOOKING.MANDT = ?1 AND ZTM268_BOOKING.CLIENT = SESSION_CONTEXT('CDS_CLIENT') (DETAIL: (([SCAN] ZTM268_BOOKING.CARRIER_ID = /DMO/CARRIER.CARRIER_ID) AND ([INDEX LOOK-UP] ZTM268_BOOKING.MANDT = ?1) AND ([INDEX LOOK-UP] ZTM268_BOOKING.CLIENT = SESSION_CONTEXT('CDS_CLIENT'))))]]></Summary>
+					<Schema><![CDATA[SAPHANADB]]></Schema>
+					<TableType><![CDATA[COLUMN TABLE]]></TableType>
+					<ObjectName><![CDATA[ZTM268_BOOKING]]></ObjectName>
+					<Property><![CDATA[ENUM_BY: JOIN_THRU_AGGR, PHYSICAL_ENUM_BY: HEX_TABLE_SCAN_SEMI_JOIN]]></Property>
+					<Location>vhshpan5db01:30243</Location>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">75747.1</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>4.06612e+06</EstimatedOutputCardinality>
+					<Details><![CDATA[{"Join Condition":"ZTM268_BOOKING.CARRIER_ID = /DMO/CARRIER.CARRIER_ID, FILTER CONDITION: ZTM268_BOOKING.MANDT = ?1 AND ZTM268_BOOKING.CLIENT = SESSION_CONTEXT('CDS_CLIENT') (DETAIL: (([SCAN] ZTM268_BOOKING.CARRIER_ID = /DMO/CARRIER.CARRIER_ID) AND ([INDEX LOOK-UP] ZTM268_BOOKING.MANDT = ?1) AND ([INDEX LOOK-UP] ZTM268_BOOKING.CLIENT = SESSION_CONTEXT('CDS_CLIENT'))))"}]]></Details>
+					<Child ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_10">
+					</Child>
+				</Relation>
+				<Relation ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_10" TypeName="VIEW">
+					<Name>VIEW</Name>
+					<Summary><![CDATA[PROJECT COLS: ]]></Summary>
+					<Property><![CDATA[ENUM_BY: SEMI_JOIN_REDUCTION, PHYSICAL_ENUM_BY: HEX_SHARED_SUBPLAN]]></Property>
+					<Location>vhshpan5db01:30243</Location>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">0</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>1</EstimatedOutputCardinality>
+					<Child ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_6" />
+				</Relation>
+				<Relation ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_5" TypeName="VIEW">
+					<Name>VIEW</Name>
+					<Summary><![CDATA[PROJECT COLS: ]]></Summary>
+					<Property><![CDATA[ENUM_BY: SEMI_JOIN_REDUCTION, PHYSICAL_ENUM_BY: HEX_SHARED_SUBPLAN]]></Property>
+					<Location>vhshpan5db01:30243</Location>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">0.233417</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>1</EstimatedOutputCardinality>
+					<Child ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_6">
+					</Child>
+				</Relation>
+				<Relation ID="ID_323819_AEF32326B96ED54BB781F07C810C5B6D_1_6" TypeName="TABLE">
+					<Name>TABLE SCAN</Name>
+					<Summary><![CDATA[FILTER CONDITION: /DMO/CARRIER.MANDT = ?1 AND /DMO/CARRIER.CLIENT = SESSION_CONTEXT('CDS_CLIENT') AND /DMO/CARRIER.CARRIER_NAME = ?2 (DETAIL: ([SCAN] /DMO/CARRIER.CARRIER_NAME = ?2) AND ([POST-FILTER] /DMO/CARRIER.MANDT = ?1 AND /DMO/CARRIER.CLIENT = SESSION_CONTEXT('CDS_CLIENT')))]]></Summary>
+					<Schema><![CDATA[SAPHANADB]]></Schema>
+					<TableType><![CDATA[COLUMN TABLE]]></TableType>
+					<ObjectName><![CDATA[/DMO/CARRIER]]></ObjectName>
+					<Property><![CDATA[PHYSICAL_ENUM_BY: HEX_TABLE_SCAN]]></Property>
+					<Location>vhshpan5db01:30243</Location>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">0.233417</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>1</EstimatedOutputCardinality>
+					<Details><![CDATA[{"Filter":"/DMO/CARRIER.MANDT = ?1 AND /DMO/CARRIER.CLIENT = SESSION_CONTEXT('CDS_CLIENT') AND /DMO/CARRIER.CARRIER_NAME = ?2 (DETAIL: ([SCAN] /DMO/CARRIER.CARRIER_NAME = ?2) AND ([POST-FILTER] /DMO/CARRIER.MANDT = ?1 AND /DMO/CARRIER.CLIENT = SESSION_CONTEXT('CDS_CLIENT')))"}]]></Details>
+				</Relation>
+			</Plan>
+			<Plan ID="5381_group41" Type="Executed" PlanType="Column">
+				<RootRelation ID="5381_group41_node" Status="Finished" Physical="True" TypeName="HEX">
+					<Name><![CDATA[PROJECT]]></Name>
+					<Summary><![CDATA[/DMO/CONNECTION.AIRPORT_FROM_ID, /DMO/CONNECTION.AIRPORT_TO_ID, ZTM268_BOOKING.BOOKING_DATE, ZTM268_C_BOOKING_CONN_CARR_900.BOOKING_PER_CLASS, /DMO/CARRIER.CARRIER_ID, ?2, ZTM268_BOOKING.CONNECTION_ID, /DMO/CARRIER.CURRENCY_CODE, ZTM268_BOOKING.FLIGHT_DATE, PRICE_CLASS, ZTM268_BOOKING.UNIQUE_ID]]></Summary>
+					<ExecutionTime>
+						<Timestamps>[{"Pop":[{"start":1789634462027373,"end":1789634462027879}]}]</Timestamps>
+					</ExecutionTime>
+					<UserCPUTime Unit="ms">0.199</UserCPUTime>
+					<Details><![CDATA[{"max numUsedLocalContexts":"1","Estimated Output Cardinality":"3","Memory Allocated":"0.004 MB","Output Spec":"AIRPORT_FROM_ID NVARCHAR(3), AIRPORT_TO_ID NVARCHAR(3), BOOKING_DATE NVARCHAR(8), BOOKING_PER_CLASS BIGINT, CARRIER_ID NVARCHAR(3), CARRIER_NAME NVARCHAR(40), CONNECTION_ID NVARCHAR(4), CURRENCY_CODE NVARCHAR(5), FLIGHT_DATE NVARCHAR(8), PRICE_CLASS NVARCHAR(8), UNIQUE_ID INT"}]]></Details>
+					<InnerPlans>
+						<Plan ID="5382_op96" Type="Executed" PlanType="Column">
+							<RootRelation ID="5382_op96_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[OrderedProjectBufferOp]]></Name>
+								<Summary><![CDATA[Buffer result rows if required]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462027373,"end":1789634462027767}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.195</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"11","pipeline 17":"numUsedLocalContexts 1, CPUTime 0.195 ms, CPUWaitTime 0.000 ms, calls 11","Init CPUTime":"0.003 ms","Init CPUWaitTime":"0.000 ms","InitLocal CPUTime":"0.005 ms","InitLocal CPUWaitTime":"0.000 ms","Memory Allocated":"0.004 MB","operatorId":"110"}]]></Details>
+								<Child ID="5383_op95_node">
+									<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5384_op97" Type="Executed" PlanType="Column">
+							<RootRelation ID="5384_op97_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[OrderedProjectFetchOp]]></Name>
+								<Summary><![CDATA[Fetch buffered result rows]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462027875,"end":1789634462027879}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.004</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 18":"numUsedLocalContexts 1, CPUTime 0.004 ms, CPUWaitTime 0.000 ms, calls 1","operatorId":"111"}]]></Details>
+								<Child ID="5382_op96_node">
+									<Details><![CDATA[{"ConnectionType":"Logical"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+					</InnerPlans>
+				</RootRelation>
+			</Plan>
+			<Plan ID="5385_group42" Type="Executed" PlanType="Column">
+				<RootRelation ID="5385_group42_node" Status="Finished" Physical="True" TypeName="HEX">
+					<Name><![CDATA[TOP K SORT]]></Name>
+					<Summary><![CDATA[SORT COLUMNS: /DMO/CARRIER.CARRIER_ID ASC, /DMO/CARRIER.CURRENCY_CODE ASC, ZTM268_BOOKING.CONNECTION_ID ASC, ZTM268_BOOKING.FLIGHT_DATE ASC, ZTM268_BOOKING.UNIQUE_ID ASC, PRICE_CLASS ASC, ZTM268_BOOKING.BOOKING_DATE ASC, NUM RECORDS: 200]]></Summary>
+					<ExecutionTime>
+						<Timestamps>[{"Pop":[{"start":1789634462025706,"end":1789634462027768}]}]</Timestamps>
+					</ExecutionTime>
+					<UserCPUTime Unit="ms">0.890</UserCPUTime>
+					<Details><![CDATA[{"max numUsedLocalContexts":"3","Estimated Output Cardinality":"3","Memory Allocated":"0.048 MB","Output Spec":"[Value] BOOKING_PER_CLASS BIGINT, [DocId] CARRIER_ID NVARCHAR(3), [DocId] CURRENCY_CODE NVARCHAR(5), [DocId] UNIQUE_ID INT, [DocId] BOOKING_DATE NVARCHAR(8), [DocId] CONNECTION_ID NVARCHAR(4), [DocId] FLIGHT_DATE NVARCHAR(8), [DocId] AIRPORT_FROM_ID NVARCHAR(3), [DocId] AIRPORT_TO_ID NVARCHAR(3), [Value] PRICE_CLASS NVARCHAR(8)","sort strategy":"ByValue, ByValue, ByValue, ByValue, ByValue, ByValue, ByValue"}]]></Details>
+					<InnerPlans>
+						<Plan ID="5386_op92" Type="Executed" PlanType="Column">
+							<RootRelation ID="5386_op92_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[CollectRangesFromSortVectors]]></Name>
+								<Summary><![CDATA[Collect ranges from sort vectors]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462027524,"end":1789634462027774}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.003</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 17":"numUsedLocalContexts 1, CPUTime 0.003 ms, CPUWaitTime 0.000 ms, calls 1","operatorId":"105"}]]></Details>
+								<Child ID="5387_op91_node">
+									<Details><![CDATA[{"ConnectionType":"Logical"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5388_op85" Type="Executed" PlanType="Column">
+							<RootRelation ID="5388_op85_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[MergeHeapControlOp]]></Name>
+								<Summary><![CDATA[Control buffer merges into global heaps]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462026035,"end":1789634462026513},{"start":1789634462026878,"end":1789634462027016}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.062</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"3","calls":"32","pipeline 14":"numUsedLocalContexts 3, CPUTime 0.054 ms, CPUWaitTime 0.000 ms, calls 32","pipeline 15":"numUsedLocalContexts 1, CPUTime 0.008 ms, CPUWaitTime 0.000 ms, calls 0","Finish CPUTime":"0.008 ms","Finish CPUWaitTime":"0.000 ms","operatorId":"100"}]]></Details>
+								<Child ID="5389_op84_node">
+									<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5387_op91" Type="Executed" PlanType="Column">
+							<RootRelation ID="5387_op91_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[LlangNoDataOperator]]></Name>
+								<Summary><![CDATA[<Sort heap partially>]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462027031,"end":1789634462027352}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.310</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 16":"numUsedLocalContexts 1, CPUTime 0.310 ms, CPUWaitTime 0.000 ms, calls 1","InitLocal CPUTime":"0.005 ms","InitLocal CPUWaitTime":"0.000 ms","JIT cache hit":"yes","JIT compile status":"Compiled (Policy: GlobalJitMode)","JIT opt level":"O2","operatorId":"104"}]]></Details>
+								<Child ID="5390_op90_node">
+									<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5391_op93" Type="Executed" PlanType="Column">
+							<RootRelation ID="5391_op93_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[LlangNoDataOperator]]></Name>
+								<Summary><![CDATA[<Merge sorted lists>]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462027361,"end":1789634462027774}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.011</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 17":"numUsedLocalContexts 1, CPUTime 0.011 ms, CPUWaitTime 0.000 ms, calls 1","InitLocal CPUTime":"0.003 ms","InitLocal CPUWaitTime":"0.000 ms","JIT cache hit":"yes","JIT compile status":"Compiled (Policy: GlobalJitMode)","JIT opt level":"O2","operatorId":"106"}]]></Details>
+								<Child ID="5386_op92_node">
+									<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5392_op86" Type="Executed" PlanType="Column">
+							<RootRelation ID="5392_op86_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[LlangNoDataOperator]]></Name>
+								<Summary><![CDATA[<Merge buffer into heap>]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462025713,"end":1789634462025895},{"start":1789634462026883,"end":1789634462027015}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.140</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"3","calls":"3","pipeline 14":"numUsedLocalContexts 3, CPUTime 0.010 ms, CPUWaitTime 0.000 ms, calls 0","pipeline 15":"numUsedLocalContexts 1, CPUTime 0.130 ms, CPUWaitTime 0.000 ms, calls 3","InitLocal CPUTime":"0.010 ms","InitLocal CPUWaitTime":"0.000 ms","JIT cache hit":"yes","JIT compile status":"Compiled (Policy: GlobalJitMode)","JIT opt level":"O2","operatorId":"101"}]]></Details>
+								<Child ID="5388_op85_node">
+									<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5393_op94" Type="Executed" PlanType="Column">
+							<RootRelation ID="5393_op94_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[ProduceSortedOutputScheduleOpT<ProduceSortedOutputGlobalVectorBase>]]></Name>
+								<Summary><![CDATA[Produce sorted results]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462027534,"end":1789634462027773}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.028</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 17":"numUsedLocalContexts 1, CPUTime 0.028 ms, CPUWaitTime 0.000 ms, calls 1","operatorId":"107"}]]></Details>
+								<Child ID="5391_op93_node">
+									<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5389_op84" Type="Executed" PlanType="Column">
+							<RootRelation ID="5389_op84_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[LlangOperatorWithRetry<LlangInOperator>]]></Name>
+								<Summary><![CDATA[<Mark right matching rows preamble>; <Lookup rows in column index>; <Check input limit>; <Evaluate join predicate: ?(r:-4) = /DMO/CONNECTION.CLIENT (NVARCHAR(3))>; <Produce right matching rows>; <Materialize: 1000023.20000000 (BIGINT)>; <Materialize: 1000000.10000000 (BIGINT)>; <Collect rows>]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462025706,"end":1789634462026514}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.302</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"3","calls":"32","pipeline 14":"numUsedLocalContexts 3, CPUTime 0.302 ms, CPUWaitTime 0.000 ms, calls 32","pipeline 15":"numUsedLocalContexts 0, CPUTime 0.000 ms, CPUWaitTime 0.000 ms, calls 0","InitLocal CPUTime":"0.010 ms","InitLocal CPUWaitTime":"0.000 ms","JIT cache hit":"yes","JIT compile status":"Compiled (Policy: GlobalJitMode)","JIT opt level":"O2","index predicate":"/DMO/CONNECTION.$trexexternalkey$ (VARCHAR) = 1000022.20000000 (VARCHAR)","operatorId":"99"}]]></Details>
+								<Child ID="5394_op83_node">
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5395_op89" Type="Executed" PlanType="Column">
+							<RootRelation ID="5395_op89_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[OffsetReductionOp]]></Name>
+								<Summary><![CDATA[Reduce offset]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462027039,"end":1789634462027355}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.006</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 16":"numUsedLocalContexts 1, CPUTime 0.006 ms, CPUWaitTime 0.000 ms, calls 1","operatorId":"102"}]]></Details>
+								<Child ID="5392_op86_node">
+									<Details><![CDATA[{"ConnectionType":"Logical"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5390_op90" Type="Executed" PlanType="Column">
+							<RootRelation ID="5390_op90_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[SortHeapControlOp]]></Name>
+								<Summary><![CDATA[Trigger (partial) heap sort on global heaps]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462027044,"end":1789634462027354}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.005</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 16":"numUsedLocalContexts 1, CPUTime 0.005 ms, CPUWaitTime 0.000 ms, calls 1","Memory Allocated":"0.048 MB","operatorId":"103"}]]></Details>
+								<Child ID="5395_op89_node">
+									<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5383_op95" Type="Executed" PlanType="Column">
+							<RootRelation ID="5383_op95_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[LlangOutOperator]]></Name>
+								<Summary><![CDATA[<Produce sorted rows>; <Registers fields as sources>]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462027368,"end":1789634462027768}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.023</UserCPUTime>
+								<EstimatedOutputCardinality>3</EstimatedOutputCardinality>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"2","pipeline 17":"numUsedLocalContexts 1, CPUTime 0.023 ms, CPUWaitTime 0.000 ms, calls 2","InitLocal CPUTime":"0.002 ms","InitLocal CPUWaitTime":"0.000 ms","Estimated Output Cardinality":"3","JIT cache hit":"yes","JIT compile status":"Compiled (Policy: GlobalJitMode)","JIT opt level":"O2","TaskStats from op: 121":"count = 1, min = 56354ns, avg = 56354ns, max = 56354ns,  25%= 56354ns,  50%= 56354ns,  75%= 56354ns, parentOpId: 107\u000aSampling: \u000aOpId: 107 sampleSize: 16 elapsedTimeInNs: 56354 overhead: 0 cpiScalingFactor: 1 currCost: 3522.12 costChangeFactor: 1 TotalCost: 3522.12\u000aOpId: 107 Sampling is finished. TaskSize: 70 sumElapsed: 56354 timeBudget: 18446744073709551615 totalCost: 3522.12 cost limit: 6060.6 minCost < costLimit: 1 hasDecidedSequential: 1\u000acalculated cost: 3522.12 for op: 107 taskSize: 70 will run in seq: 1 totalRowCount: 165\u000a","operatorId":"109"}]]></Details>
+								<Child ID="5393_op94_node">
+									<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+					</InnerPlans>
+				</RootRelation>
+			</Plan>
+			<Plan ID="5396_group43" Type="Executed" PlanType="Column">
+				<RootRelation ID="5396_group43_node" Status="NotStarted" Physical="True" TypeName="HEX">
+					<Name><![CDATA[MATERIALIZE]]></Name>
+					<Summary><![CDATA[COALESCE(COUNT(*), 1)]]></Summary>
+					<UserCPUTime Unit="ms">0.000</UserCPUTime>
+					<Details><![CDATA[{"max numUsedLocalContexts":"0","Estimated Output Cardinality":"3","Output Spec":"[Value] BOOKING_PER_CLASS BIGINT, [DocId] CARRIER_ID NVARCHAR(3), [DocId] CURRENCY_CODE NVARCHAR(5), [DocId] UNIQUE_ID INT, [DocId] BOOKING_DATE NVARCHAR(8), [DocId] CONNECTION_ID NVARCHAR(4), [DocId] FLIGHT_DATE NVARCHAR(8), [DocId] AIRPORT_FROM_ID NVARCHAR(3), [DocId] AIRPORT_TO_ID NVARCHAR(3), [Value] PRICE_CLASS NVARCHAR(8)"}]]></Details>
+					<InnerPlans>
+						<Plan ID="5394_op83" Type="Executed" PlanType="Column">
+							<RootRelation ID="5394_op83_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[LlangOperatorWithRetry<LlangInOperator>]]></Name>
+								<Summary><![CDATA[Code-generated operator across relations <see next op>]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<UserCPUTime Unit="ms">0.000</UserCPUTime>
+								<EstimatedOutputCardinality>3</EstimatedOutputCardinality>
+								<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","Estimated Output Cardinality":"3","index predicate":"/DMO/CONNECTION.$trexexternalkey$ (VARCHAR) = 1000022.20000000 (VARCHAR)"}]]></Details>
+								<Child ID="5397_op82_node">
+									<Details><![CDATA[{"ConnectionType":"Logical"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+					</InnerPlans>
+				</RootRelation>
+			</Plan>
+			<Plan ID="5398_group44" Type="Executed" PlanType="Column">
+				<RootRelation ID="5398_group44_node" Status="Finished" Physical="True" TypeName="HEX">
+					<Name><![CDATA[INDEX JOIN (LEFT OUTER)]]></Name>
+					<Summary><![CDATA[INDEX JOIN CONDITION: __cs_concat__(SESSION_CONTEXT('CDS_CLIENT'), ZTM268_BOOKING.CARRIER_ID, ZTM268_BOOKING.CONNECTION_ID) = $trexexternalkey$, POST JOIN CONDITION: SESSION_CONTEXT('CDS_CLIENT') = /DMO/CONNECTION.CLIENT, RIGHT SIDE INDEX]]></Summary>
+					<TableType><![CDATA[COLUMN TABLE]]></TableType>
+					<Schema><![CDATA[SAPHANADB]]></Schema>
+					<ObjectName><![CDATA[/DMO/CONNECTION]]></ObjectName>
+					<ExecutionTime>
+						<Timestamps>[{"Pop":[{"start":1789634462025656,"end":1789634462026823}]}]</Timestamps>
+					</ExecutionTime>
+					<UserCPUTime Unit="ms">0.705</UserCPUTime>
+					<Details><![CDATA[{"max numUsedLocalContexts":"3","Active Table Fragments":"/DMO/CONNECTION~main","Est. Intermediate Cardinality":"1.83333","Est. Output Cardinality":"1.83333","Est. Right Side Input Cardinality":"1.83333","Estimated Output Cardinality":"2","Operator Specific Partition Info":"{\"Indexed Table Logical Partition Info\": (empty)}","Output Spec":"[DocId] CARRIER_ID NVARCHAR(3), [DocId] CURRENCY_CODE NVARCHAR(5), [DocId] UNIQUE_ID INT, [DocId] BOOKING_DATE NVARCHAR(8), [DocId] CONNECTION_ID NVARCHAR(4), [DocId] FLIGHT_DATE NVARCHAR(8), [DocId] AIRPORT_FROM_ID NVARCHAR(3), [DocId] AIRPORT_TO_ID NVARCHAR(3), [Value] PRICE_CLASS NVARCHAR(8), coalesce(...) BIGINT","index predicate":"/DMO/CONNECTION.$trexexternalkey$ (VARCHAR) = 1000022.20000000 (VARCHAR)"}]]></Details>
+					<InnerPlans>
+						<Plan ID="5397_op82" Type="Executed" PlanType="Column">
+							<RootRelation ID="5397_op82_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[LlangOperatorWithRetry<LlangInOperator>]]></Name>
+								<Summary><![CDATA[Code-generated operator across relations <see next op>]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<UserCPUTime Unit="ms">0.000</UserCPUTime>
+								<EstimatedOutputCardinality>2</EstimatedOutputCardinality>
+								<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","Estimated Output Cardinality":"2","index predicate":"/DMO/CONNECTION.$trexexternalkey$ (VARCHAR) = 1000022.20000000 (VARCHAR)"}]]></Details>
+								<Child ID="5399_op81_node">
+									<Details><![CDATA[{"ConnectionType":"Logical"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5399_op81" Type="Executed" PlanType="Column">
+							<RootRelation ID="5399_op81_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[LlangOperatorWithRetry<LlangInOperator>]]></Name>
+								<Summary><![CDATA[Code-generated operator across relations <see next op>]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<UserCPUTime Unit="ms">0.000</UserCPUTime>
+								<EstimatedOutputCardinality>2</EstimatedOutputCardinality>
+								<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","Estimated Output Cardinality":"2","index predicate":"/DMO/CONNECTION.$trexexternalkey$ (VARCHAR) = 1000022.20000000 (VARCHAR)"}]]></Details>
+								<Child ID="5400_op80_node">
+									<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5400_op80" Type="Executed" PlanType="Column">
+							<RootRelation ID="5400_op80_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[IndexJoinBlockingOp]]></Name>
+								<Summary><![CDATA[]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462025656,"end":1789634462026515},{"start":1789634462026735,"end":1789634462026823}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.705</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"3","calls":"32","pipeline 14":"numUsedLocalContexts 3, CPUTime 0.696 ms, CPUWaitTime 0.000 ms, calls 32","pipeline 15":"numUsedLocalContexts 1, CPUTime 0.009 ms, CPUWaitTime 0.000 ms, calls 0","Init CPUTime":"0.003 ms","Init CPUWaitTime":"0.000 ms","InitLocal CPUTime":"0.009 ms","InitLocal CPUWaitTime":"0.000 ms","OnTaskEnd CPUTime":"0.638 ms","OnTaskEnd CPUWaitTime":"0.000 ms","Index Lookup Result Size":"165","operatorId":"93"}]]></Details>
+								<Child ID="5401_op79_node">
+									<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+					</InnerPlans>
+				</RootRelation>
+			</Plan>
+			<Plan ID="5402_group45" Type="Executed" PlanType="Column">
+				<RootRelation ID="5402_group45_node" Status="Finished" Physical="True" TypeName="HEX">
+					<Name><![CDATA[HASH JOIN (LEFT OUTER)]]></Name>
+					<Summary><![CDATA[HASH CONDITION: /DMO/CARRIER.CARRIER_ID = ZTM268_BOOKING.CARRIER_ID, HASH SIZE: 1, LEFT SIDE HASH]]></Summary>
+					<ExecutionTime>
+						<Timestamps>[{"Pop":[{"start":1789634462021982,"end":1789634462026494}]}]</Timestamps>
+					</ExecutionTime>
+					<UserCPUTime Unit="ms">0.916</UserCPUTime>
+					<Details><![CDATA[{"max numUsedLocalContexts":"3","Est. Intermediate Cardinality":"0.5","Est. Left Side Input Cardinality":"1","Est. Output Cardinality":"1.83333","Est. Right Side Input Cardinality":"3","Estimated Output Cardinality":"2","Estimated Output Cardinality_1":"1","Memory Allocated":"0.014 MB","Output Spec":"[DocId] CARRIER_ID NVARCHAR(3), [DocId] CURRENCY_CODE NVARCHAR(5), [DocId] UNIQUE_ID INT, [DocId] BOOKING_DATE NVARCHAR(8), [DocId] CONNECTION_ID NVARCHAR(4), [DocId] FLIGHT_DATE NVARCHAR(8), [Value] PRICE_CLASS NVARCHAR(8), [Value] ? BIGINT, concat(...) VARCHAR","hashtable collect key":"/DMO/CARRIER.CARRIER_ID (NVARCHAR(3) NOT NULL)","hashtable lookup key":"ZTM268_BOOKING.CARRIER_ID (NVARCHAR(3))"}]]></Details>
+					<InnerPlans>
+						<Plan ID="5401_op79" Type="Executed" PlanType="Column">
+							<RootRelation ID="5401_op79_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[LlangInOutOperator]]></Name>
+								<Summary><![CDATA[<Materialize>; <Materialize: 1000022.20000000 (VARCHAR)>]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462025650,"end":1789634462026494}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.289</UserCPUTime>
+								<EstimatedOutputCardinality>2</EstimatedOutputCardinality>
+								<Details><![CDATA[{"max numUsedLocalContexts":"3","calls":"32","pipeline 14":"numUsedLocalContexts 3, CPUTime 0.289 ms, CPUWaitTime 0.000 ms, calls 32","pipeline 15":"numUsedLocalContexts 0, CPUTime 0.000 ms, CPUWaitTime 0.000 ms, calls 0","InitLocal CPUTime":"0.010 ms","InitLocal CPUWaitTime":"0.000 ms","Estimated Output Cardinality":"2","FieldToHeader":"1000001","JIT cache hit":"yes","JIT compile status":"Compiled (Policy: GlobalJitMode)","JIT opt level":"O2","operatorId":"92"}]]></Details>
+								<Child ID="5403_op78_node">
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5404_op87" Type="Executed" PlanType="Column">
+							<RootRelation ID="5404_op87_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[PartitionedHashJoinScheduleProduceMarkLeftOp<PartitionedHashJoinTargetMap<(unsignedchar)3,false>>]]></Name>
+								<Summary><![CDATA[Schedules ProduceMarkLeftOp of partitioned hash join]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462026690,"end":1789634462026727}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.037</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 15":"numUsedLocalContexts 1, CPUTime 0.037 ms, CPUWaitTime 0.000 ms, calls 1","operatorId":"90"}]]></Details>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5405_op88" Type="Executed" PlanType="Column">
+							<RootRelation ID="5405_op88_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[PartitionedHashJoinProduceMarkLeftOp<PartitionedHashJoinTargetMap<(unsignedchar)3,false>>]]></Name>
+								<Summary><![CDATA[Produce outer join rows from partitioned hash join #outCols=10]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462026744,"end":1789634462026788}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.016</UserCPUTime>
+								<EstimatedOutputCardinality>2</EstimatedOutputCardinality>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"8","pipeline 15":"numUsedLocalContexts 1, CPUTime 0.016 ms, CPUWaitTime 0.000 ms, calls 8","Estimated Output Cardinality":"2","TaskStats from op: 120":"count = 8, min = 2617ns, avg = 5061ns, max = 16094ns,  25%= 2812ns,  50%= 3608ns,  75%= 4752ns, parentOpId: 90","operatorId":"91"}]]></Details>
+								<Child ID="5404_op87_node">
+									<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5403_op78" Type="Executed" PlanType="Column">
+							<RootRelation ID="5403_op78_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[LlangInOutOperator]]></Name>
+								<Summary><![CDATA[Code-generated operator across relations <see next op>]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<UserCPUTime Unit="ms">0.000</UserCPUTime>
+								<EstimatedOutputCardinality>2</EstimatedOutputCardinality>
+								<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","Estimated Output Cardinality":"2","FieldToHeader":"1000001"}]]></Details>
+								<Child ID="5406_op77_node">
+									<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+								<Child ID="5405_op88_node">
+									<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5407_op16" Type="Executed" PlanType="Column">
+							<RootRelation ID="5407_op16_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[LlangInOperator]]></Name>
+								<Summary><![CDATA[<Materialize: /DMO/CARRIER.CARRIER_ID (NVARCHAR(3) NOT NULL)>; <Partition Input>]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462021982,"end":1789634462022143}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.028</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 5":"numUsedLocalContexts 1, CPUTime 0.028 ms, CPUWaitTime 0.000 ms, calls 1","InitLocal CPUTime":"0.005 ms","InitLocal CPUWaitTime":"0.000 ms","HeaderToField":"1000001","JIT cache hit":"yes","JIT compile status":"Compiled (Policy: GlobalJitMode)","JIT opt level":"O2","operatorId":"26"}]]></Details>
+								<Child ID="5408_op15_node">
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5408_op15" Type="Executed" PlanType="Column">
+							<RootRelation ID="5408_op15_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[LlangInOperator]]></Name>
+								<Summary><![CDATA[Code-generated operator across relations <see next op>]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<UserCPUTime Unit="ms">0.000</UserCPUTime>
+								<EstimatedOutputCardinality>1</EstimatedOutputCardinality>
+								<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","Estimated Output Cardinality":"1","HeaderToField":"1000001"}]]></Details>
+								<Child ID="5409_op12_node">
+									<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5406_op77" Type="Executed" PlanType="Column">
+							<RootRelation ID="5406_op77_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[LlangOutOperator]]></Name>
+								<Summary><![CDATA[<Merge part result, calculate post aggregations and materialize rows>; <Lookup rows in HashMap>; <Mark left matching rows>]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462025641,"end":1789634462026495}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.484</UserCPUTime>
+								<EstimatedOutputCardinality>2</EstimatedOutputCardinality>
+								<Details><![CDATA[{"max numUsedLocalContexts":"3","calls":"32","pipeline 14":"numUsedLocalContexts 3, CPUTime 0.484 ms, CPUWaitTime 0.000 ms, calls 32","InitLocal CPUTime":"0.017 ms","InitLocal CPUWaitTime":"0.000 ms","Estimated Output Cardinality":"2","JIT cache hit":"yes","JIT compile status":"Compiled (Policy: GlobalJitMode)","JIT opt level":"O2","TaskStats from op: 118":"count = 32, min = 24237ns, avg = 58157ns, max = 238691ns,  25%= 33098ns,  50%= 38945ns,  75%= 59416ns, parentOpId: 83","hashtable lookup key":"ZTM268_BOOKING.CARRIER_ID (NVARCHAR(3))","operatorId":"89"}]]></Details>
+								<Child ID="5410_op24_node">
+									<Details><![CDATA[{"ConnectionType":"Logical"}]]></Details>
+								</Child>
+								<Child ID="5411_op76_node">
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5410_op24" Type="Executed" PlanType="Column">
+							<RootRelation ID="5410_op24_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[PartitionedHashJoinCollectOp<PartitionedHashJoinTargetMap<(unsignedchar)3,false>,true>]]></Name>
+								<Summary><![CDATA[]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462022260,"end":1789634462022397}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.033</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 6":"numUsedLocalContexts 1, CPUTime 0.033 ms, CPUWaitTime 0.000 ms, calls 1","Init CPUTime":"0.003 ms","Init CPUWaitTime":"0.000 ms","InitLocal CPUTime":"0.007 ms","InitLocal CPUWaitTime":"0.000 ms","Finish CPUTime":"0.002 ms","Finish CPUWaitTime":"0.000 ms","BloomFilter":"IsNotSet","CoalMapSizes":"[3, 10, 3, 3, 3, 3, 3, 3]","JIT cache hit":"yes","JIT compile status":"Compiled (Policy: GlobalJitMode)","JIT opt level":"O2","MarkLeft":"True","Memory Allocated":"0.014 MB","Partitions":"8","TaskStats from op: 113":"count = 0, parentOpId: 4294967295","TotalCoalMapCapacity":"31","TotalInsertedDuplicateRows":"0","TotalInsertedRows":"1","TotalResizes":"0","hashtable collect key":"/DMO/CARRIER.CARRIER_ID (NVARCHAR(3) NOT NULL)","operatorId":"29"}]]></Details>
+								<Child ID="5412_op22_node">
+									<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5412_op22" Type="Executed" PlanType="Column">
+							<RootRelation ID="5412_op22_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[PartitionedHashJoinScheduleCollectOp<PartitionedHashJoinTargetMap<(unsignedchar)3,false>>]]></Name>
+								<Summary><![CDATA[Schedule partitioned hash join collect jobs]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462022274,"end":1789634462022328}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.024</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 6":"numUsedLocalContexts 1, CPUTime 0.024 ms, CPUWaitTime 0.000 ms, calls 1","EstimatedElements":"3","Partitions":"8","operatorId":"27"}]]></Details>
+								<Child ID="5407_op16_node">
+									<Details><![CDATA[{"ConnectionType":"Logical"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5413_op23" Type="Executed" PlanType="Column">
+							<RootRelation ID="5413_op23_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[EnforceCompilationByThresholdOpT<>]]></Name>
+								<Summary><![CDATA[]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462022294,"end":1789634462022299}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.005</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 6":"numUsedLocalContexts 1, CPUTime 0.005 ms, CPUWaitTime 0.000 ms, calls 1","TaskStats from op: 114":"count = 0, parentOpId: 4294967295","operatorId":"28"}]]></Details>
+								<Child ID="5412_op22_node">
+									<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+					</InnerPlans>
+				</RootRelation>
+			</Plan>
+			<Plan ID="5414_group46" Type="Executed" PlanType="Column">
+				<RootRelation ID="5414_group46_node" Status="Finished" Physical="True" TypeName="HEX">
+					<Name><![CDATA[Shared Sub-Plan]]></Name>
+					<Summary><![CDATA[]]></Summary>
+					<ExecutionTime>
+						<Timestamps>[{"Pop":[{"start":1789634462022116,"end":1789634462022160}]}]</Timestamps>
+					</ExecutionTime>
+					<UserCPUTime Unit="ms">0.007</UserCPUTime>
+					<Details><![CDATA[{"max numUsedLocalContexts":"1","Estimated Output Cardinality":"1","References":"Ref(0, breaker: false), Ref(1, breaker: false)","RelationMode":"Retain Original Fields"}]]></Details>
+					<InnerPlans>
+						<Plan ID="5409_op12" Type="Executed" PlanType="Column">
+							<RootRelation ID="5409_op12_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[RepeaterOp]]></Name>
+								<Summary><![CDATA[]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462022116,"end":1789634462022160}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.007</UserCPUTime>
+								<EstimatedOutputCardinality>1</EstimatedOutputCardinality>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 5":"numUsedLocalContexts 1, CPUTime 0.007 ms, CPUWaitTime 0.000 ms, calls 1","Estimated Output Cardinality":"1","operatorId":"23"}]]></Details>
+								<Child ID="5415_op11_node">
+									<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+					</InnerPlans>
+				</RootRelation>
+			</Plan>
+			<Plan ID="5416_group47" Type="Executed" PlanType="Column">
+				<RootRelation ID="5416_group47_node" Status="Finished" Physical="True" TypeName="HEX">
+					<Name><![CDATA[TABLE SCAN]]></Name>
+					<Summary><![CDATA[FILTER CONDITION: /DMO/CARRIER.MANDT = ?1 AND /DMO/CARRIER.CLIENT = SESSION_CONTEXT('CDS_CLIENT') AND /DMO/CARRIER.CARRIER_NAME = ?2 (DETAIL: ([SCAN] /DMO/CARRIER.CARRIER_NAME = ?2) AND ([POST-FILTER] /DMO/CARRIER.MANDT = ?1 AND /DMO/CARRIER.CLIENT = SESSION_CONTEXT('CDS_CLIENT')))]]></Summary>
+					<TableType><![CDATA[COLUMN TABLE]]></TableType>
+					<Schema><![CDATA[SAPHANADB]]></Schema>
+					<ObjectName><![CDATA[/DMO/CARRIER]]></ObjectName>
+					<ExecutionTime>
+						<Timestamps>[{"Pop":[{"start":1789634462021601,"end":1789634462021712}]}]</Timestamps>
+					</ExecutionTime>
+					<UserCPUTime Unit="ms">0.384</UserCPUTime>
+					<Details><![CDATA[{"max numUsedLocalContexts":"1","Active Table Fragments":"/DMO/CARRIER~main","Estimated Output Cardinality":"1","Filter":"(/DMO/CARRIER.NAME (NVARCHAR(40)) = ?(r:1) AND ?(r:-1) = (Collation: 24) 1)","Output Spec":"[DocId] CARRIER_ID NVARCHAR(3), [DocId] CURRENCY_CODE NVARCHAR(5)"}]]></Details>
+					<InnerPlans>
+						<Plan ID="5417_group13" Type="Executed" PlanType="Column">
+							<RootRelation ID="5417_group13_node" Status="Finished" Physical="True" TypeName="HEX">
+								<Name><![CDATA[TableScanControl]]></Name>
+								<Summary><![CDATA[]]></Summary>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462021601,"end":1789634462021713}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.014</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1"}]]></Details>
+								<InnerPlans>
+									<Plan ID="5418_op0" Type="Executed" PlanType="Column">
+										<RootRelation ID="5418_op0_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+											<Name><![CDATA[OpenFragmentsControlOp]]></Name>
+											<Summary><![CDATA[]]></Summary>
+											<Location><![CDATA[vhshpan5db01:30243]]></Location>
+											<ExecutionTime>
+												<Timestamps>[{"Pop":[{"start":1789634462021601,"end":1789634462021713}]}]</Timestamps>
+											</ExecutionTime>
+											<UserCPUTime Unit="ms">0.014</UserCPUTime>
+											<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 2":"numUsedLocalContexts 1, CPUTime 0.014 ms, CPUWaitTime 0.000 ms, calls 1","operatorId":"3"}]]></Details>
+										</RootRelation>
+									</Plan>
+								</InnerPlans>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5419_group12" Type="Executed" PlanType="Column">
+							<RootRelation ID="5419_group12_node" Status="Finished" Physical="True" TypeName="HEX">
+								<Name><![CDATA[/DMO/CARRIER[~main, ~delta1, ~delta2]]]></Name>
+								<Summary><![CDATA[(/DMO/CARRIER.NAME (NVARCHAR(40)) = ?(r:1) AND ?(r:-1) = (Collation: 24) 1)]]></Summary>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462021735,"end":1789634462022084}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.272</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","Active Table Fragments":"/DMO/CARRIER~main"}]]></Details>
+								<InnerPlans>
+									<Plan ID="5420_group17" Type="Executed" PlanType="Column">
+										<RootRelation ID="5420_group17_node" Status="Finished" Physical="True" TypeName="HEX">
+											<Name><![CDATA[/DMO/CARRIER.NAME (NVARCHAR(40)) = ?(r:1)]]></Name>
+											<Summary><![CDATA[Scan]]></Summary>
+											<ExecutionTime>
+												<Timestamps>[{"Pop":[{"start":1789634462021794,"end":1789634462022074}]}]</Timestamps>
+											</ExecutionTime>
+											<UserCPUTime Unit="ms">0.083</UserCPUTime>
+											<Details><![CDATA[{"max numUsedLocalContexts":"1","Assigned index in parent":"0","Estimated costs ds&dvs":"1052.805","Estimated costs dvl&dl":"1916.4015359999999","Estimated distinct count":"16","Estimated exclusive output size":"1","Estimated exclusive selectivity":"0.0625","Estimated inclusive output size":"1","Estimated inclusive selectivity":"0.0625","Estimated kurtosis":"Flat","Estimated null count":"0","Estimated previous output size":"16","Estimated previous selectivity":"1","Estimated row count":"16","Estimated top value counts":"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]","Estimation assumption":"WorstCase","Predicate order":"Free"}]]></Details>
+											<InnerPlans>
+												<Plan ID="5421_op7" Type="Executed" PlanType="Column">
+													<RootRelation ID="5421_op7_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[EqualDictScanOp]]></Name>
+														<Summary><![CDATA[Dictionary scan on SAPHANADB./DMO/CARRIER~main, ~delta1, ~delta2.NAME of group 5]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462021794,"end":1789634462021840}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.046</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 3":"numUsedLocalContexts 1, CPUTime 0.046 ms, CPUWaitTime 0.000 ms, calls 1","StateAfterRun (~main)":"{PredInitState: ValueIdSet: ValueIdSet(kind=Range isSorted=Yes size=1 [9, 10)), RowCountEstimation: {exactly 1 row}, Uses: 1, PredicateEstimationState: {RowCountEstimation: {exactly 1 row}, ChunkCapacityBound: 1, LargestIntermediateResult: 0}, DictScanFlags: {allowedToSkipDictScan: false, dictScanSkipped: false}}","operatorId":"17"}]]></Details>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5422_op21" Type="Executed" PlanType="Column">
+													<RootRelation ID="5422_op21_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[PredicateOp]]></Name>
+														<Summary><![CDATA[Data vector scan/lookup on SAPHANADB./DMO/CARRIER~main, ~delta1, ~delta2.NAME of group 5]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462021995,"end":1789634462022074}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.037</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 5":"numUsedLocalContexts 1, CPUTime 0.037 ms, CPUWaitTime 0.000 ms, calls 1","Init CPUTime":"0.003 ms","Init CPUWaitTime":"0.000 ms","InitLocal CPUTime":"0.004 ms","InitLocal CPUWaitTime":"0.000 ms","operatorId":"18"}]]></Details>
+													</RootRelation>
+												</Plan>
+											</InnerPlans>
+										</RootRelation>
+									</Plan>
+									<Plan ID="5423_group15" Type="Executed" PlanType="Column">
+										<RootRelation ID="5423_group15_node" Status="Finished" Physical="True" TypeName="HEX">
+											<Name><![CDATA[Visibility]]></Name>
+											<Summary><![CDATA[Filter]]></Summary>
+											<ExecutionTime>
+												<Timestamps>[{"Pop":[{"start":1789634462021739,"end":1789634462022111}]}]</Timestamps>
+											</ExecutionTime>
+											<UserCPUTime Unit="ms">0.092</UserCPUTime>
+											<Details><![CDATA[{"max numUsedLocalContexts":"1"}]]></Details>
+											<InnerPlans>
+												<Plan ID="5424_op3" Type="Executed" PlanType="Column">
+													<RootRelation ID="5424_op3_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[PostFilterConjInitOp]]></Name>
+														<Summary><![CDATA[PostFilterConj (AND) with early return support in init pipeline of group 3]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462021739,"end":1789634462021868}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.013</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 3":"numUsedLocalContexts 1, CPUTime 0.013 ms, CPUWaitTime 0.000 ms, calls 1","StateAfterRun (~main)":"{PredicateEstimationState: {RowCountEstimation: {approx. 1 row}, ChunkCapacityBound: 1, LargestIntermediateResult: 0}}","operatorId":"11"}]]></Details>
+														<Child ID="5425_op5_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+														<Child ID="5426_op4_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5427_op9" Type="Executed" PlanType="Column">
+													<RootRelation ID="5427_op9_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[PostFilterConjIndexLookupOp]]></Name>
+														<Summary><![CDATA[PostFilterConjunction (AND) with Early Return support for IndexLookup of group 3]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462021899,"end":1789634462021923}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.010</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 4":"numUsedLocalContexts 1, CPUTime 0.010 ms, CPUWaitTime 0.000 ms, calls 1","StateAfterRun (~main)":"{IndexLookupResult: n/a}","operatorId":"12"}]]></Details>
+														<Child ID="5428_op10_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5426_op4" Type="Executed" PlanType="Column">
+													<RootRelation ID="5426_op4_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[VisibilityFilterEstimationOp]]></Name>
+														<Summary><![CDATA[Estimate transactional visibility check on SAPHANADB./DMO/CARRIER~main, ~delta1, ~delta2 of group 3]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462021743,"end":1789634462021861}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.039</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"2","pipeline 3":"numUsedLocalContexts 1, CPUTime 0.039 ms, CPUWaitTime 0.000 ms, calls 2","StateAfterRun (~main)":"{PredicateEstimationState: {RowCountEstimation: {approx. 16 rows}, ChunkCapacityBound: NO_BOUND, LargestIntermediateResult: 0}}","operatorId":"21"}]]></Details>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5429_op17" Type="Executed" PlanType="Column">
+													<RootRelation ID="5429_op17_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[PostFilterConjOp]]></Name>
+														<Summary><![CDATA[Post filter conjunction of group 3]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022037,"end":1789634462022113}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.008</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 5":"numUsedLocalContexts 1, CPUTime 0.008 ms, CPUWaitTime 0.000 ms, calls 1","operatorId":"13"}]]></Details>
+														<Child ID="5430_op18_node">
+															<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+														<Child ID="5431_op19_node">
+															<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5430_op18" Type="Executed" PlanType="Column">
+													<RootRelation ID="5430_op18_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[VisibilityFilterOp]]></Name>
+														<Summary><![CDATA[Check transactional visibility on SAPHANADB./DMO/CARRIER~main, ~delta1, ~delta2 of group 3]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022089,"end":1789634462022111}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.022</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 5":"numUsedLocalContexts 1, CPUTime 0.022 ms, CPUWaitTime 0.000 ms, calls 1","operatorId":"22"}]]></Details>
+													</RootRelation>
+												</Plan>
+											</InnerPlans>
+										</RootRelation>
+									</Plan>
+									<Plan ID="5432_group14" Type="Executed" PlanType="Column">
+										<RootRelation ID="5432_group14_node" Status="Finished" Physical="True" TypeName="HEX">
+											<Name><![CDATA[FragmentScan]]></Name>
+											<Summary><![CDATA[]]></Summary>
+											<ExecutionTime>
+												<Timestamps>[{"Pop":[{"start":1789634462021735,"end":1789634462021929}]}]</Timestamps>
+											</ExecutionTime>
+											<UserCPUTime Unit="ms">0.037</UserCPUTime>
+											<Details><![CDATA[{"max numUsedLocalContexts":"1","Active Table Fragments":"/DMO/CARRIER~main"}]]></Details>
+											<InnerPlans>
+												<Plan ID="5433_op2" Type="Executed" PlanType="Column">
+													<RootRelation ID="5433_op2_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[FragmentScanInitOp]]></Name>
+														<Summary><![CDATA[Initialize scan on SAPHANADB./DMO/CARRIER~main, ~delta1, ~delta2 of group 1]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462021735,"end":1789634462021880}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.016</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 3":"numUsedLocalContexts 1, CPUTime 0.016 ms, CPUWaitTime 0.000 ms, calls 1","StateAfterRun (~main)":"{PredicateEstimationState: {RowCountEstimation: {approx. 1 row}, ChunkCapacityBound: 1, LargestIntermediateResult: 0}, Fragment Cardinality: 16 rows}","operatorId":"8"}]]></Details>
+														<Child ID="5424_op3_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5415_op11" Type="Executed" PlanType="Column">
+													<RootRelation ID="5415_op11_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[FragmentScanOp_RpRp]]></Name>
+														<Summary><![CDATA[Scan on SAPHANADB./DMO/CARRIER~main, ~delta1, ~delta2 of group 1]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022031,"end":1789634462022163}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.012</UserCPUTime>
+														<EstimatedOutputCardinality>1</EstimatedOutputCardinality>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 5":"numUsedLocalContexts 1, CPUTime 0.012 ms, CPUWaitTime 0.000 ms, calls 1","Estimated Output Cardinality":"1","TaskStats from op: 112":"count = 0, parentOpId: 4294967295\u000aSampling: \u000aSampling interrupted or no sampling took place for opId: 7. SampleSize: 255 rangeSize: 16 maxSampleSize: 8192 earlyExit: 0 hasRunOutOfTime: 0 isCostGettingWorse: 0\u000acalculated cost: 0 for op: 7 taskSize: 18446744073709551615 will run in seq: 1 totalRowCount: 16\u000a","operatorId":"10"}]]></Details>
+														<Child ID="5429_op17_node">
+															<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5434_op8" Type="Executed" PlanType="Column">
+													<RootRelation ID="5434_op8_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[FragmentScanIndexLookupOp]]></Name>
+														<Summary><![CDATA[Index Lookup on SAPHANADB./DMO/CARRIER~main, ~delta1, ~delta2]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462021896,"end":1789634462021929}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.009</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 4":"numUsedLocalContexts 1, CPUTime 0.009 ms, CPUWaitTime 0.000 ms, calls 1","StateAfterRun (~main)":"{IndexLookupResult: n/a}","operatorId":"9"}]]></Details>
+														<Child ID="5427_op9_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+											</InnerPlans>
+										</RootRelation>
+									</Plan>
+									<Plan ID="5435_group16" Type="Executed" PlanType="Column">
+										<RootRelation ID="5435_group16_node" Status="Finished" Physical="True" TypeName="HEX">
+											<Name><![CDATA[?(r:-1) = (Collation: 24) 1]]></Name>
+											<Summary><![CDATA[Postfilter]]></Summary>
+											<ExecutionTime>
+												<Timestamps>[{"Pop":[{"start":1789634462021778,"end":1789634462022084}]}]</Timestamps>
+											</ExecutionTime>
+											<UserCPUTime Unit="ms">0.060</UserCPUTime>
+											<Details><![CDATA[{"max numUsedLocalContexts":"1","Estimated inclusive output size":"1","Estimated inclusive selectivity":"0.0625","Estimated kurtosis":"Unknown","Estimated previous output size":"1","Estimated previous selectivity":"0.0625","Estimated row count":"16","Estimation assumption":"WorstCase","Predicate order":"Free"}]]></Details>
+											<InnerPlans>
+												<Plan ID="5425_op5" Type="Executed" PlanType="Column">
+													<RootRelation ID="5425_op5_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[PostFilterConjInitOp]]></Name>
+														<Summary><![CDATA[PostFilterConj (AND) with early return support in init pipeline of group 4]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462021778,"end":1789634462021855}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.014</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 3":"numUsedLocalContexts 1, CPUTime 0.014 ms, CPUWaitTime 0.000 ms, calls 1","StateAfterRun (~main)":"{PredicateEstimationState: {RowCountEstimation: {approx. 1 row}, ChunkCapacityBound: 1, LargestIntermediateResult: 0}}","operatorId":"14"}]]></Details>
+														<Child ID="5436_op6_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+														<Child ID="5421_op7_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5436_op6" Type="Executed" PlanType="Column">
+													<RootRelation ID="5436_op6_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[PostFilterInitOp]]></Name>
+														<Summary><![CDATA[PostFilterInitOp with early return support in init pipeline of group 4]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462021781,"end":1789634462021846}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.017</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"2","pipeline 3":"numUsedLocalContexts 1, CPUTime 0.017 ms, CPUWaitTime 0.000 ms, calls 2","StateAfterRun (~main)":"{PredicateEstimationState: {RowCountEstimation: {approx. 16 rows}, ChunkCapacityBound: NO_BOUND, LargestIntermediateResult: 0}}","operatorId":"19"}]]></Details>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5431_op19" Type="Executed" PlanType="Column">
+													<RootRelation ID="5431_op19_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[PostFilterConjOp]]></Name>
+														<Summary><![CDATA[Post filter conjunction of group 4]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022041,"end":1789634462022087}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.007</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 5":"numUsedLocalContexts 1, CPUTime 0.007 ms, CPUWaitTime 0.000 ms, calls 1","operatorId":"16"}]]></Details>
+														<Child ID="5422_op21_node">
+															<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+														<Child ID="5437_op20_node">
+															<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5428_op10" Type="Executed" PlanType="Column">
+													<RootRelation ID="5428_op10_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[PostFilterConjIndexLookupOp]]></Name>
+														<Summary><![CDATA[PostFilterConjunction (AND) with Early Return support for IndexLookup of group 4]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462021903,"end":1789634462021916}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.011</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 4":"numUsedLocalContexts 1, CPUTime 0.011 ms, CPUWaitTime 0.000 ms, calls 1","StateAfterRun (~main)":"{IndexLookupResult: n/a}","operatorId":"15"}]]></Details>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5437_op20" Type="Executed" PlanType="Column">
+													<RootRelation ID="5437_op20_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[LlangLeafOperator]]></Name>
+														<Summary><![CDATA[<?(r:-1) = (Collation: 24) 1>]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462021991,"end":1789634462022084}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.011</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 5":"numUsedLocalContexts 1, CPUTime 0.011 ms, CPUWaitTime 0.000 ms, calls 1","InitLocal CPUTime":"0.002 ms","InitLocal CPUWaitTime":"0.000 ms","JIT cache hit":"yes","JIT compile status":"Compiled (Policy: GlobalJitMode)","JIT opt level":"O2","operatorId":"20"}]]></Details>
+													</RootRelation>
+												</Plan>
+											</InnerPlans>
+										</RootRelation>
+									</Plan>
+								</InnerPlans>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5438_op1" Type="Executed" PlanType="Column">
+							<RootRelation ID="5438_op1_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[OpenFragmentsOp<0u>]]></Name>
+								<Summary><![CDATA[Open Fragments SAPHANADB./DMO/CARRIER~main, ~delta1, ~delta2]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462021614,"end":1789634462021712}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.098</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 2":"numUsedLocalContexts 1, CPUTime 0.098 ms, CPUWaitTime 0.000 ms, calls 1","operatorId":"4"}]]></Details>
+								<Child ID="5418_op0_node">
+									<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+					</InnerPlans>
+				</RootRelation>
+			</Plan>
+			<Plan ID="5439_group48" Type="Executed" PlanType="Column">
+				<RootRelation ID="5439_group48_node" Status="Finished" Physical="True" TypeName="HEX">
+					<Name><![CDATA[AGGREGATION]]></Name>
+					<Summary><![CDATA[GROUPING: ZTM268_BOOKING.CONNECTION_ID, ZTM268_BOOKING.FLIGHT_DATE, ZTM268_BOOKING.BOOKING_DATE, ZTM268_BOOKING.UNIQUE_ID, PRICE_CLASS, ZTM268_BOOKING.CARRIER_ID, AGGREGATION: COUNT(*)]]></Summary>
+					<ExecutionTime>
+						<Timestamps>[{"Pop":[{"start":1789634462023122,"end":1789634462025739}]}]</Timestamps>
+					</ExecutionTime>
+					<UserCPUTime Unit="ms">2.002</UserCPUTime>
+					<Details><![CDATA[{"max numUsedLocalContexts":"3","Estimated Output Cardinality":"3","Estimated Output Cardinality_1":"3.86281e+06","HashColumn(0)":"ZTM268_BOOKING.CONNECTION_ID (NVARCHAR(4))","HashColumn(1)":"ZTM268_BOOKING.FLIGHT_DATE (NVARCHAR(8))","HashColumn(2)":"ZTM268_BOOKING.BOOKING_DATE (NVARCHAR(8))","HashColumn(3)":"ZTM268_BOOKING.ID (INT)","HashColumn(4)":"1000010.10000000 (NVARCHAR(8) NOT NULL)","HashColumn(5)":"ZTM268_BOOKING.CARRIER_ID (NVARCHAR(3))","Memory Allocated":"0.179 MB","Output Spec":"[DocId] UNIQUE_ID INT, [DocId] BOOKING_DATE NVARCHAR(8), [DocId, Value] CARRIER_ID NVARCHAR(3), [DocId] CONNECTION_ID NVARCHAR(4), [DocId] FLIGHT_DATE NVARCHAR(8), [Value] PRICE_CLASS NVARCHAR(8), [Value] ? BIGINT","agg(0)":"Count(*) -> 1000014.10000000 (BIGINT NOT NULL)","rowWidth":"104"}]]></Details>
+					<InnerPlans>
+						<Plan ID="5440_op59" Type="Executed" PlanType="Column">
+							<RootRelation ID="5440_op59_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[LlangInOperator]]></Name>
+								<Summary><![CDATA[<Materialize: ZTM268_BOOKING.FLIGHT_PRICE (FIXED8(16, 2)), 1000019.20000000 (NVARCHAR(8) NOT NULL)>; <Materialize: 1000010.10000000 (NVARCHAR(8) NOT NULL)>; <Materialize: ZTM268_BOOKING.CARRIER_ID (NVARCHAR(3))>; <Materialize: ZTM268_BOOKING.ID (INT), ZTM268_BOOKING.BOOKING_DATE (NVARCHAR(8)), ZTM268_BOOKING.CONNECTION_ID (NVARCHAR(4)), ZTM268_BOOKING.FLIGHT_DATE (NVARCHAR(8))>; <Collect rows in a CoalMap and compute aggregates>]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462023122,"end":1789634462025368}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">1.964</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"3","calls":"13","pipeline 12":"numUsedLocalContexts 3, CPUTime 1.964 ms, CPUWaitTime 0.000 ms, calls 13","pipeline 13":"numUsedLocalContexts 0, CPUTime 0.000 ms, CPUWaitTime 0.000 ms, calls 0","InitLocal CPUTime":"0.038 ms","InitLocal CPUWaitTime":"0.000 ms","HashColumn(0)":"ZTM268_BOOKING.CONNECTION_ID (NVARCHAR(4))","HashColumn(1)":"ZTM268_BOOKING.FLIGHT_DATE (NVARCHAR(8))","HashColumn(2)":"ZTM268_BOOKING.BOOKING_DATE (NVARCHAR(8))","HashColumn(3)":"ZTM268_BOOKING.ID (INT)","HashColumn(4)":"1000010.10000000 (NVARCHAR(8) NOT NULL)","HashColumn(5)":"ZTM268_BOOKING.CARRIER_ID (NVARCHAR(3))","JIT cache hit":"yes","JIT compile status":"Compiled (Policy: GlobalJitMode)","JIT opt level":"O2","Memory Allocated":"0.179 MB","agg(0)":"Count(*) -> 1000014.10000000 (BIGINT NOT NULL)","operatorId":"82","rowWidth":"104"}]]></Details>
+								<Child ID="5441_op58_node">
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5441_op58" Type="Executed" PlanType="Column">
+							<RootRelation ID="5441_op58_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[LlangInOperator]]></Name>
+								<Summary><![CDATA[Code-generated operator across relations <see next op>]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<UserCPUTime Unit="ms">0.000</UserCPUTime>
+								<EstimatedOutputCardinality>3.86e+06</EstimatedOutputCardinality>
+								<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","Estimated Output Cardinality":"3.86281e+06","HashColumn(0)":"ZTM268_BOOKING.CONNECTION_ID (NVARCHAR(4))","HashColumn(1)":"ZTM268_BOOKING.FLIGHT_DATE (NVARCHAR(8))","HashColumn(2)":"ZTM268_BOOKING.BOOKING_DATE (NVARCHAR(8))","HashColumn(3)":"ZTM268_BOOKING.ID (INT)","HashColumn(4)":"1000010.10000000 (NVARCHAR(8) NOT NULL)","HashColumn(5)":"ZTM268_BOOKING.CARRIER_ID (NVARCHAR(3))","agg(0)":"Count(*) -> 1000014.10000000 (BIGINT NOT NULL)","rowWidth":"104"}]]></Details>
+								<Child ID="5442_op57_node">
+									<Details><![CDATA[{"ConnectionType":"Logical"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5443_op74" Type="Executed" PlanType="Column">
+							<RootRelation ID="5443_op74_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[MergeCoalMapsSchedulingOp<GroupByPayloadHandler>]]></Name>
+								<Summary><![CDATA[Schedule tasks to merge CoalMapArrays into final result]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462025719,"end":1789634462025757}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.034</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 14":"numUsedLocalContexts 1, CPUTime 0.034 ms, CPUWaitTime 0.000 ms, calls 1","InputNumLocalStates":"3","NumMaps":"1","NumScheduledStates":"32","avgFillRate":"55","avgNumBits":"5","estimatedDistinctCount":"0","maxNumBits":"9","numBits":"3","numCoalMaps":"10","numInserts":"1844","numParts":"32","operatorId":"83","size":"411"}]]></Details>
+								<Child ID="5440_op59_node">
+									<Details><![CDATA[{"ConnectionType":"Logical"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5411_op76" Type="Executed" PlanType="Column">
+							<RootRelation ID="5411_op76_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[LlangOutOperator]]></Name>
+								<Summary><![CDATA[Code-generated operator across relations <see next op>]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<UserCPUTime Unit="ms">0.000</UserCPUTime>
+								<EstimatedOutputCardinality>3</EstimatedOutputCardinality>
+								<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","Estimated Output Cardinality":"3","hashtable lookup key":"ZTM268_BOOKING.CARRIER_ID (NVARCHAR(3))"}]]></Details>
+								<Child ID="5443_op74_node">
+									<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5444_op75" Type="Executed" PlanType="Column">
+							<RootRelation ID="5444_op75_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[EnforceCompilationByThresholdOpT<>]]></Name>
+								<Summary><![CDATA[]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462025735,"end":1789634462025739}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.004</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 14":"numUsedLocalContexts 1, CPUTime 0.004 ms, CPUWaitTime 0.000 ms, calls 1","TaskStats from op: 119":"count = 0, parentOpId: 4294967295","operatorId":"84"}]]></Details>
+								<Child ID="5443_op74_node">
+									<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+					</InnerPlans>
+				</RootRelation>
+			</Plan>
+			<Plan ID="5445_group49" Type="Executed" PlanType="Column">
+				<RootRelation ID="5445_group49_node" Status="NotStarted" Physical="True" TypeName="HEX">
+					<Name><![CDATA[MATERIALIZE]]></Name>
+					<Summary><![CDATA[CASE WHEN ZTM268_BOOKING.FLIGHT_PRICE > 1500 THEN 'PREMIUM' WHEN ZTM268_BOOKING.FLIGHT_PRICE > 1000 AND ZTM268_BOOKING.FLIGHT_PRICE <= 1500 THEN 'BUSINESS' ELSE 'STANDARD' END]]></Summary>
+					<UserCPUTime Unit="ms">0.000</UserCPUTime>
+					<Details><![CDATA[{"max numUsedLocalContexts":"0","Estimated Output Cardinality":"3.86281e+06","Output Spec":"[DocId] UNIQUE_ID INT, [DocId] BOOKING_DATE NVARCHAR(8), [DocId, Value] CARRIER_ID NVARCHAR(3), [DocId] CONNECTION_ID NVARCHAR(4), [DocId] FLIGHT_DATE NVARCHAR(8), [Value] PRICE_CLASS NVARCHAR(8)"}]]></Details>
+					<InnerPlans>
+						<Plan ID="5446_op56" Type="Executed" PlanType="Column">
+							<RootRelation ID="5446_op56_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[LlangInOperator]]></Name>
+								<Summary><![CDATA[Code-generated operator across relations <see next op>]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<UserCPUTime Unit="ms">0.000</UserCPUTime>
+								<EstimatedOutputCardinality>3.86e+06</EstimatedOutputCardinality>
+								<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","Estimated Output Cardinality":"3.86281e+06","HashColumn(0)":"ZTM268_BOOKING.CONNECTION_ID (NVARCHAR(4))","HashColumn(1)":"ZTM268_BOOKING.FLIGHT_DATE (NVARCHAR(8))","HashColumn(2)":"ZTM268_BOOKING.BOOKING_DATE (NVARCHAR(8))","HashColumn(3)":"ZTM268_BOOKING.ID (INT)","HashColumn(4)":"1000010.10000000 (NVARCHAR(8) NOT NULL)","HashColumn(5)":"ZTM268_BOOKING.CARRIER_ID (NVARCHAR(3))","agg(0)":"Count(*) -> 1000014.10000000 (BIGINT NOT NULL)","rowWidth":"104"}]]></Details>
+								<Child ID="5447_op55_node">
+									<Details><![CDATA[{"ConnectionType":"Logical"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5442_op57" Type="Executed" PlanType="Column">
+							<RootRelation ID="5442_op57_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[LlangInOperator]]></Name>
+								<Summary><![CDATA[Code-generated operator across relations <see next op>]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<UserCPUTime Unit="ms">0.000</UserCPUTime>
+								<EstimatedOutputCardinality>3.86e+06</EstimatedOutputCardinality>
+								<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","Estimated Output Cardinality":"3.86281e+06","HashColumn(0)":"ZTM268_BOOKING.CONNECTION_ID (NVARCHAR(4))","HashColumn(1)":"ZTM268_BOOKING.FLIGHT_DATE (NVARCHAR(8))","HashColumn(2)":"ZTM268_BOOKING.BOOKING_DATE (NVARCHAR(8))","HashColumn(3)":"ZTM268_BOOKING.ID (INT)","HashColumn(4)":"1000010.10000000 (NVARCHAR(8) NOT NULL)","HashColumn(5)":"ZTM268_BOOKING.CARRIER_ID (NVARCHAR(3))","agg(0)":"Count(*) -> 1000014.10000000 (BIGINT NOT NULL)","rowWidth":"104"}]]></Details>
+								<Child ID="5446_op56_node">
+									<Details><![CDATA[{"ConnectionType":"Logical"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+					</InnerPlans>
+				</RootRelation>
+			</Plan>
+			<Plan ID="5448_group50" Type="Executed" PlanType="Column">
+				<RootRelation ID="5448_group50_node" Status="Finished" Physical="True" TypeName="HEX">
+					<Name><![CDATA[TABLE SCAN SEMI JOIN]]></Name>
+					<Summary><![CDATA[JOIN CONDITION: ZTM268_BOOKING.CARRIER_ID = /DMO/CARRIER.CARRIER_ID, FILTER CONDITION: ZTM268_BOOKING.MANDT = ?1 AND ZTM268_BOOKING.CLIENT = SESSION_CONTEXT('CDS_CLIENT') (DETAIL: (([SCAN] ZTM268_BOOKING.CARRIER_ID = /DMO/CARRIER.CARRIER_ID) AND ([INDEX LOOK-UP] ZTM268_BOOKING.MANDT = ?1) AND ([INDEX LOOK-UP] ZTM268_BOOKING.CLIENT = SESSION_CONTEXT('CDS_CLIENT'))))]]></Summary>
+					<TableType><![CDATA[COLUMN TABLE]]></TableType>
+					<Schema><![CDATA[SAPHANADB]]></Schema>
+					<ObjectName><![CDATA[ZTM268_BOOKING]]></ObjectName>
+					<ExecutionTime>
+						<Timestamps>[{"Pop":[{"start":1789634462021948,"end":1789634462022573}]}]</Timestamps>
+					</ExecutionTime>
+					<UserCPUTime Unit="ms">1.709</UserCPUTime>
+					<Details><![CDATA[{"max numUsedLocalContexts":"3","Active Table Fragments":"ZTM268_BOOKING~delta1, ZTM268_BOOKING~main","Estimated Output Cardinality":"4.06612e+06","Estimated Output Cardinality_1":"1","Filter":"(ValueIdList(/DMO/CARRIER.CARRIER_ID (NVARCHAR(3) NOT NULL), ZTM268_BOOKING.CARRIER_ID (NVARCHAR(3))) AND ZTM268_BOOKING.CLIENT (NVARCHAR(3)) = ?(r:0) AND ZTM268_BOOKING.CLIENT (NVARCHAR(3)) = ?(r:-2))","Memory Allocated":"0.000 MB","Operator Specific Partition Info":"{\"Table Logical Partition Info\": (empty)}","Output Spec":"[DocId] UNIQUE_ID INT, [DocId] BOOKING_DATE NVARCHAR(8), [DocId] CARRIER_ID NVARCHAR(3), [DocId] CONNECTION_ID NVARCHAR(4), [DocId] FLIGHT_DATE NVARCHAR(8), PRICE_CLASS NVARCHAR(8)"}]]></Details>
+					<InnerPlans>
+						<Plan ID="5449_group25" Type="Executed" PlanType="Column">
+							<RootRelation ID="5449_group25_node" Status="Finished" Physical="True" TypeName="HEX">
+								<Name><![CDATA[ZTM268_BOOKING~main]]></Name>
+								<Summary><![CDATA[(ValueIdList(/DMO/CARRIER.CARRIER_ID (NVARCHAR(3) NOT NULL), ZTM268_BOOKING.CARRIER_ID (NVARCHAR(3))) AND ZTM268_BOOKING.CLIENT (NVARCHAR(3)) = ?(r:0) AND ZTM268_BOOKING.CLIENT (NVARCHAR(3)) = ?(r:-2))]]></Summary>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462022722,"end":1789634462024486}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">1.224</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"3","Active Table Fragments":"ZTM268_BOOKING~main"}]]></Details>
+								<InnerPlans>
+									<Plan ID="5450_group35" Type="Executed" PlanType="Column">
+										<RootRelation ID="5450_group35_node" Status="Finished" Physical="True" TypeName="HEX">
+											<Name><![CDATA[AND]]></Name>
+											<Summary><![CDATA[]]></Summary>
+											<ExecutionTime>
+												<Timestamps>[{"Pop":[{"start":1789634462022739,"end":1789634462024491}]}]</Timestamps>
+											</ExecutionTime>
+											<UserCPUTime Unit="ms">0.196</UserCPUTime>
+											<Details><![CDATA[{"max numUsedLocalContexts":"3","Estimated costs ds&dvs":"0","Estimated costs dvl&dl":"0","Estimated exclusive output size":"4066120.333333333","Estimated exclusive selectivity":"0.16666666666666666","Estimated inclusive output size":"4066120.333333333","Estimated inclusive selectivity":"0.16666666666666666","Estimated kurtosis":"Unknown","Estimated previous output size":"24396722","Estimated previous selectivity":"1","Estimated row count":"24396722","Estimation assumption":"WorstCase","Predicate order":"Free"}]]></Details>
+											<InnerPlans>
+												<Plan ID="5451_op31" Type="Executed" PlanType="Column">
+													<RootRelation ID="5451_op31_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[ConjunctionInitOp]]></Name>
+														<Summary><![CDATA[Conjunction (AND) with Early Return support for DS of group 17]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022739,"end":1789634462022825}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.027</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 10":"numUsedLocalContexts 1, CPUTime 0.027 ms, CPUWaitTime 0.000 ms, calls 1","StateAfterRun (~main)":"{PredicateEstimationState: {RowCountEstimation: {approx. 1844 rows}, ChunkCapacityBound: 23745509, LargestIntermediateResult: 1844}, ConjunctionInitOpState: {PredicateEstimationStates: [{RowCountEstimation: {exactly 1844 rows}, ChunkCapacityBound: 1844, LargestIntermediateResult: 0}, {RowCountEstimation: {exactly 23745509 rows}, ChunkCapacityBound: 23745509, LargestIntermediateResult: 0}, {RowCountEstimation: {exactly 23745509 rows}, ChunkCapacityBound: 23745509, LargestIntermediateResult: 0}]}, ConjunctionOpState: {EvaluationOrder: [0, 1, 2]}}","operatorId":"64"}]]></Details>
+														<Child ID="5452_op34_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+														<Child ID="5453_op33_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+														<Child ID="5454_op32_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5455_op44" Type="Executed" PlanType="Column">
+													<RootRelation ID="5455_op44_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[ConjunctionIndexLookupOp]]></Name>
+														<Summary><![CDATA[Conjunction (AND) with Early Return support for IndexLookup of group 17]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022924,"end":1789634462022935}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.009</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 11":"numUsedLocalContexts 1, CPUTime 0.009 ms, CPUWaitTime 0.000 ms, calls 1","StateAfterRun (~main)":"{IndexLookupResult: n/a}","operatorId":"65"}]]></Details>
+														<Child ID="5456_op46_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+														<Child ID="5457_op45_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5458_op62" Type="Executed" PlanType="Column">
+													<RootRelation ID="5458_op62_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[ConjunctionOp]]></Name>
+														<Summary><![CDATA[Conjunction (AND) of group 17]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462023167,"end":1789634462024491}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.160</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"3","calls":"93","pipeline 12":"numUsedLocalContexts 3, CPUTime 0.160 ms, CPUWaitTime 0.000 ms, calls 93","operatorId":"66"}]]></Details>
+														<Child ID="5459_op65_node">
+															<ExecutedOutputCardinality>1844</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+														<Child ID="5460_op63_node">
+															<ExecutedOutputCardinality>1844</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+														<Child ID="5461_op64_node">
+															<ExecutedOutputCardinality>1844</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+											</InnerPlans>
+										</RootRelation>
+									</Plan>
+									<Plan ID="5462_group33" Type="Executed" PlanType="Column">
+										<RootRelation ID="5462_group33_node" Status="Finished" Physical="True" TypeName="HEX">
+											<Name><![CDATA[FragmentScan]]></Name>
+											<Summary><![CDATA[]]></Summary>
+											<ExecutionTime>
+												<Timestamps>[{"Pop":[{"start":1789634462022722,"end":1789634462022947}]}]</Timestamps>
+											</ExecutionTime>
+											<UserCPUTime Unit="ms">0.231</UserCPUTime>
+											<Details><![CDATA[{"max numUsedLocalContexts":"3","Active Table Fragments":"ZTM268_BOOKING~main"}]]></Details>
+											<InnerPlans>
+												<Plan ID="5463_op28" Type="Executed" PlanType="Column">
+													<RootRelation ID="5463_op28_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[FragmentScanInitOp]]></Name>
+														<Summary><![CDATA[Initialize scan on SAPHANADB.ZTM268_BOOKING~main of group 14]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022722,"end":1789634462022860}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.013</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 10":"numUsedLocalContexts 1, CPUTime 0.013 ms, CPUWaitTime 0.000 ms, calls 1","StateAfterRun (~main)":"{PredicateEstimationState: {RowCountEstimation: {approx. 1844 rows}, ChunkCapacityBound: 23745509, LargestIntermediateResult: 1844}, Fragment Cardinality: 23745509 rows}","operatorId":"58"}]]></Details>
+														<Child ID="5464_op29_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5465_op52" Type="Executed" PlanType="Column">
+													<RootRelation ID="5465_op52_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[FragmentScanOp_RpRp]]></Name>
+														<Summary><![CDATA[Scan on SAPHANADB.ZTM268_BOOKING~main of group 14]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462023159,"end":1789634462025378}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.209</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"3","calls":"93","pipeline 12":"numUsedLocalContexts 3, CPUTime 0.209 ms, CPUWaitTime 0.000 ms, calls 93","TaskStats from op: 116":"count = 93, min = 7237ns, avg = 23790ns, max = 909071ns,  25%= 7483ns,  50%= 8016ns,  75%= 8857ns, parentOpId: 38\u000aSampling: \u000aOpId: 38 sampleSize: 255 elapsedTimeInNs: 39302 overhead: 0 cpiScalingFactor: 1 currCost: 154.125 costChangeFactor: 1 TotalCost: 154.125\u000aOpId: 38 sampleSize: 512 elapsedTimeInNs: 10064 overhead: 0 cpiScalingFactor: 1 currCost: 19.6562 costChangeFactor: 0.872465 TotalCost: 19.6562\u000aOpId: 38 sampleSize: 1024 elapsedTimeInNs: 7903 overhead: 0 cpiScalingFactor: 1 currCost: 7.71777 costChangeFactor: 0.607362 TotalCost: 7.71777\u000aOpId: 38 sampleSize: 2048 elapsedTimeInNs: 7632 overhead: 0 cpiScalingFactor: 1 currCost: 3.72656 costChangeFactor: 0.517145 TotalCost: 3.72656\u000aOpId: 38 sampleSize: 4096 elapsedTimeInNs: 7548 overhead: 0 cpiScalingFactor: 1 currCost: 1.84277 costChangeFactor: 0.505503 TotalCost: 1.84277\u000aOpId: 38 sampleSize: 8192 elapsedTimeInNs: 7447 overhead: 0 cpiScalingFactor: 1 currCost: 0.909057 costChangeFactor: 0.50669 TotalCost: 0.909057\u000acalculated cost: 0.909057 for op: 38 taskSize: 275010 will run in seq: 0 totalRowCount: 23745509\u000acalculateLowerBoundForTaskSize for OpId: 38 cost: 0.909057 taskSize: 275010 maxWorkers: 16 taskSizeLBwithoutCap: 148309 taskSizeToRepeat: 110004028 costPerTaskUBInNs: 100000000 Final taskSize: 275010\u000a","operatorId":"60"}]]></Details>
+														<Child ID="5466_op60_node">
+															<ExecutedOutputCardinality>1844</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5467_op42" Type="Executed" PlanType="Column">
+													<RootRelation ID="5467_op42_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[FragmentScanIndexLookupOp]]></Name>
+														<Summary><![CDATA[Index Lookup on SAPHANADB.ZTM268_BOOKING~main]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022918,"end":1789634462022947}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.009</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 11":"numUsedLocalContexts 1, CPUTime 0.009 ms, CPUWaitTime 0.000 ms, calls 1","StateAfterRun (~main)":"{IndexLookupResult: n/a}","operatorId":"59"}]]></Details>
+														<Child ID="5468_op43_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+											</InnerPlans>
+										</RootRelation>
+									</Plan>
+									<Plan ID="5469_group36" Type="Executed" PlanType="Column">
+										<RootRelation ID="5469_group36_node" Status="Finished" Physical="True" TypeName="HEX">
+											<Name><![CDATA[ValueIdList(/DMO/CARRIER.CARRIER_ID (NVARCHAR(3) NOT NULL), ZTM268_BOOKING.CARRIER_ID (NVARCHAR(3)))]]></Name>
+											<Summary><![CDATA[]]></Summary>
+											<ExecutionTime>
+												<Timestamps>[{"Pop":[{"start":1789634462022743,"end":1789634462024481}]}]</Timestamps>
+											</ExecutionTime>
+											<UserCPUTime Unit="ms">0.406</UserCPUTime>
+											<Details><![CDATA[{"max numUsedLocalContexts":"3"}]]></Details>
+											<InnerPlans>
+												<Plan ID="5452_op34" Type="Executed" PlanType="Column">
+													<RootRelation ID="5452_op34_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[SemiJoinReductionToDataVectorScanAdapterOp]]></Name>
+														<Summary><![CDATA[Converts ValueIdSets into Predicate State Maps of group 18]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022743,"end":1789634462022756}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.013</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 10":"numUsedLocalContexts 1, CPUTime 0.013 ms, CPUWaitTime 0.000 ms, calls 1","StateBeforeFinish (~main)":"{ValueIdSet: ValueIdSet(kind=Range isSorted=Yes size=1 [3, 4)), RowCountEstimation: {exactly 1844 rows}, Uses: 1}","operatorId":"67"}]]></Details>
+														<Child ID="5470_op25_node">
+															<Details><![CDATA[{"ConnectionType":"Logical"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5459_op65" Type="Executed" PlanType="Column">
+													<RootRelation ID="5459_op65_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[PredicateOp]]></Name>
+														<Summary><![CDATA[Data vector scan/lookup on SAPHANADB.ZTM268_BOOKING~main.CARRIER_ID of group 18]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462023003,"end":1789634462024481}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.393</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"3","calls":"93","pipeline 12":"numUsedLocalContexts 3, CPUTime 0.393 ms, CPUWaitTime 0.000 ms, calls 93","Init CPUTime":"0.002 ms","Init CPUWaitTime":"0.000 ms","InitLocal CPUTime":"0.010 ms","InitLocal CPUWaitTime":"0.000 ms","operatorId":"68"}]]></Details>
+													</RootRelation>
+												</Plan>
+											</InnerPlans>
+										</RootRelation>
+									</Plan>
+									<Plan ID="5471_group38" Type="Executed" PlanType="Column">
+										<RootRelation ID="5471_group38_node" Status="Finished" Physical="True" TypeName="HEX">
+											<Name><![CDATA[ZTM268_BOOKING.CLIENT (NVARCHAR(3)) = ?(r:-2)]]></Name>
+											<Summary><![CDATA[BlockIndexLookup]]></Summary>
+											<ExecutionTime>
+												<Timestamps>[{"Pop":[{"start":1789634462022791,"end":1789634462024490}]}]</Timestamps>
+											</ExecutionTime>
+											<UserCPUTime Unit="ms">0.062</UserCPUTime>
+											<Details><![CDATA[{"max numUsedLocalContexts":"3","Assigned index in parent":"2","Estimated costs ds&dvs":"16183414.926666666","Estimated costs ds&il":"3396859665.1549788","Estimated costs dvl&dl":"156139045.19672197","Estimated distinct count":"1","Estimated exclusive output size":"24396722","Estimated exclusive selectivity":"1","Estimated inclusive output size":"4066120.333333333","Estimated inclusive selectivity":"0.16666666666666666","Estimated kurtosis":"Normal","Estimated null count":"0","Estimated previous output size":"4066120.333333333","Estimated previous selectivity":"0.16666666666666666","Estimated row count":"24396722","Estimated top value counts":"[23745509]","Estimation assumption":"WorstCase","Predicate order":"Free"}]]></Details>
+											<InnerPlans>
+												<Plan ID="5454_op32" Type="Executed" PlanType="Column">
+													<RootRelation ID="5454_op32_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[EqualDictScanOp]]></Name>
+														<Summary><![CDATA[Dictionary scan on SAPHANADB.ZTM268_BOOKING~main.CLIENT of group 20]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022791,"end":1789634462022806}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.015</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 10":"numUsedLocalContexts 1, CPUTime 0.015 ms, CPUWaitTime 0.000 ms, calls 1","StateAfterRun (~main)":"{PredInitState: ValueIdSet: ValueIdSet(kind=Range isSorted=Yes size=1 [0, 1)), RowCountEstimation: {exactly 23745509 rows}, Uses: 2, PredicateEstimationState: {RowCountEstimation: {exactly 23745509 rows}, ChunkCapacityBound: 23745509, LargestIntermediateResult: 0}, DictScanFlags: {allowedToSkipDictScan: true, dictScanSkipped: false}}","operatorId":"72"}]]></Details>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5457_op45" Type="Executed" PlanType="Column">
+													<RootRelation ID="5457_op45_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[IndexLookupOp]]></Name>
+														<Summary><![CDATA[Block index lookup and block scan on SAPHANADB.ZTM268_BOOKING~main.CLIENT of group 20]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<UserCPUTime Unit="ms">0.000</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","pipeline 11":"numUsedLocalContexts 0, CPUTime 0.000 ms, CPUWaitTime 0.000 ms, calls 0","Memory Allocated":"0.000 MB","StateBeforeFinish (~main)":"{IndexLookupResult: n/a}","operatorId":"73"}]]></Details>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5460_op63" Type="Executed" PlanType="Column">
+													<RootRelation ID="5460_op63_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[PredicateOp]]></Name>
+														<Summary><![CDATA[Data vector scan/lookup on SAPHANADB.ZTM268_BOOKING~main.CLIENT of group 20]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022985,"end":1789634462024490}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.047</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"3","calls":"10","pipeline 12":"numUsedLocalContexts 3, CPUTime 0.047 ms, CPUWaitTime 0.000 ms, calls 10","Init CPUTime":"0.003 ms","Init CPUWaitTime":"0.000 ms","InitLocal CPUTime":"0.011 ms","InitLocal CPUWaitTime":"0.000 ms","operatorId":"74"}]]></Details>
+														<Child ID="5461_op64_node">
+															<Details><![CDATA[{"ConnectionType":"Logical"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+											</InnerPlans>
+										</RootRelation>
+									</Plan>
+									<Plan ID="5472_group34" Type="Executed" PlanType="Column">
+										<RootRelation ID="5472_group34_node" Status="Finished" Physical="True" TypeName="HEX">
+											<Name><![CDATA[Visibility]]></Name>
+											<Summary><![CDATA[Filter]]></Summary>
+											<ExecutionTime>
+												<Timestamps>[{"Pop":[{"start":1789634462022725,"end":1789634462024192}]}]</Timestamps>
+											</ExecutionTime>
+											<UserCPUTime Unit="ms">0.231</UserCPUTime>
+											<Details><![CDATA[{"max numUsedLocalContexts":"3"}]]></Details>
+											<InnerPlans>
+												<Plan ID="5464_op29" Type="Executed" PlanType="Column">
+													<RootRelation ID="5464_op29_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[PostFilterConjInitOp]]></Name>
+														<Summary><![CDATA[PostFilterConj (AND) with early return support in init pipeline of group 16]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022725,"end":1789634462022850}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.012</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 10":"numUsedLocalContexts 1, CPUTime 0.012 ms, CPUWaitTime 0.000 ms, calls 1","StateAfterRun (~main)":"{PredicateEstimationState: {RowCountEstimation: {approx. 1844 rows}, ChunkCapacityBound: 23745509, LargestIntermediateResult: 1844}}","operatorId":"61"}]]></Details>
+														<Child ID="5473_op30_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+														<Child ID="5451_op31_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5473_op30" Type="Executed" PlanType="Column">
+													<RootRelation ID="5473_op30_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[VisibilityFilterEstimationOp]]></Name>
+														<Summary><![CDATA[Estimate transactional visibility check on SAPHANADB.ZTM268_BOOKING~main of group 16]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022728,"end":1789634462022843}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.027</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"2","pipeline 10":"numUsedLocalContexts 1, CPUTime 0.027 ms, CPUWaitTime 0.000 ms, calls 2","StateAfterRun (~main)":"{PredicateEstimationState: {RowCountEstimation: {exactly 23745509 rows}, ChunkCapacityBound: 23745509, LargestIntermediateResult: 0}}","operatorId":"75"}]]></Details>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5468_op43" Type="Executed" PlanType="Column">
+													<RootRelation ID="5468_op43_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[PostFilterConjIndexLookupOp]]></Name>
+														<Summary><![CDATA[PostFilterConjunction (AND) with Early Return support for IndexLookup of group 16]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022922,"end":1789634462022942}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.008</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 11":"numUsedLocalContexts 1, CPUTime 0.008 ms, CPUWaitTime 0.000 ms, calls 1","StateAfterRun (~main)":"{IndexLookupResult: n/a}","operatorId":"62"}]]></Details>
+														<Child ID="5455_op44_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5466_op60" Type="Executed" PlanType="Column">
+													<RootRelation ID="5466_op60_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[PostFilterConjOp]]></Name>
+														<Summary><![CDATA[Post filter conjunction of group 16]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462023164,"end":1789634462024494}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.156</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"3","calls":"93","pipeline 12":"numUsedLocalContexts 3, CPUTime 0.156 ms, CPUWaitTime 0.000 ms, calls 93","operatorId":"63"}]]></Details>
+														<Child ID="5474_op61_node">
+															<ExecutedOutputCardinality>1844</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+														<Child ID="5458_op62_node">
+															<ExecutedOutputCardinality>1844</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5474_op61" Type="Executed" PlanType="Column">
+													<RootRelation ID="5474_op61_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[VisibilityFilterOp]]></Name>
+														<Summary><![CDATA[Check transactional visibility on SAPHANADB.ZTM268_BOOKING~main of group 16]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462024004,"end":1789634462024192}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.028</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"3","calls":"10","pipeline 12":"numUsedLocalContexts 3, CPUTime 0.028 ms, CPUWaitTime 0.000 ms, calls 10","operatorId":"76"}]]></Details>
+													</RootRelation>
+												</Plan>
+											</InnerPlans>
+										</RootRelation>
+									</Plan>
+									<Plan ID="5475_group37" Type="Executed" PlanType="Column">
+										<RootRelation ID="5475_group37_node" Status="Finished" Physical="True" TypeName="HEX">
+											<Name><![CDATA[ZTM268_BOOKING.CLIENT (NVARCHAR(3)) = ?(r:0)]]></Name>
+											<Summary><![CDATA[BlockIndexLookup]]></Summary>
+											<ExecutionTime>
+												<Timestamps>[{"Pop":[{"start":1789634462022758,"end":1789634462024486}]}]</Timestamps>
+											</ExecutionTime>
+											<UserCPUTime Unit="ms">0.098</UserCPUTime>
+											<Details><![CDATA[{"max numUsedLocalContexts":"3","Assigned index in parent":"1","Estimated costs ds&dvs":"17315038.935127877","Estimated costs ds&il":"3301554259.361577","Estimated costs dvl&dl":"154706376.59672195","Estimated distinct count":"1","Estimated exclusive output size":"23745509","Estimated exclusive selectivity":"0.9733073566194671","Estimated inclusive output size":"4066120.333333333","Estimated inclusive selectivity":"0.16666666666666666","Estimated kurtosis":"Normal","Estimated null count":"0","Estimated previous output size":"4066120.333333333","Estimated previous selectivity":"0.16666666666666666","Estimated row count":"24396722","Estimated top value counts":"[23745509]","Estimation assumption":"WorstCase","Predicate order":"Free"}]]></Details>
+											<InnerPlans>
+												<Plan ID="5456_op46" Type="Executed" PlanType="Column">
+													<RootRelation ID="5456_op46_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[IndexLookupOp]]></Name>
+														<Summary><![CDATA[Block index lookup and block scan on SAPHANADB.ZTM268_BOOKING~main.CLIENT of group 19]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<UserCPUTime Unit="ms">0.000</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","pipeline 11":"numUsedLocalContexts 0, CPUTime 0.000 ms, CPUWaitTime 0.000 ms, calls 0","Memory Allocated":"0.000 MB","StateBeforeFinish (~main)":"{IndexLookupResult: n/a}","operatorId":"70"}]]></Details>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5453_op33" Type="Executed" PlanType="Column">
+													<RootRelation ID="5453_op33_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[EqualDictScanOp]]></Name>
+														<Summary><![CDATA[Dictionary scan on SAPHANADB.ZTM268_BOOKING~main.CLIENT of group 19]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022758,"end":1789634462022789}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.031</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 10":"numUsedLocalContexts 1, CPUTime 0.031 ms, CPUWaitTime 0.000 ms, calls 1","StateAfterRun (~main)":"{PredInitState: ValueIdSet: ValueIdSet(kind=Range isSorted=Yes size=1 [0, 1)), RowCountEstimation: {exactly 23745509 rows}, Uses: 1, PredicateEstimationState: {RowCountEstimation: {exactly 23745509 rows}, ChunkCapacityBound: 23745509, LargestIntermediateResult: 0}, DictScanFlags: {allowedToSkipDictScan: true, dictScanSkipped: false}}","operatorId":"69"}]]></Details>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5461_op64" Type="Executed" PlanType="Column">
+													<RootRelation ID="5461_op64_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[PredicateOp]]></Name>
+														<Summary><![CDATA[Data vector scan/lookup on SAPHANADB.ZTM268_BOOKING~main.CLIENT of group 19]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022994,"end":1789634462024486}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.067</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"3","calls":"10","pipeline 12":"numUsedLocalContexts 3, CPUTime 0.067 ms, CPUWaitTime 0.000 ms, calls 10","Init CPUTime":"0.003 ms","Init CPUWaitTime":"0.000 ms","InitLocal CPUTime":"0.008 ms","InitLocal CPUWaitTime":"0.000 ms","operatorId":"71"}]]></Details>
+														<Child ID="5459_op65_node">
+															<Details><![CDATA[{"ConnectionType":"Logical"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+											</InnerPlans>
+										</RootRelation>
+									</Plan>
+								</InnerPlans>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5476_group26" Type="Executed" PlanType="Column">
+							<RootRelation ID="5476_group26_node" Status="Finished" Physical="True" TypeName="HEX">
+								<Name><![CDATA[TableScanControl]]></Name>
+								<Summary><![CDATA[]]></Summary>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462022624,"end":1789634462022634}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.006</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1"}]]></Details>
+								<InnerPlans>
+									<Plan ID="5477_op26" Type="Executed" PlanType="Column">
+										<RootRelation ID="5477_op26_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+											<Name><![CDATA[OpenFragmentsControlOp]]></Name>
+											<Summary><![CDATA[]]></Summary>
+											<Location><![CDATA[vhshpan5db01:30243]]></Location>
+											<ExecutionTime>
+												<Timestamps>[{"Pop":[{"start":1789634462022624,"end":1789634462022634}]}]</Timestamps>
+											</ExecutionTime>
+											<UserCPUTime Unit="ms">0.006</UserCPUTime>
+											<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 9":"numUsedLocalContexts 1, CPUTime 0.006 ms, CPUWaitTime 0.000 ms, calls 1","operatorId":"34"}]]></Details>
+										</RootRelation>
+									</Plan>
+								</InnerPlans>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5478_group24" Type="Executed" PlanType="Column">
+							<RootRelation ID="5478_group24_node" Status="Finished" Physical="True" TypeName="HEX">
+								<Name><![CDATA[ZTM268_BOOKING[~delta1, ~delta2]]]></Name>
+								<Summary><![CDATA[(ValueIdList(/DMO/CARRIER.CARRIER_ID (NVARCHAR(3) NOT NULL), ZTM268_BOOKING.CARRIER_ID (NVARCHAR(3))) AND ZTM268_BOOKING.CLIENT (NVARCHAR(3)) = ?(r:0) AND ZTM268_BOOKING.CLIENT (NVARCHAR(3)) = ?(r:-2))]]></Summary>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462022654,"end":1789634462022911}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.083</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","Active Table Fragments":"ZTM268_BOOKING~delta1"}]]></Details>
+								<InnerPlans>
+									<Plan ID="5479_group29" Type="Executed" PlanType="Column">
+										<RootRelation ID="5479_group29_node" Status="Finished" Physical="True" TypeName="HEX">
+											<Name><![CDATA[AND]]></Name>
+											<Summary><![CDATA[]]></Summary>
+											<ExecutionTime>
+												<Timestamps>[{"Pop":[{"start":1789634462022676,"end":1789634462022699}]}]</Timestamps>
+											</ExecutionTime>
+											<UserCPUTime Unit="ms">0.015</UserCPUTime>
+											<Details><![CDATA[{"max numUsedLocalContexts":"1","Estimated costs ds&dvs":"0","Estimated costs dvl&dl":"0","Estimated exclusive output size":"4066120.333333333","Estimated exclusive selectivity":"0.16666666666666666","Estimated inclusive output size":"4066120.333333333","Estimated inclusive selectivity":"0.16666666666666666","Estimated kurtosis":"Unknown","Estimated previous output size":"24396722","Estimated previous selectivity":"1","Estimated row count":"24396722","Estimation assumption":"WorstCase","Predicate order":"Free"}]]></Details>
+											<InnerPlans>
+												<Plan ID="5480_op49" Type="Executed" PlanType="Column">
+													<RootRelation ID="5480_op49_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[ConjunctionIndexLookupOp]]></Name>
+														<Summary><![CDATA[Conjunction (AND) with Early Return support for IndexLookup of group 10]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<UserCPUTime Unit="ms">0.000</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","pipeline 11":"numUsedLocalContexts 0, CPUTime 0.000 ms, CPUWaitTime 0.000 ms, calls 0","operatorId":"46"}]]></Details>
+														<Child ID="5481_op51_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+														<Child ID="5482_op50_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5483_op38" Type="Executed" PlanType="Column">
+													<RootRelation ID="5483_op38_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[ConjunctionInitOp]]></Name>
+														<Summary><![CDATA[Conjunction (AND) with Early Return support for DS of group 10]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022676,"end":1789634462022699}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.015</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 10":"numUsedLocalContexts 1, CPUTime 0.015 ms, CPUWaitTime 0.000 ms, calls 1","StateAfterRun (~delta1)":"{Early returned}","operatorId":"45"}]]></Details>
+														<Child ID="5484_op41_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+														<Child ID="5485_op40_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+														<Child ID="5486_op39_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5487_op69" Type="Executed" PlanType="Column">
+													<RootRelation ID="5487_op69_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[ConjunctionOp]]></Name>
+														<Summary><![CDATA[Conjunction (AND) of group 10]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<UserCPUTime Unit="ms">0.000</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","pipeline 12":"numUsedLocalContexts 0, CPUTime 0.000 ms, CPUWaitTime 0.000 ms, calls 0","operatorId":"47"}]]></Details>
+														<Child ID="5488_op70_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+														<Child ID="5489_op71_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+														<Child ID="5490_op72_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+											</InnerPlans>
+										</RootRelation>
+									</Plan>
+									<Plan ID="5491_group31" Type="Executed" PlanType="Column">
+										<RootRelation ID="5491_group31_node" Status="NotStarted" Physical="True" TypeName="HEX">
+											<Name><![CDATA[ZTM268_BOOKING.CLIENT (NVARCHAR(3)) = ?(r:0)]]></Name>
+											<Summary><![CDATA[IndexLookup]]></Summary>
+											<UserCPUTime Unit="ms">0.000</UserCPUTime>
+											<Details><![CDATA[{"max numUsedLocalContexts":"0","Assigned index in parent":"1","Estimated costs ds&dvs":"17315038.935127877","Estimated costs ds&il":"3301554259.361577","Estimated costs dvl&dl":"154706376.59672195","Estimated distinct count":"1","Estimated exclusive output size":"23745509","Estimated exclusive selectivity":"0.9733073566194671","Estimated inclusive output size":"4066120.333333333","Estimated inclusive selectivity":"0.16666666666666666","Estimated kurtosis":"Normal","Estimated null count":"0","Estimated previous output size":"4066120.333333333","Estimated previous selectivity":"0.16666666666666666","Estimated row count":"24396722","Estimated top value counts":"[23745509]","Estimation assumption":"WorstCase","Predicate order":"Free"}]]></Details>
+											<InnerPlans>
+												<Plan ID="5485_op40" Type="Executed" PlanType="Column">
+													<RootRelation ID="5485_op40_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[EqualDictScanOp]]></Name>
+														<Summary><![CDATA[Dictionary scan on SAPHANADB.ZTM268_BOOKING~delta1, ~delta2.CLIENT of group 12]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<UserCPUTime Unit="ms">0.000</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","pipeline 10":"numUsedLocalContexts 0, CPUTime 0.000 ms, CPUWaitTime 0.000 ms, calls 0","operatorId":"50"}]]></Details>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5481_op51" Type="Executed" PlanType="Column">
+													<RootRelation ID="5481_op51_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[IndexLookupOp]]></Name>
+														<Summary><![CDATA[Index lookup on SAPHANADB.ZTM268_BOOKING~delta1, ~delta2.CLIENT of group 12]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<UserCPUTime Unit="ms">0.000</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","pipeline 11":"numUsedLocalContexts 0, CPUTime 0.000 ms, CPUWaitTime 0.000 ms, calls 0","Memory Allocated":"0.000 MB","operatorId":"51"}]]></Details>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5489_op71" Type="Executed" PlanType="Column">
+													<RootRelation ID="5489_op71_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[PredicateOp]]></Name>
+														<Summary><![CDATA[Data vector scan/lookup on SAPHANADB.ZTM268_BOOKING~delta1, ~delta2.CLIENT of group 12]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<UserCPUTime Unit="ms">0.000</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","pipeline 12":"numUsedLocalContexts 0, CPUTime 0.000 ms, CPUWaitTime 0.000 ms, calls 0","operatorId":"52"}]]></Details>
+													</RootRelation>
+												</Plan>
+											</InnerPlans>
+										</RootRelation>
+									</Plan>
+									<Plan ID="5492_group32" Type="Executed" PlanType="Column">
+										<RootRelation ID="5492_group32_node" Status="NotStarted" Physical="True" TypeName="HEX">
+											<Name><![CDATA[ZTM268_BOOKING.CLIENT (NVARCHAR(3)) = ?(r:-2)]]></Name>
+											<Summary><![CDATA[IndexLookup]]></Summary>
+											<UserCPUTime Unit="ms">0.000</UserCPUTime>
+											<Details><![CDATA[{"max numUsedLocalContexts":"0","Assigned index in parent":"2","Estimated costs ds&dvs":"16183414.926666666","Estimated costs ds&il":"3396859665.1549788","Estimated costs dvl&dl":"156139045.19672197","Estimated distinct count":"1","Estimated exclusive output size":"24396722","Estimated exclusive selectivity":"1","Estimated inclusive output size":"4066120.333333333","Estimated inclusive selectivity":"0.16666666666666666","Estimated kurtosis":"Normal","Estimated null count":"0","Estimated previous output size":"4066120.333333333","Estimated previous selectivity":"0.16666666666666666","Estimated row count":"24396722","Estimated top value counts":"[23745509]","Estimation assumption":"WorstCase","Predicate order":"Free"}]]></Details>
+											<InnerPlans>
+												<Plan ID="5482_op50" Type="Executed" PlanType="Column">
+													<RootRelation ID="5482_op50_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[IndexLookupOp]]></Name>
+														<Summary><![CDATA[Index lookup on SAPHANADB.ZTM268_BOOKING~delta1, ~delta2.CLIENT of group 13]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<UserCPUTime Unit="ms">0.000</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","pipeline 11":"numUsedLocalContexts 0, CPUTime 0.000 ms, CPUWaitTime 0.000 ms, calls 0","Memory Allocated":"0.000 MB","operatorId":"54"}]]></Details>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5486_op39" Type="Executed" PlanType="Column">
+													<RootRelation ID="5486_op39_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[EqualDictScanOp]]></Name>
+														<Summary><![CDATA[Dictionary scan on SAPHANADB.ZTM268_BOOKING~delta1, ~delta2.CLIENT of group 13]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<UserCPUTime Unit="ms">0.000</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","pipeline 10":"numUsedLocalContexts 0, CPUTime 0.000 ms, CPUWaitTime 0.000 ms, calls 0","operatorId":"53"}]]></Details>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5488_op70" Type="Executed" PlanType="Column">
+													<RootRelation ID="5488_op70_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[PredicateOp]]></Name>
+														<Summary><![CDATA[Data vector scan/lookup on SAPHANADB.ZTM268_BOOKING~delta1, ~delta2.CLIENT of group 13]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<UserCPUTime Unit="ms">0.000</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","pipeline 12":"numUsedLocalContexts 0, CPUTime 0.000 ms, CPUWaitTime 0.000 ms, calls 0","operatorId":"55"}]]></Details>
+													</RootRelation>
+												</Plan>
+											</InnerPlans>
+										</RootRelation>
+									</Plan>
+									<Plan ID="5493_group30" Type="Executed" PlanType="Column">
+										<RootRelation ID="5493_group30_node" Status="Finished" Physical="True" TypeName="HEX">
+											<Name><![CDATA[ValueIdList(/DMO/CARRIER.CARRIER_ID (NVARCHAR(3) NOT NULL), ZTM268_BOOKING.CARRIER_ID (NVARCHAR(3)))]]></Name>
+											<Summary><![CDATA[]]></Summary>
+											<ExecutionTime>
+												<Timestamps>[{"Pop":[{"start":1789634462022682,"end":1789634462022690}]}]</Timestamps>
+											</ExecutionTime>
+											<UserCPUTime Unit="ms">0.008</UserCPUTime>
+											<Details><![CDATA[{"max numUsedLocalContexts":"1"}]]></Details>
+											<InnerPlans>
+												<Plan ID="5484_op41" Type="Executed" PlanType="Column">
+													<RootRelation ID="5484_op41_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[SemiJoinReductionToDataVectorScanAdapterOp]]></Name>
+														<Summary><![CDATA[Converts ValueIdSets into Predicate State Maps of group 11]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022682,"end":1789634462022690}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.008</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 10":"numUsedLocalContexts 1, CPUTime 0.008 ms, CPUWaitTime 0.000 ms, calls 1","StateBeforeFinish (~delta1)":"{ValueIdSet: ValueIdSet(kind=Range isSorted=Yes size=0 [0, 0)), RowCountEstimation: {exactly 0 rows}, Uses: 1}","operatorId":"48"}]]></Details>
+														<Child ID="5470_op25_node">
+															<Details><![CDATA[{"ConnectionType":"Logical"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5490_op72" Type="Executed" PlanType="Column">
+													<RootRelation ID="5490_op72_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[PredicateOp]]></Name>
+														<Summary><![CDATA[Data vector scan/lookup on SAPHANADB.ZTM268_BOOKING~delta1, ~delta2.CARRIER_ID of group 11]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<UserCPUTime Unit="ms">0.000</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","pipeline 12":"numUsedLocalContexts 0, CPUTime 0.000 ms, CPUWaitTime 0.000 ms, calls 0","operatorId":"49"}]]></Details>
+													</RootRelation>
+												</Plan>
+											</InnerPlans>
+										</RootRelation>
+									</Plan>
+									<Plan ID="5494_group27" Type="Executed" PlanType="Column">
+										<RootRelation ID="5494_group27_node" Status="Finished" Physical="True" TypeName="HEX">
+											<Name><![CDATA[FragmentScan]]></Name>
+											<Summary><![CDATA[]]></Summary>
+											<ExecutionTime>
+												<Timestamps>[{"Pop":[{"start":1789634462022654,"end":1789634462022917}]}]</Timestamps>
+											</ExecutionTime>
+											<UserCPUTime Unit="ms">0.023</UserCPUTime>
+											<Details><![CDATA[{"max numUsedLocalContexts":"1","Active Table Fragments":"ZTM268_BOOKING~delta1"}]]></Details>
+											<InnerPlans>
+												<Plan ID="5495_op35" Type="Executed" PlanType="Column">
+													<RootRelation ID="5495_op35_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[FragmentScanInitOp]]></Name>
+														<Summary><![CDATA[Initialize scan on SAPHANADB.ZTM268_BOOKING~delta1, ~delta2 of group 7]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022654,"end":1789634462022720}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.014</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 10":"numUsedLocalContexts 1, CPUTime 0.014 ms, CPUWaitTime 0.000 ms, calls 1","StateAfterRun (~delta1)":"{PredicateEstimationState: {RowCountEstimation: {exactly 0 rows}, ChunkCapacityBound: 0, LargestIntermediateResult: 0}, Fragment Cardinality: 651213 rows}","operatorId":"39"}]]></Details>
+														<Child ID="5496_op36_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5497_op47" Type="Executed" PlanType="Column">
+													<RootRelation ID="5497_op47_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[FragmentScanIndexLookupOp]]></Name>
+														<Summary><![CDATA[Index Lookup on SAPHANADB.ZTM268_BOOKING~delta1, ~delta2]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022900,"end":1789634462022917}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.009</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 11":"numUsedLocalContexts 1, CPUTime 0.009 ms, CPUWaitTime 0.000 ms, calls 1","StateAfterRun (~delta1)":"{IndexLookupResult: n/a}","operatorId":"40"}]]></Details>
+														<Child ID="5498_op48_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5499_op66" Type="Executed" PlanType="Column">
+													<RootRelation ID="5499_op66_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[FragmentScanOp_RpRp]]></Name>
+														<Summary><![CDATA[Scan on SAPHANADB.ZTM268_BOOKING~delta1, ~delta2 of group 7]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<UserCPUTime Unit="ms">0.000</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","pipeline 12":"numUsedLocalContexts 0, CPUTime 0.000 ms, CPUWaitTime 0.000 ms, calls 0","operatorId":"41"}]]></Details>
+														<Child ID="5500_op67_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+											</InnerPlans>
+										</RootRelation>
+									</Plan>
+									<Plan ID="5501_group28" Type="Executed" PlanType="Column">
+										<RootRelation ID="5501_group28_node" Status="Finished" Physical="True" TypeName="HEX">
+											<Name><![CDATA[Visibility]]></Name>
+											<Summary><![CDATA[Filter]]></Summary>
+											<ExecutionTime>
+												<Timestamps>[{"Pop":[{"start":1789634462022657,"end":1789634462022911}]}]</Timestamps>
+											</ExecutionTime>
+											<UserCPUTime Unit="ms">0.037</UserCPUTime>
+											<Details><![CDATA[{"max numUsedLocalContexts":"1"}]]></Details>
+											<InnerPlans>
+												<Plan ID="5502_op37" Type="Executed" PlanType="Column">
+													<RootRelation ID="5502_op37_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[VisibilityFilterEstimationOp]]></Name>
+														<Summary><![CDATA[Estimate transactional visibility check on SAPHANADB.ZTM268_BOOKING~delta1, ~delta2 of group 9]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022661,"end":1789634462022675}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.014</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 10":"numUsedLocalContexts 1, CPUTime 0.014 ms, CPUWaitTime 0.000 ms, calls 1","StateAfterRun (~delta1)":"{PredicateEstimationState: {RowCountEstimation: {approx. 651213 rows}, ChunkCapacityBound: NO_BOUND, LargestIntermediateResult: 0}}","operatorId":"56"}]]></Details>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5496_op36" Type="Executed" PlanType="Column">
+													<RootRelation ID="5496_op36_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[PostFilterConjInitOp]]></Name>
+														<Summary><![CDATA[PostFilterConj (AND) with early return support in init pipeline of group 9]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022657,"end":1789634462022709}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.015</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 10":"numUsedLocalContexts 1, CPUTime 0.015 ms, CPUWaitTime 0.000 ms, calls 1","StateAfterRun (~delta1)":"{PredicateEstimationState: {RowCountEstimation: {exactly 0 rows}, ChunkCapacityBound: 0, LargestIntermediateResult: 0}}","operatorId":"42"}]]></Details>
+														<Child ID="5483_op38_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+														<Child ID="5502_op37_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5498_op48" Type="Executed" PlanType="Column">
+													<RootRelation ID="5498_op48_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[PostFilterConjIndexLookupOp]]></Name>
+														<Summary><![CDATA[PostFilterConjunction (AND) with Early Return support for IndexLookup of group 9]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Timestamps>[{"Pop":[{"start":1789634462022903,"end":1789634462022911}]}]</Timestamps>
+														</ExecutionTime>
+														<UserCPUTime Unit="ms">0.008</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 11":"numUsedLocalContexts 1, CPUTime 0.008 ms, CPUWaitTime 0.000 ms, calls 1","StateAfterRun (~delta1)":"{IndexLookupResult: n/a}","operatorId":"43"}]]></Details>
+														<Child ID="5480_op49_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5503_op68" Type="Executed" PlanType="Column">
+													<RootRelation ID="5503_op68_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[VisibilityFilterOp]]></Name>
+														<Summary><![CDATA[Check transactional visibility on SAPHANADB.ZTM268_BOOKING~delta1, ~delta2 of group 9]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<UserCPUTime Unit="ms">0.000</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","pipeline 12":"numUsedLocalContexts 0, CPUTime 0.000 ms, CPUWaitTime 0.000 ms, calls 0","operatorId":"57"}]]></Details>
+													</RootRelation>
+												</Plan>
+												<Plan ID="5500_op67" Type="Executed" PlanType="Column">
+													<RootRelation ID="5500_op67_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+														<Name><![CDATA[PostFilterConjOp]]></Name>
+														<Summary><![CDATA[Post filter conjunction of group 9]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<UserCPUTime Unit="ms">0.000</UserCPUTime>
+														<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","pipeline 12":"numUsedLocalContexts 0, CPUTime 0.000 ms, CPUWaitTime 0.000 ms, calls 0","operatorId":"44"}]]></Details>
+														<Child ID="5487_op69_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+														<Child ID="5503_op68_node">
+															<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+															<Details><![CDATA[{"ConnectionType":"Reversed"}]]></Details>
+														</Child>
+													</RootRelation>
+												</Plan>
+											</InnerPlans>
+										</RootRelation>
+									</Plan>
+								</InnerPlans>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5504_op27" Type="Executed" PlanType="Column">
+							<RootRelation ID="5504_op27_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[OpenFragmentsOp<0u>]]></Name>
+								<Summary><![CDATA[Open Fragments SAPHANADB.ZTM268_BOOKING~main, ~delta1, ~delta2]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462022629,"end":1789634462022633}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.004</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 9":"numUsedLocalContexts 1, CPUTime 0.004 ms, CPUWaitTime 0.000 ms, calls 1","operatorId":"35"}]]></Details>
+								<Child ID="5477_op26_node">
+									<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5505_op13" Type="Executed" PlanType="Column">
+							<RootRelation ID="5505_op13_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[OnePieceReadValuesOp<ChunkValueSource,RelationLookupValueSource,RelationBulkValueSource,RowStoreValueSource>]]></Name>
+								<Summary><![CDATA[Materialize: /DMO/CARRIER.CARRIER_ID (NVARCHAR(3) NOT NULL)]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462021948,"end":1789634462022158}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.015</UserCPUTime>
+								<EstimatedOutputCardinality>1</EstimatedOutputCardinality>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 5":"numUsedLocalContexts 1, CPUTime 0.015 ms, CPUWaitTime 0.000 ms, calls 1","InitLocal CPUTime":"0.006 ms","InitLocal CPUWaitTime":"0.000 ms","Estimated Output Cardinality":"1","operatorId":"30"}]]></Details>
+								<Child ID="5409_op12_node">
+									<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5506_op14" Type="Executed" PlanType="Column">
+							<RootRelation ID="5506_op14_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[SemiJoinReductionCollectOp]]></Name>
+								<Summary><![CDATA[SemiJoinReduction Collection]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462021958,"end":1789634462022156}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.009</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 5":"numUsedLocalContexts 1, CPUTime 0.009 ms, CPUWaitTime 0.000 ms, calls 1","InitLocal CPUTime":"0.004 ms","InitLocal CPUWaitTime":"0.000 ms","operatorId":"31"}]]></Details>
+								<Child ID="5505_op13_node">
+									<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5507_op54" Type="Executed" PlanType="Column">
+							<RootRelation ID="5507_op54_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[ReparProducer]]></Name>
+								<Summary><![CDATA[Produces output after a reparallelization point]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462024054,"end":1789634462025371}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.023</UserCPUTime>
+								<EstimatedOutputCardinality>4.06e+06</EstimatedOutputCardinality>
+								<Details><![CDATA[{"max numUsedLocalContexts":"3","calls":"7","pipeline 12":"numUsedLocalContexts 3, CPUTime 0.023 ms, CPUWaitTime 0.000 ms, calls 7","pipeline 13":"numUsedLocalContexts 0, CPUTime 0.000 ms, CPUWaitTime 0.000 ms, calls 0","Estimated Output Cardinality":"4.06612e+06","TaskStats from op: 117":"count = 5, min = 35830ns, avg = 221272ns, max = 794170ns,  25%= 45357ns,  50%= 101433ns,  75%= 129573ns, parentOpId: 77\u000aSampling: \u000aOpId: 77 sampleSize: 32 elapsedTimeInNs: 129573 overhead: 0 cpiScalingFactor: 1 currCost: 4049.15 costChangeFactor: 1 TotalCost: 4049.15\u000aDecided to go sequential! m_preferSequentialWithSampling: 0 sampler.hasDecidedParallel(): 0 globalTaskSize: 224 tasksToWorkerRatio: 4 outputPerThread: 614.666\u000aOpId: 77 sampleSize: 24 elapsedTimeInNs: 45357 overhead: 0 cpiScalingFactor: 1 currCost: 1889.87 costChangeFactor: 0.533266 TotalCost: 1889.87\u000aOpId: 77 Sampling is finished. TaskSize: 132 sumElapsed: 174930 timeBudget: 100000 totalCost: 1889.87 cost limit: 29.0416 minCost < costLimit: 0 hasDecidedSequential: 0\u000aDecided to go sequential! m_preferSequentialWithSampling: 0 sampler.hasDecidedParallel(): 1 globalTaskSize: 224 tasksToWorkerRatio: 4 outputPerThread: 614.666\u000aOpId: 77 sampleSize: 32 elapsedTimeInNs: 101433 overhead: 0 cpiScalingFactor: 1 currCost: 3169.78 costChangeFactor: 1 TotalCost: 3169.78\u000aOpId: 77 sampleSize: 32 elapsedTimeInNs: 35830 overhead: 0 cpiScalingFactor: 1 currCost: 1119.68 costChangeFactor: 0.646761 TotalCost: 1119.68\u000aOpId: 77 Sampling is finished. TaskSize: 223 sumElapsed: 137263 timeBudget: 100000 totalCost: 1119.68 cost limit: 15.8437 minCost < costLimit: 0 hasDecidedSequential: 0\u000aDecided to go sequential! m_preferSequentialWithSampling: 0 sampler.hasDecidedParallel(): 1 globalTaskSize: 224 tasksToWorkerRatio: 4 outputPerThread: 614.666\u000aOpId: 77 sampleSize: 918 elapsedTimeInNs: 794170 overhead: 0 cpiScalingFactor: 1 currCost: 865.108 costChangeFactor: 0.227365 TotalCost: 865.108\u000aOpId: 77 Sampling is finished. TaskSize: 288 sumElapsed: 931433 timeBudget: 100000 totalCost: 865.108 cost limit: 3.93137 minCost < costLimit: 0 hasDecidedSequential: 0\u000aDecided to go sequential! m_preferSequentialWithSampling: 0 sampler.hasDecidedParallel(): 1 globalTaskSize: 289 tasksToWorkerRatio: 4 outputPerThread: 614.666\u000a","operatorId":"78"}]]></Details>
+								<Child ID="5508_op53_node">
+									<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5447_op55" Type="Executed" PlanType="Column">
+							<RootRelation ID="5447_op55_node" Status="NotStarted" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[LlangInOperator]]></Name>
+								<Summary><![CDATA[Code-generated operator across relations <see next op>]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<UserCPUTime Unit="ms">0.000</UserCPUTime>
+								<EstimatedOutputCardinality>4.06e+06</EstimatedOutputCardinality>
+								<Details><![CDATA[{"max numUsedLocalContexts":"0","calls":"0","Estimated Output Cardinality":"4.06612e+06","HashColumn(0)":"ZTM268_BOOKING.CONNECTION_ID (NVARCHAR(4))","HashColumn(1)":"ZTM268_BOOKING.FLIGHT_DATE (NVARCHAR(8))","HashColumn(2)":"ZTM268_BOOKING.BOOKING_DATE (NVARCHAR(8))","HashColumn(3)":"ZTM268_BOOKING.ID (INT)","HashColumn(4)":"1000010.10000000 (NVARCHAR(8) NOT NULL)","HashColumn(5)":"ZTM268_BOOKING.CARRIER_ID (NVARCHAR(3))","agg(0)":"Count(*) -> 1000014.10000000 (BIGINT NOT NULL)","rowWidth":"104"}]]></Details>
+								<Child ID="5507_op54_node">
+									<ExecutedOutputCardinality>1844</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5508_op53" Type="Executed" PlanType="Column">
+							<RootRelation ID="5508_op53_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[ReparGatherer]]></Name>
+								<Summary><![CDATA[Gathers data in a buffer and might schedule tasks when the buffer gets full]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462023013,"end":1789634462025375},{"start":1789634462025534,"end":1789634462025547}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.182</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"3","calls":"11","pipeline 12":"numUsedLocalContexts 3, CPUTime 0.169 ms, CPUWaitTime 0.000 ms, calls 10","pipeline 13":"numUsedLocalContexts 1, CPUTime 0.013 ms, CPUWaitTime 0.000 ms, calls 1","Init CPUTime":"0.004 ms","Init CPUWaitTime":"0.000 ms","InitLocal CPUTime":"0.014 ms","InitLocal CPUWaitTime":"0.000 ms","Estimated num rows buffered in parallel":"31","Framework Internal Data Size (B)":"0","Largest TaskSize used":"289","Memory Allocated":"0.000 MB","NumFunctors":"0","Sequential Processing":"1","operatorId":"77"}]]></Details>
+								<Child ID="5465_op52_node">
+									<ExecutedOutputCardinality>1844</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+								<Child ID="5509_op73_node">
+									<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+									<Details><![CDATA[{"ConnectionType":"Call"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5509_op73" Type="Executed" PlanType="Column">
+							<RootRelation ID="5509_op73_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[ReparFinisher]]></Name>
+								<Summary><![CDATA[Flush the remaining data in the buffers of ReparGatherer]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462025528,"end":1789634462025550}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.009</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 13":"numUsedLocalContexts 1, CPUTime 0.009 ms, CPUWaitTime 0.000 ms, calls 1","operatorId":"79"}]]></Details>
+							</RootRelation>
+						</Plan>
+						<Plan ID="5470_op25" Type="Executed" PlanType="Column">
+							<RootRelation ID="5470_op25_node" Status="Finished" Mode="Expert" Physical="True" TypeName="HEX">
+								<Name><![CDATA[SemiJoinReductionMergeOp]]></Name>
+								<Summary><![CDATA[Merge SemiJoinReduction values]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Timestamps>[{"Pop":[{"start":1789634462022419,"end":1789634462022573}]}]</Timestamps>
+								</ExecutionTime>
+								<UserCPUTime Unit="ms">0.154</UserCPUTime>
+								<Details><![CDATA[{"max numUsedLocalContexts":"1","calls":"1","pipeline 7":"numUsedLocalContexts 1, CPUTime 0.154 ms, CPUWaitTime 0.000 ms, calls 1","ValueCol#0 (frag=0)":"ValueIdSet(kind=Range isSorted=Yes size=1 [3, 4))","ValueCol#0 (frag=1)":"ValueIdSet(kind=Range isSorted=Yes size=0 [0, 0))","ValueCol#0 (frag=2)":"ValueIdSet(kind=Range isSorted=Yes size=0 [0, 0))","numCols":"1","numLocalStates":"1","operatorId":"32"}]]></Details>
+								<Child ID="5506_op14_node">
+									<Details><![CDATA[{"ConnectionType":"Logical"}]]></Details>
+								</Child>
+							</RootRelation>
+						</Plan>
+					</InnerPlans>
+				</RootRelation>
+			</Plan>
+		</InnerPlans>
+	</Relation>
+</Plan>

@@ -1,0 +1,1668 @@
+<?Version 35?>
+<Plan ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_1" xmlns="http://www.sap.com/ndb/planviz" Type="Executed" PlanType="QoExec">
+<SQL><![CDATA[SELECT /* CDS access control applied */ /* Contains Native SQL */ "AIRPORT_FROM_ID" "AIRPORT_FROM_ID" , "AIRPORT_TO_ID" "AIRPORT_TO_ID" , "BOOKING_DATE" "BOOKING_DATE" , "BOOKING_PER_CLASS" "BOOKING_PER_CLASS" , "CARRIER_ID" "CARRIER_ID" , "CARRIER_NAME" "CARRIER_NAME" , "CONNECTION_ID" "CONNECTION_ID" , "CURRENCY_CODE" "CURRENCY_CODE" , "FLIGHT_DATE" "FLIGHT_DATE" , "PRICE_CLASS" "PRICE_CLASS" , "UNIQUE_ID" "UNIQUE_ID" FROM "ZTM268_C_BOOKING_CONN_CARR_900" "ZTM268_C_BOOKING_CONN_0" WHERE "MANDT" = ? AND "CARRIER_NAME" = ? ORDER BY "ZTM268_C_BOOKING_CONN_0" . "CARRIER_ID" , "ZTM268_C_BOOKING_CONN_0" . "CARRIER_NAME" , "ZTM268_C_BOOKING_CONN_0" . "CURRENCY_CODE" , "ZTM268_C_BOOKING_CONN_0" . "CONNECTION_ID" , "ZTM268_C_BOOKING_CONN_0" . "FLIGHT_DATE" , "ZTM268_C_BOOKING_CONN_0" . "UNIQUE_ID" , "ZTM268_C_BOOKING_CONN_0" . "PRICE_CLASS" , "ZTM268_C_BOOKING_CONN_0" . "BOOKING_DATE" LIMIT 200 WITH PARAMETERS( 'LOCALE' = 'EN' )  WITH HINT(NO_USE_HEX_PLAN,NO_SEMI_JOIN_BEFORE_UNION )]]></SQL>
+<SystemVersion><![CDATA[{"Version":"2.00.089.01.1769502981","CompileType":"rel","USER_NAME":"Capturing USER_NAME is disabled","SCHEMA_NAME":"SAPHANADBVLX"}]]></SystemVersion>
+<SessionVariables><![CDATA[{"ABAPVARCHARMODE":"TRUE","APPLICATION":"ABAP:APB","APPLICATIONCOMPONENT":"/SAP/OPU/ODATA4/SAP/ZUI_TM268_BOOK_CON_CAR_900_O4/SRVD","APPLICATIONCOMPONENTTYPE":"4","APPLICATIONSOURCE":"CL_SADL_SQL_EXECUTOR==========CP:1952","APPLICATIONUSER":"Capturing APPLICATIONUSER is disabled","APPLICATIONVERSION":"920 PL 12","APPLICATION_SERVER_INSTANCE_NAME":"vhshpapbci_APB_00","APPLICATION_SERVER_WORKPROCESS_INDEX":"56","CDS_CLIENT":"080","CLIENT":"080","DRIVERVERSION":"2.28.22","OS_USER":"Capturing OS_USER is disabled","PROTOCOL_VERSION":"4.1 (6, 8)","SAP_PASSPORT":"2A54482A0300E600003030303030303030303734353539393236342020202020202020202020202020000A43423939383030303039303020202020202020202020202020202020202020205341504D4854545020202020202020202020202020202020202020202020202020202020202020200003303030303030303030373435353939323634202020202020202020202020202036444646424443384144433530333830453030364141424335303932304436433038300001FA163E1349351FE1ACD0A1933AF30496FA163E1349351FE1ACD0A1933AF3249600000001000000E22A54482A","SAP_SYSTEM_DATE":"20260917","SPATIAL_OUTPUT_REPRESENTATION":"EWKB","USER_DATE":"20260917","USER_TIMEZONE":"UTC","XS_APPLICATIONUSER":"Capturing XS_APPLICATIONUSER is disabled","abapVarcharMode":"TRUE"}]]></SessionVariables>
+<ParameterValues><![CDATA["Capturing Bound Parameter Values is disabled"]]></ParameterValues>
+<ProjectedColsWithDatatype><![CDATA[AIRPORT_FROM_ID(NVARCHAR(3)), AIRPORT_TO_ID(NVARCHAR(3)), BOOKING_DATE(NVARCHAR(8)), BOOKING_PER_CLASS(BIGINT), CARRIER_ID(NVARCHAR(3)), CARRIER_NAME(NVARCHAR(40)), CONNECTION_ID(NVARCHAR(4)), CURRENCY_CODE(NVARCHAR(5)), FLIGHT_DATE(NVARCHAR(8)), PRICE_CLASS(NVARCHAR(8)), UNIQUE_ID(INT)]]></ProjectedColsWithDatatype>
+<StmtStats><![CDATA[]]></StmtStats>
+<StmtMemStats><![CDATA[[{"Allocated Count":26335,"Allocated Size":11030874639,"Allocator Name":"Connection/337009/Statement/1447442722288254","Count in Use":26332,"Deallocated Count":26224,"Deallocated Size":11030774735,"Depth":3,"Max Allocation Size (estimate)":1561390208,"Max Single Allocation Size":1561390208,"Size in Use":99632},{"Allocated Count":31,"Allocated Size":96704,"Allocator Name":"Connection/337009/Statement/1447442722288254/Pool/RowEngine/QueryExecution/SearchAlloc","Count in Use":31,"Deallocated Count":6,"Deallocated Size":15872,"Depth":4,"Max Allocation Size (estimate)":80832,"Max Single Allocation Size":32808,"Size in Use":80832},{"Allocated Count":26097,"Allocated Size":10910164399,"Allocator Name":"Connection/337009/Statement/1447442722288254/IMPLICIT","Count in Use":26094,"Deallocated Count":25986,"Deallocated Size":10910142343,"Depth":4,"Max Allocation Size (estimate)":1561390208,"Max Single Allocation Size":1561390208,"Size in Use":21784},{"Allocated Count":233,"Allocated Size":120616560,"Allocator Name":"Connection/337009/Statement/1447442722288254/Pool/JoinEvaluator","Count in Use":233,"Deallocated Count":233,"Deallocated Size":120616560,"Depth":4,"Max Allocation Size (estimate)":97586920,"Max Single Allocation Size":97586920,"Size in Use":0}]]]></StmtMemStats>
+<CompileSummary><![CDATA[{}]]></CompileSummary>
+	<RootRelation ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_1" TypeName="PROJECT" InternalBufferId="6" Status="Finished">
+		<Name>ROW SEARCH</Name>
+		<ExecutionType>ROW</ExecutionType>
+		<Summary><![CDATA[/DMO/CONNECTION.AIRPORT_FROM_ID, /DMO/CONNECTION.AIRPORT_TO_ID, ZTM268_BOOKING.BOOKING_DATE, ZTM268_C_BOOKING_CONN_CARR_900.BOOKING_PER_CLASS, /DMO/CARRIER.CARRIER_ID, ?2, ZTM268_BOOKING.CONNECTION_ID, /DMO/CARRIER.CURRENCY_CODE, ZTM268_BOOKING.FLIGHT_DATE, PRICE_CLASS, ZTM268_BOOKING.UNIQUE_ID]]></Summary>
+		<Location>vhshpan5db01:30243</Location>
+		<EstimatedCost>
+			<Inclusive Unit="us">9.62217e+06</Inclusive>
+		</EstimatedCost>
+		<EstimatedOutputCardinality>3</EstimatedOutputCardinality>
+		<ExecutionTime>
+			<Start Unit="us">1789641994327434</Start>
+			<End Unit="us">1789641999277995</End>
+			<Exclusive Unit="us">736</Exclusive>
+			<Inclusive Unit="us">4950561</Inclusive>
+			<Timestamps>[{"Open": [{"start":1789641994327434,"end":1789641994327487,"thread":24827},{"start":1789641999271759,"end":1789641999271766,"thread":24827}]},{"Fetch": [{"start":1789641999272181,"end":1789641999272217,"thread":24827},{"start":1789641999272242,"end":1789641999272862,"thread":24827},{"start":1789641999272864,"end":1789641999272873,"thread":24827}]},{"Close": [{"start":1789641999272920,"end":1789641999272925,"thread":24827},{"start":1789641999277989,"end":1789641999277995,"thread":24827}]}]</Timestamps>
+		</ExecutionTime>
+		<MemoryUsage>
+			<Max>0</Max>
+		</MemoryUsage>
+		<KernelCPUTime Unit="ms">0.000</KernelCPUTime>
+		<UserCPUTime Unit="ms">0.704</UserCPUTime>
+		<Details><![CDATA[{"Projected Cols":"/DMO/CONNECTION.AIRPORT_FROM_ID, /DMO/CONNECTION.AIRPORT_TO_ID, ZTM268_BOOKING.BOOKING_DATE, ZTM268_C_BOOKING_CONN_CARR_900.BOOKING_PER_CLASS, /DMO/CARRIER.CARRIER_ID, ?2, ZTM268_BOOKING.CONNECTION_ID, /DMO/CARRIER.CURRENCY_CODE, ZTM268_BOOKING.FLIGHT_DATE, PRICE_CLASS, ZTM268_BOOKING.UNIQUE_ID","Why not HEX":"by NO_USE_HEX_PLAN","Recompile State":"RECOMPILED"}]]></Details>
+		<Child ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_2" >
+			<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+			<FetchCallCount>1</FetchCallCount>
+		</Child>
+	</RootRelation>
+	<Relation ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_2" TypeName="TREX_SEARCH" InternalBufferId="5" Status="Finished">
+		<Name>COLUMN SEARCH</Name>
+		<ExecutionType>COLUMN</ExecutionType>
+		<Summary><![CDATA[/DMO/CARRIER.CARRIER_ID, /DMO/CARRIER.CURRENCY_CODE, ZTM268_BOOKING.UNIQUE_ID, ZTM268_BOOKING.BOOKING_DATE, ZTM268_BOOKING.CONNECTION_ID, ZTM268_BOOKING.FLIGHT_DATE, /DMO/CONNECTION.AIRPORT_FROM_ID, /DMO/CONNECTION.AIRPORT_TO_ID, PRICE_CLASS, COUNT(*), COALESCE(COUNT(*), 1)]]></Summary>
+		<Location>vhshpan5db01:30243</Location>
+		<EstimatedCost>
+			<Inclusive Unit="us">9.62215e+06</Inclusive>
+		</EstimatedCost>
+		<EstimatedOutputCardinality>3</EstimatedOutputCardinality>
+		<ExecutionTime>
+			<Start Unit="us">1789641994327490</Start>
+			<End Unit="us">1789641999277980</End>
+			<Exclusive Unit="us">2527</Exclusive>
+			<Inclusive Unit="us">4950490</Inclusive>
+			<Timestamps>[{"Open": [{"start":1789641994327490,"end":1789641994327516,"thread":24827},{"start":1789641999235613,"end":1789641999235652,"thread":24827},{"start":1789641999271734,"end":1789641999271755,"thread":24827}]},{"Fetch": [{"start":1789641999272219,"end":1789641999272241,"thread":24827}]},{"Close": [{"start":1789641999272927,"end":1789641999272931,"thread":24827},{"start":1789641999275565,"end":1789641999277980,"thread":24827}]}]</Timestamps>
+		</ExecutionTime>
+		<MemoryUsage>
+			<Max>0</Max>
+		</MemoryUsage>
+		<KernelCPUTime Unit="ms">0.000</KernelCPUTime>
+		<UserCPUTime Unit="ms">2.484</UserCPUTime>
+		<Details><![CDATA[{"Projected Cols":"/DMO/CARRIER.CARRIER_ID, /DMO/CARRIER.CURRENCY_CODE, ZTM268_BOOKING.UNIQUE_ID, ZTM268_BOOKING.BOOKING_DATE, ZTM268_BOOKING.CONNECTION_ID, ZTM268_BOOKING.FLIGHT_DATE, /DMO/CONNECTION.AIRPORT_FROM_ID, /DMO/CONNECTION.AIRPORT_TO_ID, PRICE_CLASS, COUNT(*), COALESCE(COUNT(*), 1)"}]]></Details>
+		<Child ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_3" >
+			<ExecutedOutputCardinality>2667365</ExecutedOutputCardinality>
+			<FetchCallCount>0</FetchCallCount>
+		</Child>
+		<InnerPlans>
+			<Plan ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_2_0" Type="Estimated" PlanType="Logical">
+				<RootRelation ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_2_0" TypeName="PROJECT">
+					<Name>COLUMN SEARCH</Name>
+					<Summary><![CDATA[/DMO/CARRIER.CARRIER_ID, /DMO/CARRIER.CURRENCY_CODE, ZTM268_BOOKING.UNIQUE_ID, ZTM268_BOOKING.BOOKING_DATE, ZTM268_BOOKING.CONNECTION_ID, ZTM268_BOOKING.FLIGHT_DATE, /DMO/CONNECTION.AIRPORT_FROM_ID, /DMO/CONNECTION.AIRPORT_TO_ID, PRICE_CLASS, COUNT(*), COALESCE(COUNT(*), 1)]]></Summary>
+					<Property><![CDATA[(LATE MATERIALIZATION)]]></Property>
+					<Location>vhshpan5db01:30243</Location>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">9.62215e+06</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>3</EstimatedOutputCardinality>
+					<Details><![CDATA[{"Projected Cols":"/DMO/CARRIER.CARRIER_ID, /DMO/CARRIER.CURRENCY_CODE, ZTM268_BOOKING.UNIQUE_ID, ZTM268_BOOKING.BOOKING_DATE, ZTM268_BOOKING.CONNECTION_ID, ZTM268_BOOKING.FLIGHT_DATE, /DMO/CONNECTION.AIRPORT_FROM_ID, /DMO/CONNECTION.AIRPORT_TO_ID, PRICE_CLASS, COUNT(*), COALESCE(COUNT(*), 1)"}]]></Details>
+					<Child ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_2_1">
+					</Child>
+				</RootRelation>
+				<Relation ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_2_1" TypeName="TOP">
+					<Name>LIMIT</Name>
+					<Summary><![CDATA[NUM RECORDS: 200]]></Summary>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">9.62213e+06</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>3</EstimatedOutputCardinality>
+					<Details><![CDATA[{"Num Records":"200"}]]></Details>
+					<Child ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_2_2">
+					</Child>
+				</Relation>
+				<Relation ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_2_2" TypeName="ORDER_BY">
+					<Name>ORDER BY</Name>
+					<Summary><![CDATA[/DMO/CARRIER.CARRIER_ID ASC, /DMO/CARRIER.CURRENCY_CODE ASC, ZTM268_BOOKING.CONNECTION_ID ASC, ZTM268_BOOKING.FLIGHT_DATE ASC, ZTM268_BOOKING.UNIQUE_ID ASC, PRICE_CLASS ASC, ZTM268_BOOKING.BOOKING_DATE ASC]]></Summary>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">9.62213e+06</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>3</EstimatedOutputCardinality>
+					<Details><![CDATA[{"Sort Cols":"/DMO/CARRIER.CARRIER_ID ASC, /DMO/CARRIER.CURRENCY_CODE ASC, ZTM268_BOOKING.CONNECTION_ID ASC, ZTM268_BOOKING.FLIGHT_DATE ASC, ZTM268_BOOKING.UNIQUE_ID ASC, PRICE_CLASS ASC, ZTM268_BOOKING.BOOKING_DATE ASC"}]]></Details>
+					<Child ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_2_3">
+					</Child>
+				</Relation>
+				<Relation ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_2_3" TypeName="JOIN">
+					<Name>JOIN</Name>
+					<Summary><![CDATA[JOIN CONDITION: (LEFT OUTER) ZTM268_BOOKING.CARRIER_ID = /DMO/CONNECTION.CARRIER_ID, (LEFT OUTER) ZTM268_BOOKING.CONNECTION_ID = /DMO/CONNECTION.CONNECTION_ID, (LEFT OUTER one-to-many) /DMO/CARRIER.CARRIER_ID = ZTM268_BOOKING.CARRIER_ID]]></Summary>
+					<Property><![CDATA[ENUM_BY: AGGR_THRU_JOIN]]></Property>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">9.62213e+06</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>1</EstimatedOutputCardinality>
+					<Details><![CDATA[{"Join Condition":"(LEFT OUTER) ZTM268_BOOKING.CARRIER_ID = /DMO/CONNECTION.CARRIER_ID, (LEFT OUTER) ZTM268_BOOKING.CONNECTION_ID = /DMO/CONNECTION.CONNECTION_ID, (LEFT OUTER one-to-many) /DMO/CARRIER.CARRIER_ID = ZTM268_BOOKING.CARRIER_ID"}]]></Details>
+					<Child ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_2_4">
+					</Child>
+					<Child ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_2_5">
+					</Child>
+					<Child ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_2_6">
+					</Child>
+				</Relation>
+				<Relation ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_2_6" TypeName="COLUMN_TEMP">
+					<Name>Column Temp Table</Name>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">9.61993e+06</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>3</EstimatedOutputCardinality>
+					<Child ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_3" />
+				</Relation>
+				<Relation ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_2_5" TypeName="TABLE">
+					<Name>COLUMN TABLE</Name>
+					<Summary><![CDATA[FILTER CONDITION: /DMO/CONNECTION.CLIENT = SESSION_CONTEXT(n'CDS_CLIENT')]]></Summary>
+					<Schema><![CDATA[SAPHANADB]]></Schema>
+					<TableType><![CDATA[COLUMN TABLE]]></TableType>
+					<ObjectName><![CDATA[/DMO/CONNECTION]]></ObjectName>
+					<Location>vhshpan5db01:30243</Location>
+					<EstimatedOutputCardinality>20</EstimatedOutputCardinality>
+					<Details><![CDATA[{"Filter":"/DMO/CONNECTION.CLIENT = SESSION_CONTEXT(n'CDS_CLIENT')"}]]></Details>
+				</Relation>
+				<Relation ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_2_4" TypeName="TABLE">
+					<Name>COLUMN TABLE</Name>
+					<Summary><![CDATA[FILTER CONDITION: /DMO/CARRIER.MANDT =  :1  AND /DMO/CARRIER.CLIENT = SESSION_CONTEXT(n'CDS_CLIENT') AND /DMO/CARRIER.CARRIER_NAME =  :2 ]]></Summary>
+					<Schema><![CDATA[SAPHANADB]]></Schema>
+					<TableType><![CDATA[COLUMN TABLE]]></TableType>
+					<ObjectName><![CDATA[/DMO/CARRIER]]></ObjectName>
+					<Location>vhshpan5db01:30243</Location>
+					<EstimatedOutputCardinality>1</EstimatedOutputCardinality>
+					<Details><![CDATA[{"Filter":"/DMO/CARRIER.MANDT =  :1  AND /DMO/CARRIER.CLIENT = SESSION_CONTEXT(n'CDS_CLIENT') AND /DMO/CARRIER.CARRIER_NAME =  :2 "}]]></Details>
+				</Relation>
+			</Plan>
+			<Plan ID="cs_plan1344_vhshpan5db01_30243" Type="Executed" PlanType="Column">
+				<RootRelation ID="X2_plan69512141_vhshpan5db01_30243_result0" Status="Finished">
+					<Name>Result</Name>
+					<Location><![CDATA[vhshpan5db01:30243]]></Location>
+					<Child ID="X2_plan69512141_vhshpan5db01_30243_pop21">
+						<ConnectorName><![CDATA[JEPlanDataResultDocuments]]></ConnectorName>
+						<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+						<Payload Unit="bytes">103076</Payload>
+						<Details><![CDATA[{ "description":"Result table of a query","data container member":"(column) _CV0x7f7f3de1ead0","data container member":"(column) SAPHANADBVLX.#_SYS_QO_COL_L:169_7f7f3de30ea0:4018000003eff9ff.ID","data container member":"(column) SAPHANADBVLX.#_SYS_QO_COL_L:169_7f7f3de30ea0:4018000003eff9ff.BOOKING_DATE","data container member":"(column) SAPHANADBVLX.#_SYS_QO_COL_L:169_7f7f3de30ea0:4018000003eff9ff.CONNECTION_ID","data container member":"(column) SAPHANADBVLX.#_SYS_QO_COL_L:169_7f7f3de30ea0:4018000003eff9ff.FLIGHT_DATE","data container member":"(column) SAPHANADBVLX.#_SYS_QO_COL_L:169_7f7f3de30ea0:4018000003eff9ff.COL$5$","data container member":"(column) SAPHANADBVLX.#_SYS_QO_COL_L:169_7f7f3de30ea0:4018000003eff9ff.COL$6$","data container member":"(column) SAPHANADB./DMO/CARRIER.CARRIER_ID","data container member":"(column) SAPHANADB./DMO/CARRIER.CURRENCY_CODE","data container member":"(column) SAPHANADB./DMO/CONNECTION.AIRPORT_FROM_ID","data container member":"and 1 more ..." }]]></Details>
+					</Child>
+				</RootRelation>
+				<Relation ID="X2_plan69512141_vhshpan5db01_30243" Status="Finished" Physical="False">
+					<Name><![CDATA[Column Search]]></Name>
+					<ExecutionType>Column Search</ExecutionType>
+					<Summary><![CDATA[18 nodes]]></Summary>
+					<ObjectName><![CDATA[/DMO/CARRIER, /DMO/CONNECTION, Temporary Table(s)]]></ObjectName>
+					<ExecutionTime>
+						<Exclusive Unit="ms">28.481</Exclusive>
+						<Inclusive Unit="ms">30.690</Inclusive>
+						<Timestamps>[{"Pop":[{"start":1789641999236879,"end":1789641999237857}]},{"Pop":[{"start":1789641999238160,"end":1789641999238438}]},{"Pop":[{"start":1789641999238630,"end":1789641999262497}]},{"Pop":[{"start":1789641999262765,"end":1789641999263095}]},{"Pop":[{"start":1789641999263211,"end":1789641999263348}]},{"Pop":[{"start":1789641999263349,"end":1789641999264464}]},{"Pop":[{"start":1789641999264638,"end":1789641999264716}]},{"Pop":[{"start":1789641999264870,"end":1789641999264944}]},{"Pop":[{"start":1789641999265052,"end":1789641999265189}]},{"Pop":[{"start":1789641999265367,"end":1789641999265653}]},{"Pop":[{"start":1789641999265773,"end":1789641999266047}]},{"Pop":[{"start":1789641999266504,"end":1789641999267074}]},{"Pop":[{"start":1789641999267212,"end":1789641999267569}]}]</Timestamps>
+					</ExecutionTime>
+					<KernelCPUTime Unit="ms">0</KernelCPUTime>
+					<UserCPUTime Unit="ms">133.302</UserCPUTime>
+					<Details><![CDATA[{"nodes":"18","table/column processed 001":"/DMO/CARRIER","table/column processed 002":"/DMO/CARRIER.CARRIER_ID","table/column processed 003":"/DMO/CARRIER.CURRENCY_CODE","table/column processed 004":"/DMO/CONNECTION.AIRPORT_FROM_ID","table/column processed 005":"/DMO/CONNECTION.AIRPORT_TO_ID","table/column processed 006":"/DMO/CONNECTION.CARRIER_ID","table/column processed 007":"/DMO/CONNECTION.CONNECTION_ID","table/column processed 008":"Temporary Table(s)","table/column processed 009":"Temporary Table.BOOKING_DATE","table/column processed 010":"Temporary Table.CARRIER_ID","table/column processed 011":"Temporary Table.COL$5$","table/column processed 012":"Temporary Table.COL$6$","table/column processed 013":"Temporary Table.CONNECTION_ID","table/column processed 014":"Temporary Table.FLIGHT_DATE","table/column processed 015":"Temporary Table.ID"}]]></Details>
+					<InnerPlans>
+						<Plan ID="subplan_X2_plan69512141_vhshpan5db01_30243" PlanType="Column">
+							<Relation ID="X2_plan69512141_vhshpan5db01_30243_pop17" TypeName="CS_POP" Status="Finished">
+								<Name><![CDATA[JECalculate]]></Name>
+								<ExecutionType>Column Search</ExecutionType>
+								<Summary><![CDATA[Calculation coalesce ( "SAPHANADBVLX.#_SYS_QO_COL_L:169_7f7f3de30ea0:4018000003eff9ff.COL$6$" , fixed ( 1 , 18 , 0 ) ) on table #_SYS_QO_COL_L:169_7f7f3de30ea0:4018000003eff9ff]]></Summary>
+								<Schema><![CDATA[SAPHANADBVLX]]></Schema>
+								<ObjectName><![CDATA[Temporary Table]]></ObjectName>
+								<TableType><![CDATA[COLUMN TABLE]]></TableType>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Exclusive Unit="ms">0.274</Exclusive>
+									<Inclusive Unit="ms">29.168</Inclusive>
+									<Timestamps>[{"Pop":[{"start":1789641999265773,"end":1789641999266047}]}]</Timestamps>
+								</ExecutionTime>
+								<KernelCPUTime Unit="ms">0</KernelCPUTime>
+								<UserCPUTime Unit="ms">0.302</UserCPUTime>
+								<Details><![CDATA[{"table processed":"Temporary Table","Temporary Table":"#_SYS_QO_COL_L:169_7f7f3de30ea0:4018000003eff9ff"}]]></Details>
+								<Child ID="X2_plan69512141_vhshpan5db01_30243_pop15">
+									<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+									<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+									<Payload Unit="bytes">5072</Payload>
+									<Details><![CDATA[{ "data container":"vector of vector of integers","description":"matrix of internal docid values containing the result of a join" }]]></Details>
+								</Child>
+							</Relation>
+							<Relation ID="X2_plan69512141_vhshpan5db01_30243_pop3" TypeName="CS_POP" Status="Finished">
+								<Name><![CDATA[JEEvalPrecond]]></Name>
+								<ExecutionType>Column Search</ExecutionType>
+								<Summary><![CDATA[Access Table using 5 Filters]]></Summary>
+								<Schema><![CDATA[SAPHANADB]]></Schema>
+								<ObjectName><![CDATA[/DMO/CARRIER]]></ObjectName>
+								<TableType><![CDATA[COLUMN TABLE]]></TableType>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Exclusive Unit="ms">0.978</Exclusive>
+									<Inclusive Unit="ms">0.978</Inclusive>
+									<Timestamps>[{"Pop":[{"start":1789641999236879,"end":1789641999237857}]}]</Timestamps>
+								</ExecutionTime>
+								<KernelCPUTime Unit="ms">0</KernelCPUTime>
+								<UserCPUTime Unit="ms">1.036</UserCPUTime>
+								<Details><![CDATA[{"table processed":"/DMO/CARRIER"}]]></Details>
+								<InnerPlans>
+									<Plan ID="cs_plan1340_vhshpan5db01_30243" PlanType="Column" />
+								</InnerPlans>
+							</Relation>
+							<Relation ID="cs_plan1344_vhshpan5db01_30243_pattern4" Status="Finished" Physical="False">
+								<Name><![CDATA[result assembly]]></Name>
+								<ExecutionType>Column Search</ExecutionType>
+								<Summary><![CDATA[(5 nodes) build result table with requested columns]]></Summary>
+								<Schema><![CDATA[SAPHANADBVLX]]></Schema>
+								<ObjectName><![CDATA[/DMO/CARRIER, /DMO/CONNECTION, Temporary Table(s)]]></ObjectName>
+								<ExecutionTime>
+									<Exclusive Unit="ms">0.989</Exclusive>
+									<Inclusive Unit="ms">30.690</Inclusive>
+									<Timestamps>[{"Pop":[{"start":1789641999265884,"end":1789641999265946}]},{"Pop":[{"start":1789641999266504,"end":1789641999267074}]},{"Pop":[{"start":1789641999267212,"end":1789641999267569}]}]</Timestamps>
+								</ExecutionTime>
+								<KernelCPUTime Unit="ms">0</KernelCPUTime>
+								<UserCPUTime Unit="ms">1.782</UserCPUTime>
+								<Details><![CDATA[{"nodes":"5","table/column processed 001":"/DMO/CARRIER.CARRIER_ID","table/column processed 002":"/DMO/CARRIER.CURRENCY_CODE","table/column processed 003":"/DMO/CONNECTION.AIRPORT_FROM_ID","table/column processed 004":"/DMO/CONNECTION.AIRPORT_TO_ID","table/column processed 005":"Temporary Table","table/column processed 006":"Temporary Table.BOOKING_DATE","table/column processed 007":"Temporary Table.COL$5$","table/column processed 008":"Temporary Table.COL$6$","table/column processed 009":"Temporary Table.CONNECTION_ID","table/column processed 010":"Temporary Table.FLIGHT_DATE","table/column processed 011":"Temporary Table.ID","schema":"SAPHANADBVLX","table/column processed 001":"/DMO/CARRIER.CARRIER_ID","table/column processed 002":"/DMO/CARRIER.CURRENCY_CODE","table/column processed 003":"/DMO/CONNECTION.AIRPORT_FROM_ID","table/column processed 004":"/DMO/CONNECTION.AIRPORT_TO_ID","table/column processed 005":"Temporary Table","table/column processed 006":"Temporary Table.BOOKING_DATE","table/column processed 007":"Temporary Table.COL$5$","table/column processed 008":"Temporary Table.COL$6$","table/column processed 009":"Temporary Table.CONNECTION_ID","table/column processed 010":"Temporary Table.FLIGHT_DATE","table/column processed 011":"Temporary Table.ID","schema":"SAPHANADBVLX"}]]></Details>
+								<InnerPlans>
+									<Plan ID="subplan_cs_plan1344_vhshpan5db01_30243_pattern4" PlanType="Column">
+										<Relation ID="X2_plan69512141_vhshpan5db01_30243_pop16" TypeName="CS_POP" Status="Finished">
+											<Name><![CDATA[JEUniqueColumn]]></Name>
+											<ExecutionType>Column Search</ExecutionType>
+											<Summary><![CDATA[Split Plandata]]></Summary>
+											<Schema><![CDATA[SAPHANADBVLX]]></Schema>
+											<ObjectName><![CDATA[Temporary Table]]></ObjectName>
+											<TableType><![CDATA[COLUMN TABLE]]></TableType>
+											<Location><![CDATA[vhshpan5db01:30243]]></Location>
+											<ExecutionTime>
+												<Exclusive Unit="ms">0.062</Exclusive>
+												<Inclusive Unit="ms">29.067</Inclusive>
+												<Timestamps>[{"Pop":[{"start":1789641999265884,"end":1789641999265946}]}]</Timestamps>
+											</ExecutionTime>
+											<KernelCPUTime Unit="ms">0</KernelCPUTime>
+											<UserCPUTime Unit="ms">0.106</UserCPUTime>
+											<Details><![CDATA[{"table/column processed":"Temporary Table","table/column processed":"Temporary Table","table/column processed":"Temporary Table","Temporary Table":"#JE_L:201_4618441417934502412"}]]></Details>
+											<Child ID="X2_plan69512141_vhshpan5db01_30243_pop15">
+												<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+												<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+												<Payload Unit="bytes">5072</Payload>
+												<Details><![CDATA[{ "data container":"vector of vector of integers","description":"matrix of internal docid values containing the result of a join" }]]></Details>
+											</Child>
+										</Relation>
+										<Relation ID="X2_plan69512141_vhshpan5db01_30243_pop21" TypeName="CS_POP" Status="Finished">
+											<Name><![CDATA[JEAssembleResults]]></Name>
+											<ExecutionType>Column Search</ExecutionType>
+											<Summary><![CDATA[Build Result + Order By CARRIER_ID, CURRENCY_CODE, CONNECTION_ID, FLIGHT_DATE, ID, COL$5$, BOOKING_DATE]]></Summary>
+											<Location><![CDATA[vhshpan5db01:30243]]></Location>
+											<ExecutionTime>
+												<Exclusive Unit="ms">0.357</Exclusive>
+												<Inclusive Unit="ms">30.690</Inclusive>
+												<Timestamps>[{"Pop":[{"start":1789641999267212,"end":1789641999267569}]}]</Timestamps>
+											</ExecutionTime>
+											<KernelCPUTime Unit="ms">0</KernelCPUTime>
+											<UserCPUTime Unit="ms">0.381</UserCPUTime>
+											<Details><![CDATA[{"column processed 001":"CARRIER_ID (Order By)","column processed 002":"CURRENCY_CODE (Order By)","column processed 003":"CONNECTION_ID (Order By)","column processed 004":"FLIGHT_DATE (Order By)","column processed 005":"ID (Order By)","column processed 006":"COL$5$ (Order By)","column processed 007":"BOOKING_DATE (Order By)"}]]></Details>
+											<Child ID="X2_plan69512141_vhshpan5db01_30243_pop15">
+												<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+												<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+												<Payload Unit="bytes">5072</Payload>
+												<Details><![CDATA[{ "data container":"vector of vector of integers","description":"matrix of internal docid values containing the result of a join" }]]></Details>
+											</Child>
+											<Child ID="X2_plan69512141_vhshpan5db01_30243_pop17">
+												<ConnectorName><![CDATA[JEPlanDataAttrVals]]></ConnectorName>
+												<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+												<Payload Unit="bytes">1752</Payload>
+												<Details><![CDATA[{ "data container":"vector of columns","description":"result of a projection: list of columns with type definition and values or docids","data container member":"(column) _CV0x7f7f3de1ead0 (type) fixed0.0" }]]></Details>
+											</Child>
+											<Child ID="X2_plan69512141_vhshpan5db01_30243_pop18">
+												<ConnectorName><![CDATA[JEPlanDataAttrVals]]></ConnectorName>
+												<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+												<Payload Unit="bytes">44812</Payload>
+												<Details><![CDATA[{ "data container":"vector of columns","description":"result of a projection: list of columns with type definition and values or docids","data container member":"(column) ID (type) int","data container member":"(column) BOOKING_DATE (type) string","data container member":"(column) CONNECTION_ID (type) string","data container member":"(column) FLIGHT_DATE (type) string","data container member":"(column) COL$5$ (type) string","data container member":"(column) COL$6$ (type) fixed18.0" }]]></Details>
+											</Child>
+											<Child ID="X2_plan69512141_vhshpan5db01_30243_pop19">
+												<ConnectorName><![CDATA[JEPlanDataAttrVals]]></ConnectorName>
+												<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+												<Payload Unit="bytes">21584</Payload>
+												<Details><![CDATA[{ "data container":"vector of columns","description":"result of a projection: list of columns with type definition and values or docids","data container member":"(column) CARRIER_ID (type) string","data container member":"(column) CURRENCY_CODE (type) string" }]]></Details>
+											</Child>
+											<Child ID="X2_plan69512141_vhshpan5db01_30243_pop20">
+												<ConnectorName><![CDATA[JEPlanDataAttrVals]]></ConnectorName>
+												<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+												<Payload Unit="bytes">21584</Payload>
+												<Details><![CDATA[{ "data container":"vector of columns","description":"result of a projection: list of columns with type definition and values or docids","data container member":"(column) AIRPORT_FROM_ID (type) string","data container member":"(column) AIRPORT_TO_ID (type) string" }]]></Details>
+											</Child>
+										</Relation>
+										<Relation ID="cs_plan1344_vhshpan5db01_30243_pattern4_abstr1" Status="Finished" Physical="False">
+											<Name><![CDATA[JERequestedAttributes]]></Name>
+											<ExecutionType>Column Search</ExecutionType>
+											<Summary><![CDATA[3 nodes with same name]]></Summary>
+											<ObjectName><![CDATA[/DMO/CARRIER, /DMO/CONNECTION, Temporary Table(s)]]></ObjectName>
+											<ExecutionTime>
+												<Exclusive Unit="ms">0.570</Exclusive>
+												<Inclusive Unit="ms">30.195</Inclusive>
+												<Timestamps>[{"Pop":[{"start":1789641999266504,"end":1789641999267074}]}]</Timestamps>
+											</ExecutionTime>
+											<KernelCPUTime Unit="ms">0</KernelCPUTime>
+											<UserCPUTime Unit="ms">1.295</UserCPUTime>
+											<Details><![CDATA[{"nodes":"3","table/column processed 001":"/DMO/CARRIER.CARRIER_ID","table/column processed 002":"/DMO/CARRIER.CURRENCY_CODE","table/column processed 003":"/DMO/CONNECTION.AIRPORT_FROM_ID","table/column processed 004":"/DMO/CONNECTION.AIRPORT_TO_ID","table/column processed 005":"Temporary Table.BOOKING_DATE","table/column processed 006":"Temporary Table.COL$5$","table/column processed 007":"Temporary Table.COL$6$","table/column processed 008":"Temporary Table.CONNECTION_ID","table/column processed 009":"Temporary Table.FLIGHT_DATE","table/column processed 010":"Temporary Table.ID","table/column processed 001":"/DMO/CARRIER.CARRIER_ID","table/column processed 002":"/DMO/CARRIER.CURRENCY_CODE","table/column processed 003":"/DMO/CONNECTION.AIRPORT_FROM_ID","table/column processed 004":"/DMO/CONNECTION.AIRPORT_TO_ID","table/column processed 005":"Temporary Table.BOOKING_DATE","table/column processed 006":"Temporary Table.COL$5$","table/column processed 007":"Temporary Table.COL$6$","table/column processed 008":"Temporary Table.CONNECTION_ID","table/column processed 009":"Temporary Table.FLIGHT_DATE","table/column processed 010":"Temporary Table.ID","table/column processed 001":"/DMO/CARRIER.CARRIER_ID","table/column processed 002":"/DMO/CARRIER.CURRENCY_CODE","table/column processed 003":"/DMO/CONNECTION.AIRPORT_FROM_ID","table/column processed 004":"/DMO/CONNECTION.AIRPORT_TO_ID","table/column processed 005":"Temporary Table.BOOKING_DATE","table/column processed 006":"Temporary Table.COL$5$","table/column processed 007":"Temporary Table.COL$6$","table/column processed 008":"Temporary Table.CONNECTION_ID","table/column processed 009":"Temporary Table.FLIGHT_DATE","table/column processed 010":"Temporary Table.ID"}]]></Details>
+											<InnerPlans>
+												<Plan ID="subplan_cs_plan1344_vhshpan5db01_30243_pattern4_abstr1" PlanType="Column">
+													<Relation ID="X2_plan69512141_vhshpan5db01_30243_pop18" TypeName="CS_POP" Status="Finished">
+														<Name><![CDATA[JERequestedAttributes]]></Name>
+														<ExecutionType>Column Search</ExecutionType>
+														<Summary><![CDATA[Projection of columns ID, BOOKING_DATE, CONNECTION_ID, FLIGHT_DATE, COL$5$, COL$6$]]></Summary>
+														<Schema><![CDATA[SAPHANADBVLX]]></Schema>
+														<ObjectName><![CDATA[Temporary Table(s)]]></ObjectName>
+														<TableType><![CDATA[COLUMN TABLE]]></TableType>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Exclusive Unit="ms">0.570</Exclusive>
+															<Inclusive Unit="ms">30.195</Inclusive>
+															<Timestamps>[{"Pop":[{"start":1789641999266504,"end":1789641999267074}]}]</Timestamps>
+														</ExecutionTime>
+														<KernelCPUTime Unit="ms">0</KernelCPUTime>
+														<UserCPUTime Unit="ms">0.624</UserCPUTime>
+														<Details><![CDATA[{"table/column processed 001":"Temporary Table.ID","table/column processed 002":"Temporary Table.BOOKING_DATE","table/column processed 003":"Temporary Table.CONNECTION_ID","table/column processed 004":"Temporary Table.FLIGHT_DATE","table/column processed 005":"Temporary Table.COL$5$","table/column processed 006":"Temporary Table.COL$6$","Temporary Table":"#_SYS_QO_COL_L:169_7f7f3de30ea0:4018000003eff9ff"}]]></Details>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop16">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+															<Payload Unit="bytes">5072</Payload>
+															<Details><![CDATA[{ "data container":"vector of vector of integers","description":"matrix of internal docid values containing the result of a join" }]]></Details>
+														</Child>
+													</Relation>
+													<Relation ID="X2_plan69512141_vhshpan5db01_30243_pop19" TypeName="CS_POP" Status="Finished">
+														<Name><![CDATA[JERequestedAttributes]]></Name>
+														<ExecutionType>Column Search</ExecutionType>
+														<Summary><![CDATA[Projection of columns CARRIER_ID, CURRENCY_CODE]]></Summary>
+														<Schema><![CDATA[SAPHANADB]]></Schema>
+														<ObjectName><![CDATA[/DMO/CARRIER]]></ObjectName>
+														<TableType><![CDATA[COLUMN TABLE]]></TableType>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Exclusive Unit="ms">0.230</Exclusive>
+															<Inclusive Unit="ms">29.953</Inclusive>
+															<Timestamps>[{"Pop":[{"start":1789641999266602,"end":1789641999266832}]}]</Timestamps>
+														</ExecutionTime>
+														<KernelCPUTime Unit="ms">0</KernelCPUTime>
+														<UserCPUTime Unit="ms">0.34</UserCPUTime>
+														<Details><![CDATA[{"table/column processed 001":"/DMO/CARRIER.CARRIER_ID","table/column processed 002":"/DMO/CARRIER.CURRENCY_CODE"}]]></Details>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop16">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+															<Payload Unit="bytes">5072</Payload>
+															<Details><![CDATA[{ "data container":"vector of vector of integers","description":"matrix of internal docid values containing the result of a join" }]]></Details>
+														</Child>
+													</Relation>
+													<Relation ID="X2_plan69512141_vhshpan5db01_30243_pop20" TypeName="CS_POP" Status="Finished">
+														<Name><![CDATA[JERequestedAttributes]]></Name>
+														<ExecutionType>Column Search</ExecutionType>
+														<Summary><![CDATA[Projection of columns AIRPORT_FROM_ID, AIRPORT_TO_ID]]></Summary>
+														<Schema><![CDATA[SAPHANADB]]></Schema>
+														<ObjectName><![CDATA[/DMO/CONNECTION]]></ObjectName>
+														<TableType><![CDATA[COLUMN TABLE]]></TableType>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Exclusive Unit="ms">0.239</Exclusive>
+															<Inclusive Unit="ms">29.954</Inclusive>
+															<Timestamps>[{"Pop":[{"start":1789641999266594,"end":1789641999266833}]}]</Timestamps>
+														</ExecutionTime>
+														<KernelCPUTime Unit="ms">0</KernelCPUTime>
+														<UserCPUTime Unit="ms">0.331</UserCPUTime>
+														<Details><![CDATA[{"table/column processed 001":"/DMO/CONNECTION.AIRPORT_FROM_ID","table/column processed 002":"/DMO/CONNECTION.AIRPORT_TO_ID"}]]></Details>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop16">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+															<Payload Unit="bytes">5072</Payload>
+															<Details><![CDATA[{ "data container":"vector of vector of integers","description":"matrix of internal docid values containing the result of a join" }]]></Details>
+														</Child>
+													</Relation>
+												</Plan>
+											</InnerPlans>
+										</Relation>
+									</Plan>
+								</InnerPlans>
+							</Relation>
+							<Relation ID="cs_plan1344_vhshpan5db01_30243_pattern5" Status="Finished" Physical="False">
+								<Name><![CDATA[join]]></Name>
+								<ExecutionType>Column Search</ExecutionType>
+								<Summary><![CDATA[(11 nodes) composition of semijoins]]></Summary>
+								<Schema><![CDATA[SAPHANADB]]></Schema>
+								<ObjectName><![CDATA[/DMO/CARRIER, /DMO/CONNECTION, Temporary Table(s)]]></ObjectName>
+								<ExecutionTime>
+									<Exclusive Unit="ms">26.302</Exclusive>
+									<Inclusive Unit="ms">28.774</Inclusive>
+									<Timestamps>[{"Pop":[{"start":1789641999238160,"end":1789641999238438}]},{"Pop":[{"start":1789641999238630,"end":1789641999262497}]},{"Pop":[{"start":1789641999262765,"end":1789641999263095}]},{"Pop":[{"start":1789641999263211,"end":1789641999263348}]},{"Pop":[{"start":1789641999263349,"end":1789641999264464}]},{"Pop":[{"start":1789641999264638,"end":1789641999264716}]},{"Pop":[{"start":1789641999264870,"end":1789641999264944}]},{"Pop":[{"start":1789641999265052,"end":1789641999265189}]},{"Pop":[{"start":1789641999265367,"end":1789641999265653}]}]</Timestamps>
+								</ExecutionTime>
+								<KernelCPUTime Unit="ms">0</KernelCPUTime>
+								<UserCPUTime Unit="ms">130.182</UserCPUTime>
+								<Details><![CDATA[{"nodes":"11","table/column processed 001":"/DMO/CARRIER","table/column processed 002":"/DMO/CARRIER.CARRIER_ID","table/column processed 003":"/DMO/CARRIER.CURRENCY_CODE","table/column processed 004":"/DMO/CONNECTION.CARRIER_ID","table/column processed 005":"/DMO/CONNECTION.CONNECTION_ID","table/column processed 006":"Temporary Table.CARRIER_ID","table/column processed 007":"Temporary Table.CONNECTION_ID","schema":"SAPHANADB","table/column processed 001":"/DMO/CARRIER","table/column processed 002":"/DMO/CARRIER.CARRIER_ID","table/column processed 003":"/DMO/CARRIER.CURRENCY_CODE","table/column processed 004":"/DMO/CONNECTION.CARRIER_ID","table/column processed 005":"/DMO/CONNECTION.CONNECTION_ID","table/column processed 006":"Temporary Table.CARRIER_ID","table/column processed 007":"Temporary Table.CONNECTION_ID","schema":"SAPHANADB"}]]></Details>
+								<InnerPlans>
+									<Plan ID="subplan_cs_plan1344_vhshpan5db01_30243_pattern5" PlanType="Column">
+										<Relation ID="cs_plan1344_vhshpan5db01_30243_pattern1" Status="Finished" Physical="False">
+											<Name><![CDATA[reduction phase]]></Name>
+											<ExecutionType>Column Search</ExecutionType>
+											<Summary><![CDATA[(4 nodes) reduce data prior to join]]></Summary>
+											<ObjectName><![CDATA[/DMO/CARRIER, Temporary Table(s)]]></ObjectName>
+											<ExecutionTime>
+												<Exclusive Unit="ms">24.449</Exclusive>
+												<Inclusive Unit="ms">26.469</Inclusive>
+												<Timestamps>[{"Pop":[{"start":1789641999238160,"end":1789641999238438}]},{"Pop":[{"start":1789641999238630,"end":1789641999262497}]},{"Pop":[{"start":1789641999262784,"end":1789641999262951}]},{"Pop":[{"start":1789641999263211,"end":1789641999263348}]}]</Timestamps>
+											</ExecutionTime>
+											<KernelCPUTime Unit="ms">0</KernelCPUTime>
+											<UserCPUTime Unit="ms">127.65</UserCPUTime>
+											<Details><![CDATA[{"nodes":"4","table/column processed 001":"/DMO/CARRIER.CARRIER_ID","table/column processed 002":"Temporary Table.CARRIER_ID","table/column processed 001":"/DMO/CARRIER.CARRIER_ID","table/column processed 002":"Temporary Table.CARRIER_ID","table/column processed 001":"/DMO/CARRIER.CARRIER_ID","table/column processed 002":"Temporary Table.CARRIER_ID"}]]></Details>
+											<InnerPlans>
+												<Plan ID="subplan_cs_plan1344_vhshpan5db01_30243_pattern1" PlanType="Column">
+													<Relation ID="X2_plan69512141_vhshpan5db01_30243_pop11" TypeName="CS_POP" Status="Finished">
+														<Name><![CDATA[JEStep3b]]></Name>
+														<ExecutionType>Column Search</ExecutionType>
+														<Summary><![CDATA[Semijoin3]]></Summary>
+														<Schema><![CDATA[SAPHANADBVLX]]></Schema>
+														<ObjectName><![CDATA[Temporary Table.CARRIER_ID]]></ObjectName>
+														<TableType><![CDATA[COLUMN TABLE]]></TableType>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Exclusive Unit="ms">0.167</Exclusive>
+															<Inclusive Unit="ms">26.072</Inclusive>
+															<Timestamps>[{"Pop":[{"start":1789641999262784,"end":1789641999262951}]}]</Timestamps>
+														</ExecutionTime>
+														<KernelCPUTime Unit="ms">0</KernelCPUTime>
+														<UserCPUTime Unit="ms">0.199</UserCPUTime>
+														<Details><![CDATA[{"table/column processed 001":"Temporary Table.CARRIER_ID","Temporary Table":"#_SYS_QO_COL_L:169_7f7f3de30ea0:4018000003eff9ff"}]]></Details>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop9">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+															<Payload Unit="bytes">2222</Payload>
+															<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+														</Child>
+													</Relation>
+													<Relation ID="X2_plan69512141_vhshpan5db01_30243_pop2" TypeName="CS_POP" Status="Finished">
+														<Name><![CDATA[JEStep1]]></Name>
+														<ExecutionType>Column Search</ExecutionType>
+														<Summary><![CDATA[Semijoin1 (first join partner)]]></Summary>
+														<Schema><![CDATA[SAPHANADB]]></Schema>
+														<ObjectName><![CDATA[/DMO/CARRIER.CARRIER_ID]]></ObjectName>
+														<TableType><![CDATA[COLUMN TABLE]]></TableType>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Exclusive Unit="ms">0.278</Exclusive>
+															<Inclusive Unit="ms">1.559</Inclusive>
+															<Timestamps>[{"Pop":[{"start":1789641999238160,"end":1789641999238438}]}]</Timestamps>
+														</ExecutionTime>
+														<KernelCPUTime Unit="ms">0</KernelCPUTime>
+														<UserCPUTime Unit="ms">0.337</UserCPUTime>
+														<Details><![CDATA[{"table/column processed 001":"/DMO/CARRIER.CARRIER_ID"}]]></Details>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop3">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+															<Payload Unit="bytes">200</Payload>
+															<Details><![CDATA[{ "description":"result of the evaluation of a filter condition" }]]></Details>
+														</Child>
+													</Relation>
+													<Relation ID="X2_plan69512141_vhshpan5db01_30243_pop4" TypeName="CS_POP" Status="Finished">
+														<Name><![CDATA[JEStep4]]></Name>
+														<ExecutionType>Column Search</ExecutionType>
+														<Summary><![CDATA[Semijoin4]]></Summary>
+														<Schema><![CDATA[SAPHANADB]]></Schema>
+														<ObjectName><![CDATA[/DMO/CARRIER.CARRIER_ID]]></ObjectName>
+														<TableType><![CDATA[COLUMN TABLE]]></TableType>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Exclusive Unit="ms">0.137</Exclusive>
+															<Inclusive Unit="ms">26.469</Inclusive>
+															<Timestamps>[{"Pop":[{"start":1789641999263211,"end":1789641999263348}]}]</Timestamps>
+														</ExecutionTime>
+														<KernelCPUTime Unit="ms">0</KernelCPUTime>
+														<UserCPUTime Unit="ms">0.217</UserCPUTime>
+														<Details><![CDATA[{"table/column processed 001":"/DMO/CARRIER.CARRIER_ID"}]]></Details>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop2">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+															<Payload Unit="bytes">890</Payload>
+															<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+														</Child>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop11">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+															<Payload Unit="bytes">1141</Payload>
+															<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+														</Child>
+													</Relation>
+													<Relation ID="X2_plan69512141_vhshpan5db01_30243_pop9" TypeName="CS_POP" Status="Finished">
+														<Name><![CDATA[JEStep2]]></Name>
+														<ExecutionType>Column Search</ExecutionType>
+														<Summary><![CDATA[Semijoin2 (second join partner)  + Filter]]></Summary>
+														<Schema><![CDATA[SAPHANADBVLX]]></Schema>
+														<ObjectName><![CDATA[Temporary Table.CARRIER_ID]]></ObjectName>
+														<TableType><![CDATA[COLUMN TABLE]]></TableType>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Exclusive Unit="ms">23.867</Exclusive>
+															<Inclusive Unit="ms">25.618</Inclusive>
+															<Timestamps>[{"Pop":[{"start":1789641999238630,"end":1789641999262497}]}]</Timestamps>
+														</ExecutionTime>
+														<KernelCPUTime Unit="ms">0</KernelCPUTime>
+														<UserCPUTime Unit="ms">126.897</UserCPUTime>
+														<Details><![CDATA[{"table/column processed 001":"Temporary Table.CARRIER_ID","Temporary Table":"#_SYS_QO_COL_L:169_7f7f3de30ea0:4018000003eff9ff"}]]></Details>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop2">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+															<Payload Unit="bytes">485</Payload>
+															<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+														</Child>
+													</Relation>
+												</Plan>
+											</InnerPlans>
+										</Relation>
+										<Relation ID="cs_plan1344_vhshpan5db01_30243_pattern2" Status="Finished" Physical="False">
+											<Name><![CDATA[reduction phase]]></Name>
+											<ExecutionType>Column Search</ExecutionType>
+											<Summary><![CDATA[(4 nodes) reduce data prior to join]]></Summary>
+											<ObjectName><![CDATA[/DMO/CONNECTION, Temporary Table(s)]]></ObjectName>
+											<ExecutionTime>
+												<Exclusive Unit="ms">1.597</Exclusive>
+												<Inclusive Unit="ms">28.065</Inclusive>
+												<Timestamps>[{"Pop":[{"start":1789641999262765,"end":1789641999263095}]},{"Pop":[{"start":1789641999263349,"end":1789641999264464}]},{"Pop":[{"start":1789641999264638,"end":1789641999264716}]},{"Pop":[{"start":1789641999264870,"end":1789641999264944}]}]</Timestamps>
+											</ExecutionTime>
+											<KernelCPUTime Unit="ms">0</KernelCPUTime>
+											<UserCPUTime Unit="ms">1.815</UserCPUTime>
+											<Details><![CDATA[{"nodes":"4","table/column processed 001":"/DMO/CONNECTION.CARRIER_ID","table/column processed 002":"/DMO/CONNECTION.CONNECTION_ID","table/column processed 003":"Temporary Table.CARRIER_ID","table/column processed 004":"Temporary Table.CONNECTION_ID","table/column processed 001":"/DMO/CONNECTION.CARRIER_ID","table/column processed 002":"/DMO/CONNECTION.CONNECTION_ID","table/column processed 003":"Temporary Table.CARRIER_ID","table/column processed 004":"Temporary Table.CONNECTION_ID","table/column processed 001":"/DMO/CONNECTION.CARRIER_ID","table/column processed 002":"/DMO/CONNECTION.CONNECTION_ID","table/column processed 003":"Temporary Table.CARRIER_ID","table/column processed 004":"Temporary Table.CONNECTION_ID"}]]></Details>
+											<InnerPlans>
+												<Plan ID="subplan_cs_plan1344_vhshpan5db01_30243_pattern2" PlanType="Column">
+													<Relation ID="X2_plan69512141_vhshpan5db01_30243_pop10" TypeName="CS_POP" Status="Finished">
+														<Name><![CDATA[JEStep1]]></Name>
+														<ExecutionType>Column Search</ExecutionType>
+														<Summary><![CDATA[Semijoin1 (first join partner)]]></Summary>
+														<Schema><![CDATA[SAPHANADBVLX]]></Schema>
+														<ObjectName><![CDATA[Temporary Table(s)]]></ObjectName>
+														<TableType><![CDATA[COLUMN TABLE]]></TableType>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Exclusive Unit="ms">0.330</Exclusive>
+															<Inclusive Unit="ms">26.216</Inclusive>
+															<Timestamps>[{"Pop":[{"start":1789641999262765,"end":1789641999263095}]}]</Timestamps>
+														</ExecutionTime>
+														<KernelCPUTime Unit="ms">0</KernelCPUTime>
+														<UserCPUTime Unit="ms">0.401</UserCPUTime>
+														<Details><![CDATA[{"table/column processed 001":"Temporary Table.CONNECTION_ID","table/column processed 002":"Temporary Table.CARRIER_ID","Temporary Table":"#_SYS_QO_COL_L:169_7f7f3de30ea0:4018000003eff9ff"}]]></Details>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop9">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+															<Payload Unit="bytes">2222</Payload>
+															<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+														</Child>
+													</Relation>
+													<Relation ID="X2_plan69512141_vhshpan5db01_30243_pop12" TypeName="CS_POP" Status="Finished">
+														<Name><![CDATA[JEStep4]]></Name>
+														<ExecutionType>Column Search</ExecutionType>
+														<Summary><![CDATA[Semijoin4]]></Summary>
+														<Schema><![CDATA[SAPHANADBVLX]]></Schema>
+														<ObjectName><![CDATA[Temporary Table(s)]]></ObjectName>
+														<TableType><![CDATA[COLUMN TABLE]]></TableType>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Exclusive Unit="ms">0.074</Exclusive>
+															<Inclusive Unit="ms">28.065</Inclusive>
+															<Timestamps>[{"Pop":[{"start":1789641999264870,"end":1789641999264944}]}]</Timestamps>
+														</ExecutionTime>
+														<KernelCPUTime Unit="ms">0</KernelCPUTime>
+														<UserCPUTime Unit="ms">0.109</UserCPUTime>
+														<Details><![CDATA[{"table/column processed 001":"Temporary Table.CONNECTION_ID","table/column processed 002":"Temporary Table.CARRIER_ID","Temporary Table":"#_SYS_QO_COL_L:169_7f7f3de30ea0:4018000003eff9ff"}]]></Details>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop10">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+															<Payload Unit="bytes">3323</Payload>
+															<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+														</Child>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop7">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+															<Payload Unit="bytes">3323</Payload>
+															<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+														</Child>
+													</Relation>
+													<Relation ID="X2_plan69512141_vhshpan5db01_30243_pop6" TypeName="CS_POP" Status="Finished">
+														<Name><![CDATA[JEStep2]]></Name>
+														<ExecutionType>Column Search</ExecutionType>
+														<Summary><![CDATA[Semijoin2 (second join partner) ]]></Summary>
+														<Schema><![CDATA[SAPHANADB]]></Schema>
+														<ObjectName><![CDATA[/DMO/CONNECTION]]></ObjectName>
+														<TableType><![CDATA[COLUMN TABLE]]></TableType>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Exclusive Unit="ms">1.115</Exclusive>
+															<Inclusive Unit="ms">27.585</Inclusive>
+															<Timestamps>[{"Pop":[{"start":1789641999263349,"end":1789641999264464}]}]</Timestamps>
+														</ExecutionTime>
+														<KernelCPUTime Unit="ms">0</KernelCPUTime>
+														<UserCPUTime Unit="ms">1.183</UserCPUTime>
+														<Details><![CDATA[{"table/column processed 001":"/DMO/CONNECTION.CONNECTION_ID","table/column processed 002":"/DMO/CONNECTION.CARRIER_ID"}]]></Details>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop10">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+															<Payload Unit="bytes">2242</Payload>
+															<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+														</Child>
+														<InnerPlans>
+															<Plan ID="cs_plan1346_vhshpan5db01_30243" PlanType="Column" />
+														</InnerPlans>
+													</Relation>
+													<Relation ID="X2_plan69512141_vhshpan5db01_30243_pop7" TypeName="CS_POP" Status="Finished">
+														<Name><![CDATA[JEStep3b]]></Name>
+														<ExecutionType>Column Search</ExecutionType>
+														<Summary><![CDATA[Semijoin3]]></Summary>
+														<Schema><![CDATA[SAPHANADB]]></Schema>
+														<ObjectName><![CDATA[/DMO/CONNECTION.CONNECTION_ID]]></ObjectName>
+														<TableType><![CDATA[COLUMN TABLE]]></TableType>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Exclusive Unit="ms">0.078</Exclusive>
+															<Inclusive Unit="ms">27.837</Inclusive>
+															<Timestamps>[{"Pop":[{"start":1789641999264638,"end":1789641999264716}]}]</Timestamps>
+														</ExecutionTime>
+														<KernelCPUTime Unit="ms">0</KernelCPUTime>
+														<UserCPUTime Unit="ms">0.122</UserCPUTime>
+														<Details><![CDATA[{"table/column processed 001":"/DMO/CONNECTION.CONNECTION_ID"}]]></Details>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop6">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>4</ExecutedOutputCardinality>
+															<Payload Unit="bytes">934</Payload>
+															<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+														</Child>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop6">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+															<Payload Unit="bytes">3323</Payload>
+															<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+														</Child>
+													</Relation>
+												</Plan>
+											</InnerPlans>
+										</Relation>
+										<Relation ID="cs_plan1344_vhshpan5db01_30243_pattern3" Status="Finished" Physical="False">
+											<Name><![CDATA[work up data]]></Name>
+											<ExecutionType>Column Search</ExecutionType>
+											<Summary><![CDATA[(3 nodes) preprocess/finalize]]></Summary>
+											<Schema><![CDATA[SAPHANADB]]></Schema>
+											<ObjectName><![CDATA[/DMO/CARRIER]]></ObjectName>
+											<ExecutionTime>
+												<Exclusive Unit="ms">0.620</Exclusive>
+												<Inclusive Unit="ms">28.774</Inclusive>
+												<Timestamps>[{"Pop":[{"start":1789641999263491,"end":1789641999263688}]},{"Pop":[{"start":1789641999265052,"end":1789641999265189}]},{"Pop":[{"start":1789641999265367,"end":1789641999265653}]}]</Timestamps>
+											</ExecutionTime>
+											<KernelCPUTime Unit="ms">0</KernelCPUTime>
+											<UserCPUTime Unit="ms">0.717</UserCPUTime>
+											<Details><![CDATA[{"nodes":"3","table/column processed 001":"/DMO/CARRIER","table/column processed 002":"/DMO/CARRIER.CARRIER_ID","table/column processed 003":"/DMO/CARRIER.CURRENCY_CODE","schema":"SAPHANADB","table/column processed 001":"/DMO/CARRIER","table/column processed 002":"/DMO/CARRIER.CARRIER_ID","table/column processed 003":"/DMO/CARRIER.CURRENCY_CODE","schema":"SAPHANADB","table/column processed 001":"/DMO/CARRIER","table/column processed 002":"/DMO/CARRIER.CARRIER_ID","table/column processed 003":"/DMO/CARRIER.CURRENCY_CODE","schema":"SAPHANADB"}]]></Details>
+											<InnerPlans>
+												<Plan ID="subplan_cs_plan1344_vhshpan5db01_30243_pattern3" PlanType="Column">
+													<Relation ID="X2_plan69512141_vhshpan5db01_30243_pop13" TypeName="CS_POP" Status="Finished">
+														<Name><![CDATA[JESort]]></Name>
+														<ExecutionType>Column Search</ExecutionType>
+														<Summary><![CDATA[Order By CARRIER_ID, CURRENCY_CODE]]></Summary>
+														<Schema><![CDATA[SAPHANADB]]></Schema>
+														<ObjectName><![CDATA[/DMO/CARRIER]]></ObjectName>
+														<TableType><![CDATA[COLUMN TABLE]]></TableType>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Exclusive Unit="ms">0.197</Exclusive>
+															<Inclusive Unit="ms">26.809</Inclusive>
+															<Timestamps>[{"Pop":[{"start":1789641999263491,"end":1789641999263688}]}]</Timestamps>
+														</ExecutionTime>
+														<KernelCPUTime Unit="ms">0</KernelCPUTime>
+														<UserCPUTime Unit="ms">0.224</UserCPUTime>
+														<Details><![CDATA[{"table/column processed 001":"/DMO/CARRIER.CARRIER_ID","table/column processed 002":"/DMO/CARRIER.CURRENCY_CODE"}]]></Details>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop4">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+															<Payload Unit="bytes">890</Payload>
+															<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+														</Child>
+													</Relation>
+													<Relation ID="X2_plan69512141_vhshpan5db01_30243_pop14" TypeName="CS_POP" Status="Finished">
+														<Name><![CDATA[JEPrepareData]]></Name>
+														<ExecutionType>Column Search</ExecutionType>
+														<Summary><![CDATA[Prepare Plandata add connection pairs + Order By ]]></Summary>
+														<Schema><![CDATA[SAPHANADB]]></Schema>
+														<ObjectName><![CDATA[/DMO/CARRIER]]></ObjectName>
+														<TableType><![CDATA[COLUMN TABLE]]></TableType>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Exclusive Unit="ms">0.137</Exclusive>
+															<Inclusive Unit="ms">28.310</Inclusive>
+															<Timestamps>[{"Pop":[{"start":1789641999265052,"end":1789641999265189}]}]</Timestamps>
+														</ExecutionTime>
+														<KernelCPUTime Unit="ms">0</KernelCPUTime>
+														<UserCPUTime Unit="ms">0.16</UserCPUTime>
+														<Details><![CDATA[{"table processed":"/DMO/CARRIER"}]]></Details>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop4">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+															<Payload Unit="bytes">890</Payload>
+															<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+														</Child>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop6">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>4</ExecutedOutputCardinality>
+															<Payload Unit="bytes">934</Payload>
+															<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+														</Child>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop9">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+															<Payload Unit="bytes">2222</Payload>
+															<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+														</Child>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop12">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+															<Payload Unit="bytes">2242</Payload>
+															<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+														</Child>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop13">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+															<Payload Unit="bytes">890</Payload>
+															<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+														</Child>
+													</Relation>
+													<Relation ID="X2_plan69512141_vhshpan5db01_30243_pop15" TypeName="CS_POP" Status="Finished">
+														<Name><![CDATA[JECreateNTuple]]></Name>
+														<ExecutionType>Column Search</ExecutionType>
+														<Summary><![CDATA[Sorted Merge Join]]></Summary>
+														<Location><![CDATA[vhshpan5db01:30243]]></Location>
+														<ExecutionTime>
+															<Exclusive Unit="ms">0.286</Exclusive>
+															<Inclusive Unit="ms">28.774</Inclusive>
+															<Timestamps>[{"Pop":[{"start":1789641999265367,"end":1789641999265653}]}]</Timestamps>
+														</ExecutionTime>
+														<KernelCPUTime Unit="ms">0</KernelCPUTime>
+														<UserCPUTime Unit="ms">0.333</UserCPUTime>
+														<Details><![CDATA[{}]]></Details>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop14">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+															<Payload Unit="bytes">890</Payload>
+															<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+														</Child>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop14">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>4</ExecutedOutputCardinality>
+															<Payload Unit="bytes">934</Payload>
+															<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+														</Child>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop14">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+															<Payload Unit="bytes">2222</Payload>
+															<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+														</Child>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop14">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>165</ExecutedOutputCardinality>
+															<Payload Unit="bytes">2242</Payload>
+															<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+														</Child>
+														<Child ID="X2_plan69512141_vhshpan5db01_30243_pop14">
+															<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+															<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+															<Payload Unit="bytes">890</Payload>
+															<Details><![CDATA[{ "data container":"vector of integer pairs: (docid, valueid)","description":"result of semi-join reduction" }]]></Details>
+														</Child>
+													</Relation>
+												</Plan>
+											</InnerPlans>
+										</Relation>
+									</Plan>
+								</InnerPlans>
+							</Relation>
+						</Plan>
+					</InnerPlans>
+				</Relation>
+			</Plan>
+		</InnerPlans>
+	</Relation>
+	<Relation ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_3" TypeName="ITAB_MATERIALIZER" InternalBufferId="4" Status="Finished">
+		<Name>COLUMN SEARCH</Name>
+		<ExecutionType>OLAP</ExecutionType>
+		<Summary><![CDATA[Create Temp Index]]></Summary>
+		<ObjectName><![CDATA[#_SYS_QO_COL_L:169_7f7f3de30ea0:4018000003eff9ff]]></ObjectName>
+		<Location>vhshpan5db01:30243</Location>
+		<EstimatedCost>
+			<Inclusive Unit="us">9.61993e+06</Inclusive>
+		</EstimatedCost>
+		<EstimatedOutputCardinality>3</EstimatedOutputCardinality>
+		<ExecutionTime>
+			<Start Unit="us">1789641994327518</Start>
+			<End Unit="us">1789641999275555</End>
+			<Exclusive Unit="us">2640</Exclusive>
+			<Inclusive Unit="us">4948037</Inclusive>
+			<Timestamps>[{"Open": [{"start":1789641994327518,"end":1789641994327534,"thread":24827},{"start":1789641999234870,"end":1789641999235611,"thread":24827}]},{"Close": [{"start":1789641999272934,"end":1789641999272961,"thread":24827},{"start":1789641999273699,"end":1789641999275555,"thread":24827}]}]</Timestamps>
+		</ExecutionTime>
+		<MemoryUsage>
+			<Max>0</Max>
+		</MemoryUsage>
+		<KernelCPUTime Unit="ms">0.000</KernelCPUTime>
+		<UserCPUTime Unit="ms">2.476</UserCPUTime>
+		<Details><![CDATA[{"Temp Table Name":"#_SYS_QO_COL_L:169_7f7f3de30ea0:4018000003eff9ff"}]]></Details>
+		<Child ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_4" >
+			<ExecutedOutputCardinality>2667365</ExecutedOutputCardinality>
+			<FetchCallCount>0</FetchCallCount>
+		</Child>
+	</Relation>
+	<Relation ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_4" TypeName="TREX_SEARCH" InternalBufferId="3" Status="Finished">
+		<Name>COLUMN SEARCH</Name>
+		<ExecutionType>OLAP</ExecutionType>
+		<Summary><![CDATA[ZTM268_BOOKING.UNIQUE_ID, ZTM268_BOOKING.BOOKING_DATE, ZTM268_BOOKING.CARRIER_ID, ZTM268_BOOKING.CONNECTION_ID, ZTM268_BOOKING.FLIGHT_DATE, PRICE_CLASS, COUNT(*)]]></Summary>
+		<Location>vhshpan5db01:30243</Location>
+		<EstimatedCost>
+			<Inclusive Unit="us">9.61993e+06</Inclusive>
+		</EstimatedCost>
+		<EstimatedOutputCardinality>3</EstimatedOutputCardinality>
+		<ExecutionTime>
+			<Start Unit="us">1789641994327536</Start>
+			<End Unit="us">1789641999273690</End>
+			<Exclusive Unit="us">895</Exclusive>
+			<Inclusive Unit="us">4946154</Inclusive>
+			<Timestamps>[{"Open": [{"start":1789641994327536,"end":1789641994327542,"thread":24827},{"start":1789641997477242,"end":1789641997477366,"thread":24827},{"start":1789641998309791,"end":1789641998309805,"thread":24827},{"start":1789641999234842,"end":1789641999234867,"thread":24827}]},{"Close": [{"start":1789641999272963,"end":1789641999272968,"thread":24827},{"start":1789641999272969,"end":1789641999273690,"thread":24827}]}]</Timestamps>
+		</ExecutionTime>
+		<MemoryUsage>
+			<Max>2072</Max>
+		</MemoryUsage>
+		<KernelCPUTime Unit="ms">0.000</KernelCPUTime>
+		<UserCPUTime Unit="ms">0.857</UserCPUTime>
+		<Details><![CDATA[{"Projected Cols":"ZTM268_BOOKING.UNIQUE_ID, ZTM268_BOOKING.BOOKING_DATE, ZTM268_BOOKING.CARRIER_ID, ZTM268_BOOKING.CONNECTION_ID, ZTM268_BOOKING.FLIGHT_DATE, PRICE_CLASS, COUNT(*)"}]]></Details>
+		<Child ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_5" >
+			<ExecutedOutputCardinality>24396722</ExecutedOutputCardinality>
+			<FetchCallCount>0</FetchCallCount>
+		</Child>
+		<InnerPlans>
+			<Plan ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_4_0" Type="Estimated" PlanType="Logical">
+				<RootRelation ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_4_0" TypeName="PROJECT">
+					<Name>COLUMN SEARCH</Name>
+					<Summary><![CDATA[ZTM268_BOOKING.UNIQUE_ID, ZTM268_BOOKING.BOOKING_DATE, ZTM268_BOOKING.CARRIER_ID, ZTM268_BOOKING.CONNECTION_ID, ZTM268_BOOKING.FLIGHT_DATE, PRICE_CLASS, COUNT(*)]]></Summary>
+					<Property><![CDATA[ENUM_BY: CS_AGGREGATION, PHYSICAL_ENUM_BY: CS_AGGREGATION]]></Property>
+					<Location>vhshpan5db01:30243</Location>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">9.61993e+06</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>3</EstimatedOutputCardinality>
+					<Details><![CDATA[{"Projected Cols":"ZTM268_BOOKING.UNIQUE_ID, ZTM268_BOOKING.BOOKING_DATE, ZTM268_BOOKING.CARRIER_ID, ZTM268_BOOKING.CONNECTION_ID, ZTM268_BOOKING.FLIGHT_DATE, PRICE_CLASS, COUNT(*)"}]]></Details>
+					<Child ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_4_1">
+					</Child>
+				</RootRelation>
+				<Relation ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_4_1" TypeName="GROUP_BY">
+					<Name>AGGREGATION</Name>
+					<Summary><![CDATA[GROUPING: ZTM268_BOOKING.CONNECTION_ID, ZTM268_BOOKING.FLIGHT_DATE, ZTM268_BOOKING.BOOKING_DATE, ZTM268_BOOKING.UNIQUE_ID, PRICE_CLASS, ZTM268_BOOKING.CARRIER_ID, AGGREGATION: COUNT(*)]]></Summary>
+					<Property><![CDATA[ENUM_BY: AGGR_THRU_JOIN]]></Property>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">9.61992e+06</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>3</EstimatedOutputCardinality>
+					<Details><![CDATA[{"Grouping Cols":"ZTM268_BOOKING.CONNECTION_ID, ZTM268_BOOKING.FLIGHT_DATE, ZTM268_BOOKING.BOOKING_DATE, ZTM268_BOOKING.UNIQUE_ID, PRICE_CLASS, ZTM268_BOOKING.CARRIER_ID, ","Aggregation Cols":"COUNT(*)"}]]></Details>
+					<Child ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_4_2">
+					</Child>
+				</Relation>
+				<Relation ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_4_2" TypeName="COLUMN_TEMP">
+					<Name>Column Temp Table</Name>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">9.48146e+06</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>2.31768e+07</EstimatedOutputCardinality>
+					<Child ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_5" />
+				</Relation>
+			</Plan>
+			<Plan ID="cs_plan1339_vhshpan5db01_30243" Type="Executed" PlanType="Column">
+				<RootRelation ID="X2_plan69512140_vhshpan5db01_30243_result0" Status="Finished">
+					<Name>Result</Name>
+					<Location><![CDATA[vhshpan5db01:30243]]></Location>
+					<Child ID="X2_plan69512140_vhshpan5db01_30243_pop1">
+						<ConnectorName><![CDATA[InternalTableData]]></ConnectorName>
+						<ExecutedOutputCardinality>2667365</ExecutedOutputCardinality>
+						<Payload Unit="bytes">109206975</Payload>
+						<Details><![CDATA[{ "data container":"vector of columns","description":"reference to data contained in an internal table","data container member":"(column) ID","data container member":"(column) BOOKING_DATE","data container member":"(column) CARRIER_ID","data container member":"(column) CONNECTION_ID","data container member":"(column) FLIGHT_DATE","data container member":"(column) COL$5$","data container member":"(column) $rowcount$$count$" }]]></Details>
+					</Child>
+				</RootRelation>
+				<Relation ID="X2_plan69512140_vhshpan5db01_30243" Status="Finished" Physical="False">
+					<Name><![CDATA[Analytical Search]]></Name>
+					<ExecutionType>Analytical Search</ExecutionType>
+					<Summary><![CDATA[8 nodes]]></Summary>
+					<Schema><![CDATA[SAPHANADBVLX]]></Schema>
+					<ObjectName><![CDATA[Temporary Table(s)]]></ObjectName>
+					<ExecutionTime>
+						<Exclusive Unit="ms">827.499</Exclusive>
+						<Inclusive Unit="ms">828.045</Inclusive>
+						<Timestamps>[{"Pop":[{"start":1789641997479877,"end":1789641998057521}]},{"Pop":[{"start":1789641998057889,"end":1789641998299279}]},{"Pop":[{"start":1789641998299457,"end":1789641998307922}]}]</Timestamps>
+					</ExecutionTime>
+					<KernelCPUTime Unit="ms">0</KernelCPUTime>
+					<UserCPUTime Unit="ms">11680.7</UserCPUTime>
+					<Details><![CDATA[{"nodes":"8","table/column processed 001":"Temporary Table.$rowcount$","table/column processed 002":"Temporary Table.BOOKING_DATE","table/column processed 003":"Temporary Table.CARRIER_ID","table/column processed 004":"Temporary Table.COL$5$","table/column processed 005":"Temporary Table.CONNECTION_ID","table/column processed 006":"Temporary Table.FLIGHT_DATE","table/column processed 007":"Temporary Table.ID","schema":"SAPHANADBVLX"}]]></Details>
+					<InnerPlans>
+						<Plan ID="subplan_X2_plan69512140_vhshpan5db01_30243" PlanType="Column">
+							<Relation ID="X2_plan69512140_vhshpan5db01_30243_abstr1" Status="Finished" Physical="False">
+								<Name><![CDATA[BwPopJoin13]]></Name>
+								<ExecutionType>Analytical Search</ExecutionType>
+								<Summary><![CDATA[6 nodes with same name]]></Summary>
+								<Schema><![CDATA[SAPHANADBVLX]]></Schema>
+								<ObjectName><![CDATA[Temporary Table(s)]]></ObjectName>
+								<ExecutionTime>
+									<Exclusive Unit="ms">577.644</Exclusive>
+									<Inclusive Unit="ms">577.644</Inclusive>
+									<Timestamps>[{"Pop":[{"start":1789641997479877,"end":1789641998057521}]}]</Timestamps>
+								</ExecutionTime>
+								<KernelCPUTime Unit="ms">0</KernelCPUTime>
+								<UserCPUTime Unit="ms">8037.68</UserCPUTime>
+								<Details><![CDATA[{"nodes":"6","table/column processed 001":"Temporary Table.BOOKING_DATE","table/column processed 002":"Temporary Table.CARRIER_ID","table/column processed 003":"Temporary Table.COL$5$","table/column processed 004":"Temporary Table.CONNECTION_ID","table/column processed 005":"Temporary Table.FLIGHT_DATE","table/column processed 006":"Temporary Table.ID","schema":"SAPHANADBVLX","table/column processed 001":"Temporary Table.BOOKING_DATE","table/column processed 002":"Temporary Table.CARRIER_ID","table/column processed 003":"Temporary Table.COL$5$","table/column processed 004":"Temporary Table.CONNECTION_ID","table/column processed 005":"Temporary Table.FLIGHT_DATE","table/column processed 006":"Temporary Table.ID","schema":"SAPHANADBVLX"}]]></Details>
+								<InnerPlans>
+									<Plan ID="subplan_X2_plan69512140_vhshpan5db01_30243_abstr1" PlanType="Column">
+										<Relation ID="X2_plan69512140_vhshpan5db01_30243_pop3" TypeName="CS_POP" Status="Finished">
+											<Name><![CDATA[BwPopJoin13]]></Name>
+											<ExecutionType>Analytical Search</ExecutionType>
+											<Summary><![CDATA[self-join on table #_SYS_QO_COL_L:89_7f7f3de32f00:4018000003eff9f2 with column "ID"]]></Summary>
+											<Schema><![CDATA[SAPHANADBVLX]]></Schema>
+											<ObjectName><![CDATA[Temporary Table.ID]]></ObjectName>
+											<TableType><![CDATA[COLUMN TABLE]]></TableType>
+											<Location><![CDATA[vhshpan5db01:30243]]></Location>
+											<ExecutionTime>
+												<Exclusive Unit="ms">577.293</Exclusive>
+												<Inclusive Unit="ms">577.293</Inclusive>
+												<Timestamps>[{"Pop":[{"start":1789641997480228,"end":1789641998057521}]}]</Timestamps>
+											</ExecutionTime>
+											<KernelCPUTime Unit="ms">0</KernelCPUTime>
+											<UserCPUTime Unit="ms">3968.45</UserCPUTime>
+											<Details><![CDATA[{"table/column processed 001":"Temporary Table.ID","Temporary Table":"#_SYS_QO_COL_L:89_7f7f3de32f00:4018000003eff9f2"}]]></Details>
+										</Relation>
+										<Relation ID="X2_plan69512140_vhshpan5db01_30243_pop4" TypeName="CS_POP" Status="Finished">
+											<Name><![CDATA[BwPopJoin13]]></Name>
+											<ExecutionType>Analytical Search</ExecutionType>
+											<Summary><![CDATA[self-join on table #_SYS_QO_COL_L:89_7f7f3de32f00:4018000003eff9f2 with column "BOOKING_DATE"]]></Summary>
+											<Schema><![CDATA[SAPHANADBVLX]]></Schema>
+											<ObjectName><![CDATA[Temporary Table.BOOKING_DATE]]></ObjectName>
+											<TableType><![CDATA[COLUMN TABLE]]></TableType>
+											<Location><![CDATA[vhshpan5db01:30243]]></Location>
+											<ExecutionTime>
+												<Exclusive Unit="ms">310.102</Exclusive>
+												<Inclusive Unit="ms">310.102</Inclusive>
+												<Timestamps>[{"Pop":[{"start":1789641997480214,"end":1789641997790316}]}]</Timestamps>
+											</ExecutionTime>
+											<KernelCPUTime Unit="ms">0</KernelCPUTime>
+											<UserCPUTime Unit="ms">896.498</UserCPUTime>
+											<Details><![CDATA[{"table/column processed 001":"Temporary Table.BOOKING_DATE","Temporary Table":"#_SYS_QO_COL_L:89_7f7f3de32f00:4018000003eff9f2"}]]></Details>
+										</Relation>
+										<Relation ID="X2_plan69512140_vhshpan5db01_30243_pop5" TypeName="CS_POP" Status="Finished">
+											<Name><![CDATA[BwPopJoin13]]></Name>
+											<ExecutionType>Analytical Search</ExecutionType>
+											<Summary><![CDATA[self-join on table #_SYS_QO_COL_L:89_7f7f3de32f00:4018000003eff9f2 with column "CARRIER_ID"]]></Summary>
+											<Schema><![CDATA[SAPHANADBVLX]]></Schema>
+											<ObjectName><![CDATA[Temporary Table.CARRIER_ID]]></ObjectName>
+											<TableType><![CDATA[COLUMN TABLE]]></TableType>
+											<Location><![CDATA[vhshpan5db01:30243]]></Location>
+											<ExecutionTime>
+												<Exclusive Unit="ms">465.287</Exclusive>
+												<Inclusive Unit="ms">465.287</Inclusive>
+												<Timestamps>[{"Pop":[{"start":1789641997480279,"end":1789641997945566}]}]</Timestamps>
+											</ExecutionTime>
+											<KernelCPUTime Unit="ms">0</KernelCPUTime>
+											<UserCPUTime Unit="ms">730.592</UserCPUTime>
+											<Details><![CDATA[{"table/column processed 001":"Temporary Table.CARRIER_ID","Temporary Table":"#_SYS_QO_COL_L:89_7f7f3de32f00:4018000003eff9f2"}]]></Details>
+										</Relation>
+										<Relation ID="X2_plan69512140_vhshpan5db01_30243_pop6" TypeName="CS_POP" Status="Finished">
+											<Name><![CDATA[BwPopJoin13]]></Name>
+											<ExecutionType>Analytical Search</ExecutionType>
+											<Summary><![CDATA[self-join on table #_SYS_QO_COL_L:89_7f7f3de32f00:4018000003eff9f2 with column "CONNECTION_ID"]]></Summary>
+											<Schema><![CDATA[SAPHANADBVLX]]></Schema>
+											<ObjectName><![CDATA[Temporary Table.CONNECTION_ID]]></ObjectName>
+											<TableType><![CDATA[COLUMN TABLE]]></TableType>
+											<Location><![CDATA[vhshpan5db01:30243]]></Location>
+											<ExecutionTime>
+												<Exclusive Unit="ms">299.958</Exclusive>
+												<Inclusive Unit="ms">299.958</Inclusive>
+												<Timestamps>[{"Pop":[{"start":1789641997480061,"end":1789641997780019}]}]</Timestamps>
+											</ExecutionTime>
+											<KernelCPUTime Unit="ms">0</KernelCPUTime>
+											<UserCPUTime Unit="ms">767.273</UserCPUTime>
+											<Details><![CDATA[{"table/column processed 001":"Temporary Table.CONNECTION_ID","Temporary Table":"#_SYS_QO_COL_L:89_7f7f3de32f00:4018000003eff9f2"}]]></Details>
+										</Relation>
+										<Relation ID="X2_plan69512140_vhshpan5db01_30243_pop7" TypeName="CS_POP" Status="Finished">
+											<Name><![CDATA[BwPopJoin13]]></Name>
+											<ExecutionType>Analytical Search</ExecutionType>
+											<Summary><![CDATA[self-join on table #_SYS_QO_COL_L:89_7f7f3de32f00:4018000003eff9f2 with column "FLIGHT_DATE"]]></Summary>
+											<Schema><![CDATA[SAPHANADBVLX]]></Schema>
+											<ObjectName><![CDATA[Temporary Table.FLIGHT_DATE]]></ObjectName>
+											<TableType><![CDATA[COLUMN TABLE]]></TableType>
+											<Location><![CDATA[vhshpan5db01:30243]]></Location>
+											<ExecutionTime>
+												<Exclusive Unit="ms">465.561</Exclusive>
+												<Inclusive Unit="ms">465.561</Inclusive>
+												<Timestamps>[{"Pop":[{"start":1789641997479916,"end":1789641997945477}]}]</Timestamps>
+											</ExecutionTime>
+											<KernelCPUTime Unit="ms">0</KernelCPUTime>
+											<UserCPUTime Unit="ms">794.207</UserCPUTime>
+											<Details><![CDATA[{"table/column processed 001":"Temporary Table.FLIGHT_DATE","Temporary Table":"#_SYS_QO_COL_L:89_7f7f3de32f00:4018000003eff9f2"}]]></Details>
+										</Relation>
+										<Relation ID="X2_plan69512140_vhshpan5db01_30243_pop8" TypeName="CS_POP" Status="Finished">
+											<Name><![CDATA[BwPopJoin13]]></Name>
+											<ExecutionType>Analytical Search</ExecutionType>
+											<Summary><![CDATA[self-join on table #_SYS_QO_COL_L:89_7f7f3de32f00:4018000003eff9f2 with column "COL$5$"]]></Summary>
+											<Schema><![CDATA[SAPHANADBVLX]]></Schema>
+											<ObjectName><![CDATA[Temporary Table.COL$5$]]></ObjectName>
+											<TableType><![CDATA[COLUMN TABLE]]></TableType>
+											<Location><![CDATA[vhshpan5db01:30243]]></Location>
+											<ExecutionTime>
+												<Exclusive Unit="ms">327.068</Exclusive>
+												<Inclusive Unit="ms">327.068</Inclusive>
+												<Timestamps>[{"Pop":[{"start":1789641997479877,"end":1789641997806945}]}]</Timestamps>
+											</ExecutionTime>
+											<KernelCPUTime Unit="ms">0</KernelCPUTime>
+											<UserCPUTime Unit="ms">880.668</UserCPUTime>
+											<Details><![CDATA[{"table/column processed 001":"Temporary Table.COL$5$","Temporary Table":"#_SYS_QO_COL_L:89_7f7f3de32f00:4018000003eff9f2"}]]></Details>
+										</Relation>
+									</Plan>
+								</InnerPlans>
+							</Relation>
+							<Relation ID="X2_plan69512140_vhshpan5db01_30243_pop1" TypeName="CS_POP" Status="Finished">
+								<Name><![CDATA[BwPopBuildResultParallel]]></Name>
+								<ExecutionType>Analytical Search</ExecutionType>
+								<Summary><![CDATA[converting ParallelHashMap to InternalTable]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Exclusive Unit="ms">8.465</Exclusive>
+									<Inclusive Unit="ms">828.045</Inclusive>
+									<Timestamps>[{"Pop":[{"start":1789641998299457,"end":1789641998307922}]}]</Timestamps>
+								</ExecutionTime>
+								<KernelCPUTime Unit="ms">0</KernelCPUTime>
+								<UserCPUTime Unit="ms">107.961</UserCPUTime>
+								<Details><![CDATA[{"column processed 001":"$rowcount$$count$","column processed 002":"ID (Group By)","column processed 003":"BOOKING_DATE (Group By)","column processed 004":"CARRIER_ID (Group By)","column processed 005":"CONNECTION_ID (Group By)","column processed 006":"FLIGHT_DATE (Group By)","column processed 007":"COL$5$ (Group By)"}]]></Details>
+								<Child ID="X2_plan69512140_vhshpan5db01_30243_pop2">
+									<ConnectorName><![CDATA[ParallelHashTableData]]></ConnectorName>
+									<ExecutedOutputCardinality>2667365</ExecutedOutputCardinality>
+									<Payload Unit="bytes">134746843</Payload>
+									<Details><![CDATA[{ "data container":"several vectors of Parts, of Dimensions, of Key Figures, of bytes","description":"data structure resulting from the aggregation and used to build a query result","data container member":"(dimension) ID","data container member":"(dimension) BOOKING_DATE","data container member":"(dimension) CARRIER_ID","data container member":"(dimension) CONNECTION_ID","data container member":"(dimension) FLIGHT_DATE","data container member":"(dimension) COL$5$","data container member":"(key figure) $rowcount$$count$" }]]></Details>
+								</Child>
+								<Child ID="X2_plan69512140_vhshpan5db01_30243_pop3">
+									<ConnectorName><![CDATA[BwDict]]></ConnectorName>
+									<ExecutedOutputCardinality>3334</ExecutedOutputCardinality>
+									<Payload Unit="bytes">13788</Payload>
+									<Details><![CDATA[{ "data container":"sorted vector of values used in aggregate calculationvector of integers (int)","description":"sorted vector of values used in aggregate calculation" }]]></Details>
+								</Child>
+								<Child ID="X2_plan69512140_vhshpan5db01_30243_pop4">
+									<ConnectorName><![CDATA[BwDict]]></ConnectorName>
+									<ExecutedOutputCardinality>54</ExecutedOutputCardinality>
+									<Payload Unit="bytes">1370</Payload>
+									<Details><![CDATA[{ "data container":"sorted vector of values used in aggregate calculationvector of strings (string(8))","description":"sorted vector of values used in aggregate calculation" }]]></Details>
+								</Child>
+								<Child ID="X2_plan69512140_vhshpan5db01_30243_pop5">
+									<ConnectorName><![CDATA[BwDict]]></ConnectorName>
+									<ExecutedOutputCardinality>6</ExecutedOutputCardinality>
+									<Payload Unit="bytes">518</Payload>
+									<Details><![CDATA[{ "data container":"sorted vector of values used in aggregate calculationvector of strings (string(3))","description":"sorted vector of values used in aggregate calculation" }]]></Details>
+								</Child>
+								<Child ID="X2_plan69512140_vhshpan5db01_30243_pop6">
+									<ConnectorName><![CDATA[BwDict]]></ConnectorName>
+									<ExecutedOutputCardinality>20</ExecutedOutputCardinality>
+									<Payload Unit="bytes">712</Payload>
+									<Details><![CDATA[{ "data container":"sorted vector of values used in aggregate calculationvector of strings (string(4))","description":"sorted vector of values used in aggregate calculation" }]]></Details>
+								</Child>
+								<Child ID="X2_plan69512140_vhshpan5db01_30243_pop7">
+									<ConnectorName><![CDATA[BwDict]]></ConnectorName>
+									<ExecutedOutputCardinality>14</ExecutedOutputCardinality>
+									<Payload Unit="bytes">690</Payload>
+									<Details><![CDATA[{ "data container":"sorted vector of values used in aggregate calculationvector of strings (string(8))","description":"sorted vector of values used in aggregate calculation" }]]></Details>
+								</Child>
+								<Child ID="X2_plan69512140_vhshpan5db01_30243_pop8">
+									<ConnectorName><![CDATA[BwDict]]></ConnectorName>
+									<ExecutedOutputCardinality>3</ExecutedOutputCardinality>
+									<Payload Unit="bytes">502</Payload>
+									<Details><![CDATA[{ "data container":"sorted vector of values used in aggregate calculationvector of strings (string(5000))","description":"sorted vector of values used in aggregate calculation" }]]></Details>
+								</Child>
+							</Relation>
+							<Relation ID="X2_plan69512140_vhshpan5db01_30243_pop2" TypeName="CS_POP" Status="Finished">
+								<Name><![CDATA[BwPopAggregateParallel]]></Name>
+								<ExecutionType>Analytical Search</ExecutionType>
+								<Summary><![CDATA[COUNT($rowcount$), GROUP BY ID, BOOKING_DATE, CARRIER_ID, CONNECTION_ID, FLIGHT_DATE, COL$5$ on 1 table]]></Summary>
+								<Schema><![CDATA[SAPHANADBVLX]]></Schema>
+								<ObjectName><![CDATA[Temporary Table(s)]]></ObjectName>
+								<TableType><![CDATA[COLUMN TABLE]]></TableType>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Exclusive Unit="ms">241.390</Exclusive>
+									<Inclusive Unit="ms">819.402</Inclusive>
+									<Timestamps>[{"Pop":[{"start":1789641998057889,"end":1789641998299279}]}]</Timestamps>
+								</ExecutionTime>
+								<KernelCPUTime Unit="ms">0</KernelCPUTime>
+								<UserCPUTime Unit="ms">3535.06</UserCPUTime>
+								<Details><![CDATA[{"table/column processed 001":"Temporary Table.$rowcount$","table/column processed 002":"Temporary Table.ID","table/column processed 003":"Temporary Table.BOOKING_DATE","table/column processed 004":"Temporary Table.CARRIER_ID","table/column processed 005":"Temporary Table.CONNECTION_ID","table/column processed 006":"Temporary Table.FLIGHT_DATE","table/column processed 007":"Temporary Table.COL$5$","Temporary Table":"#_SYS_QO_COL_L:89_7f7f3de32f00:4018000003eff9f2"}]]></Details>
+								<Child ID="X2_plan69512140_vhshpan5db01_30243_pop3">
+									<ConnectorName><![CDATA[BwDimFn]]></ConnectorName>
+									<ExecutedOutputCardinality>4026</ExecutedOutputCardinality>
+									<Payload Unit="bytes">16152</Payload>
+									<Details><![CDATA[{ "data container":"vector of 4026 integers (3334 distinct values)","description":"array of numbers used to transform columns that will be hashed for aggregate calculation" }]]></Details>
+								</Child>
+								<Child ID="X2_plan69512140_vhshpan5db01_30243_pop4">
+									<ConnectorName><![CDATA[BwDimFn]]></ConnectorName>
+									<ExecutedOutputCardinality>229</ExecutedOutputCardinality>
+									<Payload Unit="bytes">964</Payload>
+									<Details><![CDATA[{ "data container":"vector of 229 integers (54 distinct values)","description":"array of numbers used to transform columns that will be hashed for aggregate calculation" }]]></Details>
+								</Child>
+								<Child ID="X2_plan69512140_vhshpan5db01_30243_pop5">
+									<ConnectorName><![CDATA[BwDimFn]]></ConnectorName>
+									<ExecutedOutputCardinality>59</ExecutedOutputCardinality>
+									<Payload Unit="bytes">284</Payload>
+									<Details><![CDATA[{ "data container":"vector of 59 integers (6 distinct values)","description":"array of numbers used to transform columns that will be hashed for aggregate calculation" }]]></Details>
+								</Child>
+								<Child ID="X2_plan69512140_vhshpan5db01_30243_pop6">
+									<ConnectorName><![CDATA[BwDimFn]]></ConnectorName>
+									<ExecutedOutputCardinality>122</ExecutedOutputCardinality>
+									<Payload Unit="bytes">536</Payload>
+									<Details><![CDATA[{ "data container":"vector of 122 integers (20 distinct values)","description":"array of numbers used to transform columns that will be hashed for aggregate calculation" }]]></Details>
+								</Child>
+								<Child ID="X2_plan69512140_vhshpan5db01_30243_pop7">
+									<ConnectorName><![CDATA[BwDimFn]]></ConnectorName>
+									<ExecutedOutputCardinality>59</ExecutedOutputCardinality>
+									<Payload Unit="bytes">284</Payload>
+									<Details><![CDATA[{ "data container":"vector of 59 integers (14 distinct values)","description":"array of numbers used to transform columns that will be hashed for aggregate calculation" }]]></Details>
+								</Child>
+								<Child ID="X2_plan69512140_vhshpan5db01_30243_pop8">
+									<ConnectorName><![CDATA[BwDimFn]]></ConnectorName>
+									<ExecutedOutputCardinality>14</ExecutedOutputCardinality>
+									<Payload Unit="bytes">104</Payload>
+									<Details><![CDATA[{ "data container":"vector of 14 integers (3 distinct values)","description":"array of numbers used to transform columns that will be hashed for aggregate calculation" }]]></Details>
+								</Child>
+							</Relation>
+						</Plan>
+					</InnerPlans>
+				</Relation>
+			</Plan>
+		</InnerPlans>
+	</Relation>
+	<Relation ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_5" TypeName="ITAB_MATERIALIZER" InternalBufferId="2" Status="Finished">
+		<Name>COLUMN SEARCH</Name>
+		<ExecutionType>COLUMN</ExecutionType>
+		<Summary><![CDATA[Create Temp Index]]></Summary>
+		<ObjectName><![CDATA[#_SYS_QO_COL_L:89_7f7f3de32f00:4018000003eff9f2]]></ObjectName>
+		<Location>vhshpan5db01:30243</Location>
+		<EstimatedCost>
+			<Inclusive Unit="us">9.48146e+06</Inclusive>
+		</EstimatedCost>
+		<EstimatedOutputCardinality>2.31768e+07</EstimatedOutputCardinality>
+		<ExecutionTime>
+			<Start Unit="us">1789641994327544</Start>
+			<End Unit="us">1789641999234824</End>
+			<Exclusive Unit="us">927582</Exclusive>
+			<Inclusive Unit="us">4907280</Inclusive>
+			<Timestamps>[{"Open": [{"start":1789641994327544,"end":1789641994327548,"thread":24827},{"start":1789641997473800,"end":1789641997477237,"thread":24827}]},{"Close": [{"start":1789641998309820,"end":1789641998309826,"thread":24827},{"start":1789641998310689,"end":1789641999234824,"thread":24827}]}]</Timestamps>
+		</ExecutionTime>
+		<MemoryUsage>
+			<Max>0</Max>
+		</MemoryUsage>
+		<KernelCPUTime Unit="ms">0.000</KernelCPUTime>
+		<UserCPUTime Unit="ms">927.478</UserCPUTime>
+		<Details><![CDATA[{"Temp Table Name":"#_SYS_QO_COL_L:89_7f7f3de32f00:4018000003eff9f2"}]]></Details>
+		<Child ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_6" >
+			<ExecutedOutputCardinality>24396722</ExecutedOutputCardinality>
+			<FetchCallCount>0</FetchCallCount>
+		</Child>
+	</Relation>
+	<Relation ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_6" TypeName="TREX_SEARCH" InternalBufferId="1" Status="Finished">
+		<Name>COLUMN SEARCH</Name>
+		<ExecutionType>COLUMN</ExecutionType>
+		<Summary><![CDATA[ZTM268_BOOKING.UNIQUE_ID, ZTM268_BOOKING.BOOKING_DATE, ZTM268_BOOKING.CARRIER_ID, ZTM268_BOOKING.CONNECTION_ID, ZTM268_BOOKING.FLIGHT_DATE, ZTM268_BOOKING.FLIGHT_PRICE, CASE WHEN ZTM268_BOOKING.FLIGHT_PRICE > 1500 THEN 'PREMIUM' WHEN ZTM268_BOOKING.FLIGHT_PRICE > 1000 AND ZTM268_BOOKING.FLIGHT_PRICE <= 1500 THEN 'BUSINESS' ELSE 'STANDARD' END]]></Summary>
+		<Location>vhshpan5db01:30243</Location>
+		<EstimatedCost>
+			<Inclusive Unit="us">9.48146e+06</Inclusive>
+		</EstimatedCost>
+		<EstimatedOutputCardinality>2.31768e+07</EstimatedOutputCardinality>
+		<ExecutionTime>
+			<Start Unit="us">1789641994327550</Start>
+			<End Unit="us">1789641998310557</End>
+			<Exclusive Unit="us">800</Exclusive>
+			<Inclusive Unit="us">3983007</Inclusive>
+			<Timestamps>[{"Open": [{"start":1789641994327550,"end":1789641994327594,"thread":24827},{"start":1789641997473769,"end":1789641997473796,"thread":24827}]},{"Close": [{"start":1789641998309828,"end":1789641998310557,"thread":24827}]}]</Timestamps>
+		</ExecutionTime>
+		<MemoryUsage>
+			<Max>0</Max>
+		</MemoryUsage>
+		<KernelCPUTime Unit="ms">0.000</KernelCPUTime>
+		<UserCPUTime Unit="ms">0.783</UserCPUTime>
+		<Details><![CDATA[{"Projected Cols":"ZTM268_BOOKING.UNIQUE_ID, ZTM268_BOOKING.BOOKING_DATE, ZTM268_BOOKING.CARRIER_ID, ZTM268_BOOKING.CONNECTION_ID, ZTM268_BOOKING.FLIGHT_DATE, ZTM268_BOOKING.FLIGHT_PRICE, CASE WHEN ZTM268_BOOKING.FLIGHT_PRICE > 1500 THEN 'PREMIUM' WHEN ZTM268_BOOKING.FLIGHT_PRICE > 1000 AND ZTM268_BOOKING.FLIGHT_PRICE <= 1500 THEN 'BUSINESS' ELSE 'STANDARD' END"}]]></Details>
+		<InnerPlans>
+			<Plan ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_6_0" Type="Estimated" PlanType="Logical">
+				<RootRelation ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_6_0" TypeName="PROJECT">
+					<Name>COLUMN SEARCH</Name>
+					<Summary><![CDATA[ZTM268_BOOKING.UNIQUE_ID, ZTM268_BOOKING.BOOKING_DATE, ZTM268_BOOKING.CARRIER_ID, ZTM268_BOOKING.CONNECTION_ID, ZTM268_BOOKING.FLIGHT_DATE, ZTM268_BOOKING.FLIGHT_PRICE, CASE WHEN ZTM268_BOOKING.FLIGHT_PRICE > 1500 THEN 'PREMIUM' WHEN ZTM268_BOOKING.FLIGHT_PRICE > 1000 AND ZTM268_BOOKING.FLIGHT_PRICE <= 1500 THEN 'BUSINESS' ELSE 'STANDARD' END]]></Summary>
+					<Property><![CDATA[OLTP SEARCH, ENUM_BY: CS_AGGREGATION, PHYSICAL_ENUM_BY: CS_AGGREGATION]]></Property>
+					<Location>vhshpan5db01:30243</Location>
+					<EstimatedCost>
+						<Exclusive Unit="us">-1000000</Exclusive>
+						<Inclusive Unit="us">9.48146e+06</Inclusive>
+					</EstimatedCost>
+					<EstimatedOutputCardinality>2.31768e+07</EstimatedOutputCardinality>
+					<Details><![CDATA[{"Projected Cols":"ZTM268_BOOKING.UNIQUE_ID, ZTM268_BOOKING.BOOKING_DATE, ZTM268_BOOKING.CARRIER_ID, ZTM268_BOOKING.CONNECTION_ID, ZTM268_BOOKING.FLIGHT_DATE, ZTM268_BOOKING.FLIGHT_PRICE, CASE WHEN ZTM268_BOOKING.FLIGHT_PRICE > 1500 THEN 'PREMIUM' WHEN ZTM268_BOOKING.FLIGHT_PRICE > 1000 AND ZTM268_BOOKING.FLIGHT_PRICE <= 1500 THEN 'BUSINESS' ELSE 'STANDARD' END"}]]></Details>
+					<Child ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_6_1">
+					</Child>
+				</RootRelation>
+				<Relation ID="ID_337009_7BF6171D8C93114BA41F687AF640BC16_6_1" TypeName="TABLE">
+					<Name>COLUMN TABLE</Name>
+					<Summary><![CDATA[FILTER CONDITION: ZTM268_BOOKING.MANDT = ?1 AND ZTM268_BOOKING.CLIENT = SESSION_CONTEXT('CDS_CLIENT')]]></Summary>
+					<Schema><![CDATA[SAPHANADB]]></Schema>
+					<TableType><![CDATA[COLUMN TABLE]]></TableType>
+					<ObjectName><![CDATA[ZTM268_BOOKING]]></ObjectName>
+					<Location>vhshpan5db01:30243</Location>
+					<EstimatedOutputCardinality>2.43967e+07</EstimatedOutputCardinality>
+					<Details><![CDATA[{"Filter":"ZTM268_BOOKING.MANDT = ?1 AND ZTM268_BOOKING.CLIENT = SESSION_CONTEXT('CDS_CLIENT')"}]]></Details>
+				</Relation>
+			</Plan>
+			<Plan ID="cs_plan1335_vhshpan5db01_30243" Type="Executed" PlanType="Column">
+				<RootRelation ID="X2_plan69512139_vhshpan5db01_30243_result0" Status="Finished">
+					<Name>Result</Name>
+					<Location><![CDATA[vhshpan5db01:30243]]></Location>
+					<Child ID="X2_plan69512139_vhshpan5db01_30243_pop7">
+						<ConnectorName><![CDATA[JEPlanDataResultDocuments]]></ConnectorName>
+						<ExecutedOutputCardinality>24396722</ExecutedOutputCardinality>
+						<Payload Unit="bytes">8121058944</Payload>
+						<Details><![CDATA[{ "description":"Result table of a query","data container member":"(column) _CV0x7f7f3dde5f10","data container member":"(column) ID","data container member":"(column) BOOKING_DATE","data container member":"(column) CARRIER_ID","data container member":"(column) CONNECTION_ID","data container member":"(column) FLIGHT_DATE","data container member":"(column) FLIGHT_PRICE" }]]></Details>
+					</Child>
+				</RootRelation>
+				<Relation ID="X2_plan69512139_vhshpan5db01_30243" Status="Finished" Physical="False">
+					<Name><![CDATA[Column Search]]></Name>
+					<ExecutionType>Column Search</ExecutionType>
+					<Summary><![CDATA[6 nodes]]></Summary>
+					<Schema><![CDATA[SAPHANADB]]></Schema>
+					<ObjectName><![CDATA[Temporary Table(s), ZTM268_BOOKING]]></ObjectName>
+					<ExecutionTime>
+						<Exclusive Unit="ms">3142.205</Exclusive>
+						<Inclusive Unit="ms">3142.590</Inclusive>
+						<Timestamps>[{"Pop":[{"start":1789641994329685,"end":1789641994359274}]},{"Pop":[{"start":1789641994359339,"end":1789641994382641}]},{"Pop":[{"start":1789641994382704,"end":1789641994382733}]},{"Pop":[{"start":1789641994382751,"end":1789641995000889}]},{"Pop":[{"start":1789641995000972,"end":1789641997471902}]},{"Pop":[{"start":1789641997472058,"end":1789641997472275}]}]</Timestamps>
+					</ExecutionTime>
+					<KernelCPUTime Unit="ms">0</KernelCPUTime>
+					<UserCPUTime Unit="ms">8464.3</UserCPUTime>
+					<Details><![CDATA[{"nodes":"6","table/column processed 001":"Temporary Table","table/column processed 002":"ZTM268_BOOKING","table/column processed 003":"ZTM268_BOOKING.BOOKING_DATE","table/column processed 004":"ZTM268_BOOKING.CARRIER_ID","table/column processed 005":"ZTM268_BOOKING.CONNECTION_ID","table/column processed 006":"ZTM268_BOOKING.FLIGHT_DATE","table/column processed 007":"ZTM268_BOOKING.FLIGHT_PRICE","table/column processed 008":"ZTM268_BOOKING.ID","schema":"SAPHANADB"}]]></Details>
+					<InnerPlans>
+						<Plan ID="subplan_X2_plan69512139_vhshpan5db01_30243" PlanType="Column">
+							<Relation ID="X2_plan69512139_vhshpan5db01_30243_pop2" TypeName="CS_POP" Status="Finished">
+								<Name><![CDATA[JEEvalPrecond]]></Name>
+								<ExecutionType>Column Search</ExecutionType>
+								<Summary><![CDATA[Access Table using 1 Filter]]></Summary>
+								<Schema><![CDATA[SAPHANADB]]></Schema>
+								<ObjectName><![CDATA[ZTM268_BOOKING]]></ObjectName>
+								<TableType><![CDATA[COLUMN TABLE]]></TableType>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Exclusive Unit="ms">29.589</Exclusive>
+									<Inclusive Unit="ms">29.589</Inclusive>
+									<Timestamps>[{"Pop":[{"start":1789641994329685,"end":1789641994359274}]}]</Timestamps>
+								</ExecutionTime>
+								<KernelCPUTime Unit="ms">0</KernelCPUTime>
+								<UserCPUTime Unit="ms">29.636</UserCPUTime>
+								<Details><![CDATA[{"table processed":"ZTM268_BOOKING"}]]></Details>
+								<InnerPlans>
+									<Plan ID="cs_plan1336_vhshpan5db01_30243" PlanType="Column" />
+									<Plan ID="cs_plan1337_vhshpan5db01_30243" PlanType="Column" />
+								</InnerPlans>
+							</Relation>
+							<Relation ID="X2_plan69512139_vhshpan5db01_30243_pop3" TypeName="CS_POP" Status="Finished">
+								<Name><![CDATA[JECreateNTuple]]></Name>
+								<ExecutionType>Column Search</ExecutionType>
+								<Summary><![CDATA[Sorted Merge Join]]></Summary>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Exclusive Unit="ms">23.302</Exclusive>
+									<Inclusive Unit="ms">52.956</Inclusive>
+									<Timestamps>[{"Pop":[{"start":1789641994359339,"end":1789641994382641}]}]</Timestamps>
+								</ExecutionTime>
+								<KernelCPUTime Unit="ms">0</KernelCPUTime>
+								<UserCPUTime Unit="ms">23.352</UserCPUTime>
+								<Details><![CDATA[{}]]></Details>
+								<Child ID="X2_plan69512139_vhshpan5db01_30243_pop2">
+									<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+									<ExecutedOutputCardinality>24396722</ExecutedOutputCardinality>
+									<Payload Unit="bytes">97587737</Payload>
+									<Details><![CDATA[{ "data container":"aligned vector of data","description":"vector of values" }]]></Details>
+								</Child>
+							</Relation>
+							<Relation ID="X2_plan69512139_vhshpan5db01_30243_pop5" TypeName="CS_POP" Status="Finished">
+								<Name><![CDATA[JECalculate]]></Name>
+								<ExecutionType>Column Search</ExecutionType>
+								<Summary><![CDATA[Calculation jf ( "FLIGHT_PRICE" > fixed ( 1500 , 14 , 2 ) , 'PREMIUM' , jf ( ( "FLIGHT_PRICE" > fixed ( 1000 , 14 , 2 ) ) AND ( "FLIGHT_PRICE" <= fixed ( 1500 , 14 , 2 ) ) , 'BUSINESS' , 'STANDARD' ) ) on table ZTM268_BOOKING]]></Summary>
+								<Schema><![CDATA[SAPHANADB]]></Schema>
+								<ObjectName><![CDATA[ZTM268_BOOKING]]></ObjectName>
+								<TableType><![CDATA[COLUMN TABLE]]></TableType>
+								<Location><![CDATA[vhshpan5db01:30243]]></Location>
+								<ExecutionTime>
+									<Exclusive Unit="ms">618.138</Exclusive>
+									<Inclusive Unit="ms">671.204</Inclusive>
+									<Timestamps>[{"Pop":[{"start":1789641994382751,"end":1789641995000889}]}]</Timestamps>
+								</ExecutionTime>
+								<KernelCPUTime Unit="ms">0</KernelCPUTime>
+								<UserCPUTime Unit="ms">2260.16</UserCPUTime>
+								<Details><![CDATA[{"table processed":"ZTM268_BOOKING"}]]></Details>
+								<Child ID="X2_plan69512139_vhshpan5db01_30243_pop3">
+									<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+									<ExecutedOutputCardinality>24396722</ExecutedOutputCardinality>
+									<Payload Unit="bytes">97587369</Payload>
+									<Details><![CDATA[{ "data container":"vector of vector of integers","description":"matrix of internal docid values containing the result of a join" }]]></Details>
+								</Child>
+							</Relation>
+							<Relation ID="cs_plan1335_vhshpan5db01_30243_pattern1" Status="Finished" Physical="False">
+								<Name><![CDATA[result assembly]]></Name>
+								<ExecutionType>Column Search</ExecutionType>
+								<Summary><![CDATA[(3 nodes) build result table with requested columns]]></Summary>
+								<ObjectName><![CDATA[Temporary Table(s), ZTM268_BOOKING]]></ObjectName>
+								<ExecutionTime>
+									<Exclusive Unit="ms">2471.176</Exclusive>
+									<Inclusive Unit="ms">3142.590</Inclusive>
+									<Timestamps>[{"Pop":[{"start":1789641994382704,"end":1789641994382733}]},{"Pop":[{"start":1789641995000972,"end":1789641997471902}]},{"Pop":[{"start":1789641997472058,"end":1789641997472275}]}]</Timestamps>
+								</ExecutionTime>
+								<KernelCPUTime Unit="ms">0</KernelCPUTime>
+								<UserCPUTime Unit="ms">6151.15</UserCPUTime>
+								<Details><![CDATA[{"nodes":"3","table/column processed 001":"Temporary Table","table/column processed 002":"ZTM268_BOOKING.BOOKING_DATE","table/column processed 003":"ZTM268_BOOKING.CARRIER_ID","table/column processed 004":"ZTM268_BOOKING.CONNECTION_ID","table/column processed 005":"ZTM268_BOOKING.FLIGHT_DATE","table/column processed 006":"ZTM268_BOOKING.FLIGHT_PRICE","table/column processed 007":"ZTM268_BOOKING.ID","table/column processed 001":"Temporary Table","table/column processed 002":"ZTM268_BOOKING.BOOKING_DATE","table/column processed 003":"ZTM268_BOOKING.CARRIER_ID","table/column processed 004":"ZTM268_BOOKING.CONNECTION_ID","table/column processed 005":"ZTM268_BOOKING.FLIGHT_DATE","table/column processed 006":"ZTM268_BOOKING.FLIGHT_PRICE","table/column processed 007":"ZTM268_BOOKING.ID"}]]></Details>
+								<InnerPlans>
+									<Plan ID="subplan_cs_plan1335_vhshpan5db01_30243_pattern1" PlanType="Column">
+										<Relation ID="X2_plan69512139_vhshpan5db01_30243_pop4" TypeName="CS_POP" Status="Finished">
+											<Name><![CDATA[JEUniqueColumn]]></Name>
+											<ExecutionType>Column Search</ExecutionType>
+											<Summary><![CDATA[Split Plandata]]></Summary>
+											<Schema><![CDATA[SAPHANADBVLX]]></Schema>
+											<ObjectName><![CDATA[Temporary Table]]></ObjectName>
+											<TableType><![CDATA[COLUMN TABLE]]></TableType>
+											<Location><![CDATA[vhshpan5db01:30243]]></Location>
+											<ExecutionTime>
+												<Exclusive Unit="ms">0.029</Exclusive>
+												<Inclusive Unit="ms">53.048</Inclusive>
+												<Timestamps>[{"Pop":[{"start":1789641994382704,"end":1789641994382733}]}]</Timestamps>
+											</ExecutionTime>
+											<KernelCPUTime Unit="ms">0</KernelCPUTime>
+											<UserCPUTime Unit="ms">0.067</UserCPUTime>
+											<Details><![CDATA[{"table/column processed":"Temporary Table","Temporary Table":"#JE_L:83_4618441417934502385"}]]></Details>
+											<Child ID="X2_plan69512139_vhshpan5db01_30243_pop3">
+												<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+												<ExecutedOutputCardinality>24396722</ExecutedOutputCardinality>
+												<Payload Unit="bytes">97587369</Payload>
+												<Details><![CDATA[{ "data container":"vector of vector of integers","description":"matrix of internal docid values containing the result of a join" }]]></Details>
+											</Child>
+										</Relation>
+										<Relation ID="X2_plan69512139_vhshpan5db01_30243_pop6" TypeName="CS_POP" Status="Finished">
+											<Name><![CDATA[JERequestedAttributes]]></Name>
+											<ExecutionType>Column Search</ExecutionType>
+											<Summary><![CDATA[Projection of columns ID, BOOKING_DATE, CARRIER_ID, CONNECTION_ID, FLIGHT_DATE, FLIGHT_PRICE]]></Summary>
+											<Schema><![CDATA[SAPHANADB]]></Schema>
+											<ObjectName><![CDATA[ZTM268_BOOKING]]></ObjectName>
+											<TableType><![CDATA[COLUMN TABLE]]></TableType>
+											<Location><![CDATA[vhshpan5db01:30243]]></Location>
+											<ExecutionTime>
+												<Exclusive Unit="ms">2470.930</Exclusive>
+												<Inclusive Unit="ms">3142.217</Inclusive>
+												<Timestamps>[{"Pop":[{"start":1789641995000972,"end":1789641997471902}]}]</Timestamps>
+											</ExecutionTime>
+											<KernelCPUTime Unit="ms">0</KernelCPUTime>
+											<UserCPUTime Unit="ms">6150.75</UserCPUTime>
+											<Details><![CDATA[{"table/column processed 001":"ZTM268_BOOKING.ID","table/column processed 002":"ZTM268_BOOKING.BOOKING_DATE","table/column processed 003":"ZTM268_BOOKING.CARRIER_ID","table/column processed 004":"ZTM268_BOOKING.CONNECTION_ID","table/column processed 005":"ZTM268_BOOKING.FLIGHT_DATE","table/column processed 006":"ZTM268_BOOKING.FLIGHT_PRICE"}]]></Details>
+											<Child ID="X2_plan69512139_vhshpan5db01_30243_pop4">
+												<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+												<ExecutedOutputCardinality>24396722</ExecutedOutputCardinality>
+												<Payload Unit="bytes">97587369</Payload>
+												<Details><![CDATA[{ "data container":"vector of vector of integers","description":"matrix of internal docid values containing the result of a join" }]]></Details>
+											</Child>
+										</Relation>
+										<Relation ID="X2_plan69512139_vhshpan5db01_30243_pop7" TypeName="CS_POP" Status="Finished">
+											<Name><![CDATA[JEAssembleResults]]></Name>
+											<ExecutionType>Column Search</ExecutionType>
+											<Summary><![CDATA[Build Result]]></Summary>
+											<Location><![CDATA[vhshpan5db01:30243]]></Location>
+											<ExecutionTime>
+												<Exclusive Unit="ms">0.217</Exclusive>
+												<Inclusive Unit="ms">3142.590</Inclusive>
+												<Timestamps>[{"Pop":[{"start":1789641997472058,"end":1789641997472275}]}]</Timestamps>
+											</ExecutionTime>
+											<KernelCPUTime Unit="ms">0</KernelCPUTime>
+											<UserCPUTime Unit="ms">0.336</UserCPUTime>
+											<Details><![CDATA[{}]]></Details>
+											<Child ID="X2_plan69512139_vhshpan5db01_30243_pop3">
+												<ConnectorName><![CDATA[JEPlanData]]></ConnectorName>
+												<ExecutedOutputCardinality>24396722</ExecutedOutputCardinality>
+												<Payload Unit="bytes">97587369</Payload>
+												<Details><![CDATA[{ "data container":"vector of vector of integers","description":"matrix of internal docid values containing the result of a join" }]]></Details>
+											</Child>
+											<Child ID="X2_plan69512139_vhshpan5db01_30243_pop5">
+												<ConnectorName><![CDATA[JEPlanDataAttrVals]]></ConnectorName>
+												<ExecutedOutputCardinality>24396722</ExecutedOutputCardinality>
+												<Payload Unit="bytes">1564440208</Payload>
+												<Details><![CDATA[{ "data container":"vector of columns","description":"result of a projection: list of columns with type definition and values or docids","data container member":"(column) _CV0x7f7f3dde5f10 (type) string" }]]></Details>
+											</Child>
+											<Child ID="X2_plan69512139_vhshpan5db01_30243_pop6">
+												<ConnectorName><![CDATA[JEPlanDataAttrVals]]></ConnectorName>
+												<ExecutedOutputCardinality>24396722</ExecutedOutputCardinality>
+												<Payload Unit="bytes">6556619496</Payload>
+												<Details><![CDATA[{ "data container":"vector of columns","description":"result of a projection: list of columns with type definition and values or docids","data container member":"(column) ID (type) int","data container member":"(column) BOOKING_DATE (type) string","data container member":"(column) CARRIER_ID (type) string","data container member":"(column) CONNECTION_ID (type) string","data container member":"(column) FLIGHT_DATE (type) string","data container member":"(column) FLIGHT_PRICE (type) fixed14.2" }]]></Details>
+											</Child>
+										</Relation>
+									</Plan>
+								</InnerPlans>
+							</Relation>
+						</Plan>
+					</InnerPlans>
+				</Relation>
+			</Plan>
+		</InnerPlans>
+	</Relation>
+
+	<ReferencedPlans>
+		<Plan ID="cs_plan1346_vhshpan5db01_30243" Type="Executed" PlanType="Column">
+			<RootRelation ID="cs_plan1346_vhshpan5db01_30243_result1" Status="Finished">
+				<Name>Result</Name>
+				<Child ID="cs_plan1346_vhshpan5db01_30243_qoTableSearch1_qoTableSearchNode1">
+					<ConnectorName><![CDATA[rows]]></ConnectorName>
+					<ExecutedOutputCardinality>20</ExecutedOutputCardinality>
+				</Child>
+			</RootRelation>
+			<Relation ID="cs_plan1346_vhshpan5db01_30243_qoTableSearch1" Status="Finished" Physical="False">
+				<Name><![CDATA[Search on table]]></Name>
+				<Summary><![CDATA[(1 node) ]]></Summary>
+				<Schema><![CDATA[SAPHANADB]]></Schema>
+				<ObjectName><![CDATA[/DMO/CONNECTION]]></ObjectName>
+				<ExecutionTime>
+					<Exclusive Unit="ms">0.066</Exclusive>
+					<Inclusive Unit="ms">0.069</Inclusive>
+					<Timestamps>[{"Pop":[{"start":1789641999263728,"end":1789641999263738}]},{"Pop":[{"start":1789641999263741,"end":1789641999263797}]}]</Timestamps>
+				</ExecutionTime>
+				<Details><![CDATA[{"nodes":"1","table/column processed":"/DMO/CONNECTION","schema":"SAPHANADB"}]]></Details>
+				<InnerPlans>
+					<Plan ID="subplan_cs_plan1346_vhshpan5db01_30243_qoTableSearch1" PlanType="Column">
+						<Relation ID="cs_plan1346_vhshpan5db01_30243_qoTableSearch1_qoTableSearchNode1" TypeName="QO3_SEARCH" Status="Finished">
+							<Name><![CDATA[Basic predicate]]></Name>
+							<Summary><![CDATA[CLIENT = '080']]></Summary>
+							<Schema><![CDATA[SAPHANADB]]></Schema>
+							<ObjectName><![CDATA[/DMO/CONNECTION]]></ObjectName>
+							<TableType><![CDATA[COLUMN TABLE]]></TableType>
+							<Location><![CDATA[vhshpan5db01:30243]]></Location>
+							<ExecutionTime>
+								<Exclusive Unit="ms">0.066</Exclusive>
+								<Inclusive Unit="ms">0.069</Inclusive>
+								<Timestamps>[{"Pop":[{"name":"estimation","start":1789641999263728,"end":1789641999263738}]},{"Pop":[{"name":"evaluation","start":1789641999263741,"end":1789641999263797}]}]</Timestamps>
+							</ExecutionTime>
+							<Details><![CDATA[{"Estimated result size":"20","Estimation time":"0.010 ms","Evaluation time":"0.056 ms","Inverted index":"not used (but exists)"}]]></Details>
+						</Relation>
+					</Plan>
+				</InnerPlans>
+			</Relation>
+		</Plan>
+
+		<Plan ID="cs_plan1340_vhshpan5db01_30243" Type="Executed" PlanType="Column">
+			<RootRelation ID="cs_plan1340_vhshpan5db01_30243_result1" Status="Finished">
+				<Name>Result</Name>
+				<Location><![CDATA[vhshpan5db01:30243]]></Location>
+				<Child ID="cs_plan1340_vhshpan5db01_30243_oltpSearchNode1">
+					<ConnectorName><![CDATA[SearchAPI::SearchResults]]></ConnectorName>
+					<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+					<Payload Unit="bytes">200</Payload>
+				</Child>
+			</RootRelation>
+			<Relation ID="cs_plan1340_vhshpan5db01_30243_oltpSearchNode1" TypeName="FAST_SEARCH" Status="Finished">
+				<Name><![CDATA[dynamic search]]></Name>
+				<Summary><![CDATA[estimate first & optimize search accordingly]]></Summary>
+				<Schema><![CDATA[SAPHANADB]]></Schema>
+				<ObjectName><![CDATA[/DMO/CARRIER]]></ObjectName>
+				<TableType><![CDATA[COLUMN TABLE]]></TableType>
+				<Location><![CDATA[vhshpan5db01:30243]]></Location>
+				<ExecutionTime>
+					<Exclusive Unit="ms">0.492</Exclusive>
+					<Inclusive Unit="ms">0.791</Inclusive>
+					<Timestamps>[{"Pop":[{"name":"execution","start":1789641999236983,"end":1789641999237475}]},{"PlanVizOverhead":[{"name":"planviz","start":1789641999237476,"end":1789641999237774}]}]</Timestamps>
+				</ExecutionTime>
+				<InnerPlans>
+					<Plan ID="cs_plan1341_vhshpan5db01_30243" PlanType="Column" />
+					<Plan ID="cs_plan1342_vhshpan5db01_30243" PlanType="Column" />
+				</InnerPlans>
+			</Relation>
+		</Plan>
+
+		<Plan ID="cs_plan1341_vhshpan5db01_30243" Type="Executed" PlanType="Column">
+			<RootRelation ID="cs_plan1341_vhshpan5db01_30243_result1" Status="Finished">
+				<Name>Result</Name>
+				<Child ID="cs_plan1341_vhshpan5db01_30243_qoTableSearch1_qoTableSearchNode1">
+					<ConnectorName><![CDATA[rows]]></ConnectorName>
+					<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+				</Child>
+			</RootRelation>
+			<Relation ID="cs_plan1341_vhshpan5db01_30243_qoTableSearch1" Status="Finished" Physical="False">
+				<Name><![CDATA[Search on table]]></Name>
+				<Summary><![CDATA[(2 nodes) ]]></Summary>
+				<Schema><![CDATA[SAPHANADB]]></Schema>
+				<ObjectName><![CDATA[/DMO/CARRIER]]></ObjectName>
+				<ExecutionTime>
+					<Exclusive Unit="ms">0.105</Exclusive>
+					<Inclusive Unit="ms">0.180</Inclusive>
+					<Timestamps>[{"Pop":[{"start":1789641999237142,"end":1789641999237154}]},{"Pop":[{"start":1789641999237209,"end":1789641999237251}]},{"Pop":[{"start":1789641999237265,"end":1789641999237313}]},{"Pop":[{"start":1789641999237319,"end":1789641999237322}]}]</Timestamps>
+				</ExecutionTime>
+				<Details><![CDATA[{"nodes":"2","table/column processed":"/DMO/CARRIER","schema":"SAPHANADB"}]]></Details>
+				<InnerPlans>
+					<Plan ID="subplan_cs_plan1341_vhshpan5db01_30243_qoTableSearch1" PlanType="Column">
+						<Relation ID="cs_plan1341_vhshpan5db01_30243_qoTableSearch1_qoTableSearchNode1" TypeName="QO3_SEARCH" Status="Finished">
+							<Name><![CDATA[Basic predicate]]></Name>
+							<Summary><![CDATA[CLIENT = '080']]></Summary>
+							<Schema><![CDATA[SAPHANADB]]></Schema>
+							<ObjectName><![CDATA[/DMO/CARRIER]]></ObjectName>
+							<TableType><![CDATA[COLUMN TABLE]]></TableType>
+							<Location><![CDATA[vhshpan5db01:30243]]></Location>
+							<ExecutionTime>
+								<Exclusive Unit="ms">0.015</Exclusive>
+								<Inclusive Unit="ms">0.180</Inclusive>
+								<Timestamps>[{"Pop":[{"name":"estimation","start":1789641999237142,"end":1789641999237154}]},{"Pop":[{"name":"evaluation","start":1789641999237319,"end":1789641999237322}]}]</Timestamps>
+							</ExecutionTime>
+							<Details><![CDATA[{"Block index":"no info available","Estimated result size":"16","Estimation time":"0.012 ms","Evaluation time":"0.003 ms","Inverted index":"no info available","Single value optimization":"used"}]]></Details>
+							<Child ID="cs_plan1341_vhshpan5db01_30243_qoTableSearch1_qoTableSearchNode2">
+								<ConnectorName><![CDATA[rows]]></ConnectorName>
+								<ExecutedOutputCardinality>1</ExecutedOutputCardinality>
+							</Child>
+						</Relation>
+						<Relation ID="cs_plan1341_vhshpan5db01_30243_qoTableSearch1_qoTableSearchNode2" TypeName="QO3_SEARCH" Status="Finished">
+							<Name><![CDATA[Basic predicate]]></Name>
+							<Summary><![CDATA[NAME = 'Deutsche Lufthansa AG']]></Summary>
+							<Schema><![CDATA[SAPHANADB]]></Schema>
+							<ObjectName><![CDATA[/DMO/CARRIER]]></ObjectName>
+							<TableType><![CDATA[COLUMN TABLE]]></TableType>
+							<Location><![CDATA[vhshpan5db01:30243]]></Location>
+							<ExecutionTime>
+								<Exclusive Unit="ms">0.090</Exclusive>
+								<Inclusive Unit="ms">0.104</Inclusive>
+								<Timestamps>[{"Pop":[{"name":"estimation","start":1789641999237209,"end":1789641999237251}]},{"Pop":[{"name":"evaluation","start":1789641999237265,"end":1789641999237313}]}]</Timestamps>
+							</ExecutionTime>
+							<Details><![CDATA[{"Estimated result size":"1","Estimation time":"0.042 ms","Evaluation time":"0.048 ms","Inverted index":"no index existing"}]]></Details>
+						</Relation>
+					</Plan>
+				</InnerPlans>
+			</Relation>
+		</Plan>
+
+		<Plan ID="cs_plan1342_vhshpan5db01_30243" Type="Executed" PlanType="Column">
+			<RootRelation ID="cs_plan1342_vhshpan5db01_30243_result1" Status="Finished">
+				<Name>Result</Name>
+				<Child ID="cs_plan1342_vhshpan5db01_30243_qoTableSearch1_qoTableSearchNode1">
+					<ConnectorName><![CDATA[rows]]></ConnectorName>
+					<ExecutedOutputCardinality>0</ExecutedOutputCardinality>
+				</Child>
+			</RootRelation>
+			<Relation ID="cs_plan1342_vhshpan5db01_30243_qoTableSearch1" Status="Finished" Physical="False">
+				<Name><![CDATA[Search on Delta 1]]></Name>
+				<Summary><![CDATA[(1 node) is empty]]></Summary>
+				<Schema><![CDATA[SAPHANADB]]></Schema>
+				<ObjectName><![CDATA[/DMO/CARRIER]]></ObjectName>
+				<ExecutionTime>
+					<Exclusive Unit="ms">0.000</Exclusive>
+					<Inclusive Unit="ms">0.000</Inclusive>
+					<Timestamps>[{"Pop":[{"start":1789641999237452,"end":1789641999237452}]}]</Timestamps>
+				</ExecutionTime>
+				<Details><![CDATA[{"nodes":"1","table/column processed":"/DMO/CARRIER","schema":"SAPHANADB"}]]></Details>
+				<InnerPlans>
+					<Plan ID="subplan_cs_plan1342_vhshpan5db01_30243_qoTableSearch1" PlanType="Column">
+						<Relation ID="cs_plan1342_vhshpan5db01_30243_qoTableSearch1_qoTableSearchNode1" TypeName="QO3_SEARCH" Status="Finished">
+							<Name><![CDATA[Search on Delta 1]]></Name>
+							<Summary><![CDATA[is empty]]></Summary>
+							<Schema><![CDATA[SAPHANADB]]></Schema>
+							<ObjectName><![CDATA[/DMO/CARRIER]]></ObjectName>
+							<TableType><![CDATA[COLUMN TABLE]]></TableType>
+							<Location><![CDATA[vhshpan5db01:30243]]></Location>
+							<ExecutionTime>
+								<Exclusive Unit="ms">0.000</Exclusive>
+								<Inclusive Unit="ms">0.000</Inclusive>
+								<Timestamps>[{"Pop":[{"name":"evaluation","start":1789641999237452,"end":1789641999237452}]}]</Timestamps>
+							</ExecutionTime>
+							<Details><![CDATA[{"Block index":"no info available","Inverted index":"no info available"}]]></Details>
+						</Relation>
+					</Plan>
+				</InnerPlans>
+			</Relation>
+		</Plan>
+
+		<Plan ID="cs_plan1336_vhshpan5db01_30243" Type="Executed" PlanType="Column">
+			<RootRelation ID="cs_plan1336_vhshpan5db01_30243_result1" Status="Finished">
+				<Name>Result</Name>
+				<Child ID="cs_plan1336_vhshpan5db01_30243_qoTableSearch1_qoTableSearchNode1">
+					<ConnectorName><![CDATA[rows]]></ConnectorName>
+					<ExecutedOutputCardinality>651213</ExecutedOutputCardinality>
+				</Child>
+			</RootRelation>
+			<Relation ID="cs_plan1336_vhshpan5db01_30243_qoTableSearch1" Status="Finished" Physical="False">
+				<Name><![CDATA[Search on Delta 1]]></Name>
+				<Summary><![CDATA[(1 node) ]]></Summary>
+				<Schema><![CDATA[SAPHANADB]]></Schema>
+				<ObjectName><![CDATA[ZTM268_BOOKING]]></ObjectName>
+				<ExecutionTime>
+					<Exclusive Unit="ms">0.308</Exclusive>
+					<Inclusive Unit="ms">0.313</Inclusive>
+					<Timestamps>[{"Pop":[{"start":1789641994330040,"end":1789641994330075}]},{"Pop":[{"start":1789641994330080,"end":1789641994330353}]}]</Timestamps>
+				</ExecutionTime>
+				<Details><![CDATA[{"nodes":"1","table/column processed":"ZTM268_BOOKING","schema":"SAPHANADB"}]]></Details>
+				<InnerPlans>
+					<Plan ID="subplan_cs_plan1336_vhshpan5db01_30243_qoTableSearch1" PlanType="Column">
+						<Relation ID="cs_plan1336_vhshpan5db01_30243_qoTableSearch1_qoTableSearchNode1" TypeName="QO3_SEARCH" Status="Finished">
+							<Name><![CDATA[Basic predicate]]></Name>
+							<Summary><![CDATA[CLIENT = '080']]></Summary>
+							<Schema><![CDATA[SAPHANADB]]></Schema>
+							<ObjectName><![CDATA[ZTM268_BOOKING]]></ObjectName>
+							<TableType><![CDATA[COLUMN TABLE]]></TableType>
+							<Location><![CDATA[vhshpan5db01:30243]]></Location>
+							<ExecutionTime>
+								<Exclusive Unit="ms">0.308</Exclusive>
+								<Inclusive Unit="ms">0.313</Inclusive>
+								<Timestamps>[{"Pop":[{"name":"estimation","start":1789641994330040,"end":1789641994330075}]},{"Pop":[{"name":"evaluation","start":1789641994330080,"end":1789641994330353}]}]</Timestamps>
+							</ExecutionTime>
+							<Details><![CDATA[{"Estimated result size":"651213","Estimation time":"0.035 ms","Evaluation time":"0.273 ms","Inverted index":"index exists but usage pattern is not possible to be determined (potential reason: search on delta)"}]]></Details>
+						</Relation>
+					</Plan>
+				</InnerPlans>
+			</Relation>
+		</Plan>
+
+		<Plan ID="cs_plan1337_vhshpan5db01_30243" Type="Executed" PlanType="Column">
+			<RootRelation ID="cs_plan1337_vhshpan5db01_30243_result1" Status="Finished">
+				<Name>Result</Name>
+				<Child ID="cs_plan1337_vhshpan5db01_30243_qoTableSearch1_qoTableSearchNode1">
+					<ConnectorName><![CDATA[rows]]></ConnectorName>
+					<ExecutedOutputCardinality>23745509</ExecutedOutputCardinality>
+				</Child>
+			</RootRelation>
+			<Relation ID="cs_plan1337_vhshpan5db01_30243_qoTableSearch1" Status="Finished" Physical="False">
+				<Name><![CDATA[Search on table]]></Name>
+				<Summary><![CDATA[(1 node) ]]></Summary>
+				<Schema><![CDATA[SAPHANADB]]></Schema>
+				<ObjectName><![CDATA[ZTM268_BOOKING]]></ObjectName>
+				<ExecutionTime>
+					<Exclusive Unit="ms">1.613</Exclusive>
+					<Inclusive Unit="ms">1.616</Inclusive>
+					<Timestamps>[{"Pop":[{"start":1789641994330645,"end":1789641994330650}]},{"Pop":[{"start":1789641994330653,"end":1789641994332261}]}]</Timestamps>
+				</ExecutionTime>
+				<Details><![CDATA[{"nodes":"1","table/column processed":"ZTM268_BOOKING","schema":"SAPHANADB"}]]></Details>
+				<InnerPlans>
+					<Plan ID="subplan_cs_plan1337_vhshpan5db01_30243_qoTableSearch1" PlanType="Column">
+						<Relation ID="cs_plan1337_vhshpan5db01_30243_qoTableSearch1_qoTableSearchNode1" TypeName="QO3_SEARCH" Status="Finished">
+							<Name><![CDATA[Basic predicate]]></Name>
+							<Summary><![CDATA[CLIENT = '080']]></Summary>
+							<Schema><![CDATA[SAPHANADB]]></Schema>
+							<ObjectName><![CDATA[ZTM268_BOOKING]]></ObjectName>
+							<TableType><![CDATA[COLUMN TABLE]]></TableType>
+							<Location><![CDATA[vhshpan5db01:30243]]></Location>
+							<ExecutionTime>
+								<Exclusive Unit="ms">1.613</Exclusive>
+								<Inclusive Unit="ms">1.616</Inclusive>
+								<Timestamps>[{"Pop":[{"name":"estimation","start":1789641994330645,"end":1789641994330650}]},{"Pop":[{"name":"evaluation","start":1789641994330653,"end":1789641994332261}]}]</Timestamps>
+							</ExecutionTime>
+							<Details><![CDATA[{"Block index":"used","Estimated result size":"23745509","Estimation time":"0.005 ms","Evaluation time":"1.608 ms"}]]></Details>
+						</Relation>
+					</Plan>
+				</InnerPlans>
+			</Relation>
+		</Plan>
+
+	</ReferencedPlans>
+</Plan>

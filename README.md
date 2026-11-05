@@ -127,7 +127,17 @@ Please read the [SAP Open Source Code of Conduct](https://github.com/SAP-samples
 
 Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via the [Issues](../../issues) tab.
 
+## Further Information
+[^Top of page](#)
+
+You can find more information about the CDS View Performance and Best Practices and other related  performance recommendation here:
+
+- [CDS View Performance Best Practices](https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/cds-view-performance-best-practices/ba-p/13559714)
+- [DevToberfest by SAP TechEd 2026 - CDS Association & Joins](https://www.youtube.com/live/94XawWCVfaQ?si=bvDvkpG02sPaaNWT)
+- [CDS Performance Anti-Pattern **NOT NULL preserving in a LEFT OUTER JOIN**](https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/cds-view-performance-best-practice-not-null-preserving-left-outer-join/ba-p/13579510)
+- [CDS Performance Anti-Pattern **UNION in a LEFT OUTER JOIN**](https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/cds-view-performance-best-practice-union-in-a-left-outer-join/ba-p/14509250)
+
 ## License
 [^Top of page](#)
 
-Copyright (c) 2026 SAP SE or an SAP affiliate company and teched2026-TM268 contributors. All rights reserved. Please see our [LICENSE](https://github.com/SAP-samples/teched2026-TM268/blob/main/LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/TM268).
+Copyright (c) 2026 SAP SE or an SAP affiliate company and teched2026-TM268 contributors. All rights reserved. Please see our [LICENSE](https://github.com/SAP-samples/teched2026-TM268/blob/main/LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP-samples/teched2026-TM268).
